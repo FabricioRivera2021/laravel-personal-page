@@ -11,6 +11,12 @@
             <li><a href="#">GitHub</a></li>
             <li><a href="#">LinkedIn</a></li>
             <li><a href="#">Mail</a></li>
+            <li>
+                <select class="text-slate-50 px-1 bg-slate-700 border rounded-sm" name="lang" id="lang">
+                    <option value="EN">EN</option>
+                    <option value="ES">ES</option>
+                </select>
+            </li>
         </ul>
     </nav>
 </div>
