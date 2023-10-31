@@ -37,12 +37,21 @@
         
     </div>
 
-    <div class="text-4xl max-w-7xl mx-auto h-screen items-center pt-20">
-        <x-card class="bg-amber-300">
-            <p class="text-gray-700 text-sm w-[85rem]">
-                {{--  --}}
-            </p>
-        </x-card>
+    <div class="text-4xl w-screen mx-auto h-screen items-center pt-20">
+            <div class="text-slate-50 bg-slate-400 rounded-sm py-6 font-bold text-xl flex justify-around">
+                <div class="p-4 rounded-2xl">
+                    HTML/CSS
+                </div>
+                <div class="p-4 rounded-2xl">
+                    Javascript
+                </div>
+                <div class="p-4 rounded-2xl">
+                    PHP
+                </div>
+                <div class="p-4 rounded-2xl">
+                    LARAVEL
+                </div>
+            </div>
     </div>
 
     {{ $slot }}
