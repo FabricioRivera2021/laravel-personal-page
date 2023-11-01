@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="w-[99vw] h-screen bg-background bg-cover bg-center">
+    <div class="h-screen bg-background bg-cover bg-center">
 
         <div class="text-4xl max-w-7xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
             <x-card>
@@ -43,7 +43,7 @@
             </div>
     </div> --}}
 
-    <div class="w-[99vw] h-screen bg-gradient-to-r from-sky-200 to-indigo-700">
+    <div class="h-screen bg-gradient-to-r from-sky-200 to-indigo-700">
         <div class="text-3xl max-w-7xl mx-auto h-[calc(100vh-40px)] grid grid-rows-3 grid-flow-col gap-4 pt-16">
             <x-card class="row-span-3">
                 <h3 class="max-w-[60rem] font-bold text-slate-500">
@@ -119,3 +119,5 @@
         </div>
     </div>
 </x-layout>
+
+<x-footer />
