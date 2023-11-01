@@ -4,7 +4,7 @@
         <div class="text-4xl max-w-7xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
             <x-card>
                 <h1 class="w-[60rem] font-bold text-slate-500">
-                    WEB DEVEL<span class="text-orange-400 text-3xl">OPMENT</span>
+                    WEB DEVEL<span class="text-orange-400">OPMENT</span>
                     <span class="block text-lg text-orange-400 font-thin">
                         Made by Fabricio Rivera
                     </span>
