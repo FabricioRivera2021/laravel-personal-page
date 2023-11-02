@@ -1,40 +1,46 @@
-<footer class="bg-slate-600">
-    <div class="h-48 bg-slate-600 flex space-x-10 justify-between items-end pb-4 text-slate-300 text-sm w-[80rem] mx-auto">
+<footer class="bg-slate-800">
+    <div class="h-[3px] w-full bg-slate-400"></div>
+    <div class="h-48 bg-slate-800 flex space-x-10 justify-between items-end pb-10 text-slate-300 text-xs max-w-[95rem] mx-auto">
         <div>
-            <ul class="font-thin">
-                    <li class="mb-2">
-                        <a href="">
-                            English version
-                        </a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="">
-                            Version en español
-                        </a>
-                    </li>
+            <ul>
+                <li class="mb-2">
+                    <a class="hover:underline hover:text-orange-400" href="#">
+                        English version
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-orange-400" href="#">
+                        Version en español
+                    </a>
+                </li>
             </ul>
         </div>
         <div>
-            <ul>
-                    <li class="mb-2">Home</li>
-                    <li class="mb-2">Projects</li>
-                    <li class="mb-2">Contact form</li>
-                    <li class="mb-2">Blog</li>
+            <ul class="text-center">
+                <li class="mb-2 font-semibold text-base">Site sections</li>
+                <li class="flex space-x-3 justify-center">
+                    <div><a class="hover:underline hover:text-orange-400" href="#">Home</a></div>
+                    <div><a class="hover:underline hover:text-orange-400" href="#">Projects</a></div>
+                    <div><a class="hover:underline hover:text-orange-400" href="/contact">Contact form</a></div>
+                    <div><a class="hover:underline hover:text-orange-400" href="#">blog</a></div>
+                </li>
             </ul>
-        </div>
+        </div>  
         <div>
-            <ul>
-                <li class="mb-2 font-semibold">Contact information:</li>
-                <li class="mb-2">Fabricio.Rivera2012@gmail.com</li>
-                <li class="mb-2">github/fabricioRivera</li>
-                <li class="mb-2">linkedin/fabricioRivera</li>
+            <ul class="text-center">
+                <li class="mb-2 font-semibold text-base">Contact information:</li>
+                <li class="flex space-x-3">
+                    <div>Fabricio.Rivera2012@gmail.com</div>
+                    <div><a class="hover:underline hover:text-orange-400" href="#">github/fabricioRivera</a></div>
+                    <div><a class="hover:underline hover:text-orange-400" href="#">linkedin/fabricioRivera</a></div>
+                </li>
             </ul>
         </div>
         <div>
             <ul class="text-right">
-                <li class="mb-2">Made with Laravel by Fabricio Rivera</li>
-                <li class="mb-2">Montevideo, Uruguay</li>
-                <li class="mb-2">&copy; 2023</li>
+                <li >&copy; 2023</li>
+                <li >Montevideo, Uruguay</li>
+                <li >Made with Laravel by Fabricio Rivera</li>
             </ul>
         </div>
     </div>
