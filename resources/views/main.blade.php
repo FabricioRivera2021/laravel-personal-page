@@ -13,9 +13,10 @@
                         Made by Fabricio Rivera
                     </span>
                     @if (app()->getLocale() === 'es')
-                        <h1>Hola culo peludo</h1>
+                        <h1>Test</h1>
                     @endif
                 </h1>
+                <h1>@lang('messages.welcome')</h1>
                 <p class="text-gray-700 text-sm w-[85rem]">
                     Welcome to my personal web development corner, where I embark on a creative odyssey through the fascinating realm of the web. Here, I'll be sharing my passion for crafting elegant and efficient web solutions, from front-end magic to back-end wizardry. 
                     Join me as I explore the ever-evolving landscape of technology, one line of code at a time, and let's build the digital future together.
@@ -32,23 +33,6 @@
         </div>
         
     </div>
-
-    {{-- <div class="text-4xl max-w-3xl mx-auto items-center pt-20">
-            <div class="text-slate-50 bg-gradient-to-r from-sky-700 to-indigo-500 rounded-sm py-6 font-bold text-xl flex justify-around">
-                <div class="p-4 rounded-2xl">
-                    HTML/CSS
-                </div>
-                <div class="p-4 rounded-2xl">
-                    Javascript
-                </div>
-                <div class="p-4 rounded-2xl">
-                    PHP
-                </div>
-                <div class="p-4 rounded-2xl">
-                    LARAVEL
-                </div>
-            </div>
-    </div> --}}
 
     <div class="h-screen bg-gradient-to-r from-sky-100 to-blue-400">
         <div class="text-3xl max-w-7xl mx-auto h-[calc(100vh-40px)] grid grid-rows-3 grid-flow-col gap-6 pt-16">
@@ -174,12 +158,12 @@
     <div>
         <ul>
             <li class="mb-2">
-                <a class="hover:underline hover:text-orange-400" href="#">
+                <a class="hover:underline hover:text-orange-400" href="/en">
                     English version
                 </a>
             </li>
             <li>
-                <a class="hover:underline hover:text-orange-400" href="#">
+                <a class="hover:underline hover:text-orange-400" href="/es">
                     Version en español
                 </a>
             </li>

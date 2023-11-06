@@ -3,7 +3,11 @@
     <div class="h-screen bg-slate-300">
         <div class="text-xl max-w-7xl mx-auto h-[calc(100vh-40px)]  flex justify-evenly items-center">
             <x-card class="flex flex-col items-center justify-center p-10">
-                <h1>Get in touch</h1>
+                @if (app()->getLocale() === 'es')
+                    <h1>Ponte en contacto</h1>
+                @else
+                    <h1>Get in touch</h1>
+                @endif
                 <form class="flex flex-col space-y-4" action="">
                     <x-input placeholder="Name" id="name" name="name"/>
                     <x-input type="email" placeholder="Email" id="email" name="email"/>
@@ -26,12 +30,12 @@
     <div>
         <ul>
             <li class="mb-2">
-                <a class="hover:underline hover:text-orange-400" href="#">
+                <a class="hover:underline hover:text-orange-400" href="{{route('/')}}">
                     English version
                 </a>
             </li>
             <li>
-                <a class="hover:underline hover:text-orange-400" href="#">
+                <a class="hover:underline hover:text-orange-400" href="{{route('/')}}">
                     Version en español
                 </a>
             </li>

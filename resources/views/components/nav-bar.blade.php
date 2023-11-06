@@ -19,7 +19,6 @@
                         <option class="text-slate-700" value="EN" selected>EN</option>
                         <option class="text-slate-700" value="ES">ES</option>
                     </select>
-                    <a href="/contact" {{app()->setLocale('es')}} >hola bebe</a>
                 </div>
             </li>
             <li class="border rounded-sm border-slate-500 px-2 hover:bg-slate-600 hover:text-slate-100">

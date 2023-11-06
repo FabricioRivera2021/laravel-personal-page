@@ -18,19 +18,26 @@ Route::get('/', function () {
     return redirect(app()->getLocale());
 });
 
-Route::get('/contact', function () {
-    return redirect(app()->getLocale() . '/contact');
-});
+// Route::get('/contact', function () {
+//     return redirect(app()->getLocale() . '/contact');
+// });
 
-Route::prefix('{locale}')
-    ->where(['locale' => '[a-zA-Z]{2}'])
-    ->middleware('setlocale')
-    ->group(function () {
-        Route::get('/', function () {
-            return view('main');});
+// Route::prefix('{locale}')
+//     ->where(['locale' => '[a-zA-Z]{2}'])
+//     ->middleware('setlocale')
+//     ->group(function () {
+//         Route::get('/', function () {
+//             return view('main');});
         
-        Route::get('/contact', function () {
-            return view('contact');
-        });
-});
+//         Route::get('/contact', function () {
+//             return view('contact');
+//         });
+// });
 
+Route::group([
+    'prefix' => '/{locale}',
+    'middleware' => 'locale'],
+    function ($locale) {
+        Route::get('/', function () { return view('main'); });
+        Route::get('/contact', function () { return view('contact'); });
+});
