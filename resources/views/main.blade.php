@@ -12,7 +12,8 @@
                     <span class="block text-lg text-orange-400 font-thin">
                         Made by Fabricio Rivera
                     </span>
-                    @if (app()->getLocale() === 'es')
+                    {{app()->getLocale()}}
+                    @if (app()->getLocale() == 'es')
                         <h1>Test</h1>
                     @endif
                 </h1>

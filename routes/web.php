@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect(app()->getLocale());
+    return redirect('/' . app()->getLocale());
 });
 
 // Route::get('/contact', function () {
@@ -38,6 +38,6 @@ Route::group([
     'prefix' => '/{locale}',
     'middleware' => 'locale'],
     function ($locale) {
-        Route::get('/', function () { return view('main'); });
+        Route::get('/', function ($locale) { return view('main',['locale' => $locale]); });
         Route::get('/contact', function () { return view('contact'); });
 });
