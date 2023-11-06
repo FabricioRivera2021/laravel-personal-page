@@ -1,5 +1,6 @@
 <?php
 
+use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('EN/main');
+    return redirect(app()->getLocale());
 });
 
-Route::get('/contact', function(){
-    return view('EN/contact');
+Route::get('/contact', function () {
+    return redirect(app()->getLocale() . '/contact');
 });
+
+Route::prefix('{locale}')
+    ->where(['locale' => '[a-zA-Z]{2}'])
+    ->middleware('setlocale')
+    ->group(function () {
+        Route::get('/', function () {
+            return view('main');});
+        
+        Route::get('/contact', function () {
+            return view('contact');
+        });
+});
+

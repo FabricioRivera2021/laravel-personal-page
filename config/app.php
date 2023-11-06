@@ -185,4 +185,9 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'available_locales' => [
+        'en',
+        'es'
+    ],
+
 ];

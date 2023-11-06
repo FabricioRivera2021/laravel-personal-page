@@ -12,6 +12,9 @@
                     <span class="block text-lg text-orange-400 font-thin">
                         Made by Fabricio Rivera
                     </span>
+                    @if (app()->getLocale() === 'es')
+                        <h1>Hola culo peludo</h1>
+                    @endif
                 </h1>
                 <p class="text-gray-700 text-sm w-[85rem]">
                     Welcome to my personal web development corner, where I embark on a creative odyssey through the fascinating realm of the web. Here, I'll be sharing my passion for crafting elegant and efficient web solutions, from front-end magic to back-end wizardry. 
