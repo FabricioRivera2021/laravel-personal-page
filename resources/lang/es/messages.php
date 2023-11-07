@@ -20,6 +20,7 @@ return [
                             de <span class="font-semibold text-black">React</span>, y el sólido poder en el lado del servidor de <span class="font-semibold text-black">PHP</span> 
                             y <span class="font-semibold text-black">Laravel</span>. Únete a mí en este emocionante viaje mientras transformamos ideas en una sorprendente realidad 
                             digital y creamos páginas web que son tanto hermosas como funcionales.',
+    'heroProyectbtn'=> 'Mis proyectos',
 
     //footer
     'siteSections'=> 'Secciones',

@@ -3,7 +3,7 @@
 return [
     //navbar
     'home' => 'Home',
-    'proyects' => 'Proyects',
+    'proyects' => 'Projects',
     'contact' => 'Contact',
     'downloadCV' => 'Download CV',
 
@@ -20,6 +20,7 @@ return [
                             <span class="font-semibold text-black">React</span>, and the robust back-end power of <span class="font-semibold text-black">PHP</span> 
                             and <span class="font-semibold text-black">Laravel</span>. Join me on this thrilling journey as we transform ideas into stunning 
                             digital reality and create web pages that are both beautiful and functional.',
+    'heroProyectbtn'=> 'My projects',
 
     //footer
     'siteSections'=> 'Site sections',
