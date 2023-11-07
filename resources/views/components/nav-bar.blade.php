@@ -1,7 +1,7 @@
 <div class="fixed w-[99vw] bg-slate-700 z-50">
     <nav class="max-w-[90rem] mx-auto h-10 px-20 flex justify-between space-x-24 items-center bg-slate-700 text-slate-100">
         <ul class="flex space-x-7 font-semibold">
-            <x-navbar-link href="#">@lang('messages.home')</x-navbar-link>
+            <x-navbar-link href="/{{app()->getLocale()}}/">@lang('messages.home')</x-navbar-link>
             <x-navbar-link href="#">@lang('messages.proyects')</x-navbar-link>
             <x-navbar-link href="/{{app()->getLocale()}}/contact">@lang('messages.contact')</x-navbar-link>
             <x-navbar-link href="#">Blog</x-navbar-link>

@@ -1,24 +1,21 @@
-<x-layout>
+<x-nav-bar />
 
+<x-layout>
     <div class="h-screen bg-slate-300">
         <div class="text-xl max-w-7xl mx-auto h-[calc(100vh-40px)]  flex justify-evenly items-center">
-            <x-card class="flex flex-col items-center justify-center p-10">
-                @if (app()->getLocale() === 'es')
-                    <h1>Ponte en contacto</h1>
-                @else
-                    <h1>Get in touch</h1>
-                @endif
+            <x-card class="flex flex-col items-center justify-center p-10 bg-slate-200 rounded-md shadow-md">
+
+                <h1>Ponte en contacto</h1>
+
                 <form class="flex flex-col space-y-4" action="">
                     <x-input placeholder="Name" id="name" name="name"/>
                     <x-input type="email" placeholder="Email" id="email" name="email"/>
                     <textarea 
-                        class="w-full pr-8 rounded-sm border-0 py-1.5 px-2.5 text-sm ring-1 ring-slate-300 placeholder:text-slate-800 focus:ring-2" 
-                        placeholder="Message"
+                        class="w-full pr-8 rounded-sm border-0 py-1.5 px-2.5 text-sm ring-1 ring-slate-300 text-slate-400 focus:ring-2" 
                         name="msg" 
                         id="" 
                         cols="30" 
-                        rows="10">
-                    </textarea>
+                        rows="10">Message</textarea>
                 </form>
             </x-card>
         </div>

@@ -1,6 +1,4 @@
-<x-nav-bar>
-    
-</x-nav-bar>
+<x-nav-bar />
 
 <x-layout>
     <div class="h-screen bg-background bg-cover bg-center">
