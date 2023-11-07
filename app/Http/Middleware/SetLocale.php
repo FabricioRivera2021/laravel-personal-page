@@ -17,9 +17,10 @@ class SetLocale
     public function handle(Request $request, Closure $next): Response
     {
         $locale = 'en'; // set en as the fallback locale
-        if ($request->route('locale') === 'en') { // if the route starts with /es/* set locale to ES
+        // dd($request->route('locale'));
+        if ($request->route('locale') == 'en') { // if the route starts with /es/* set locale to ES
             $locale = 'en';
-        } else if ($request->route('locale') === 'es') { // if the route starts with /fr/* set locale to FR
+        } else if ($request->route('locale') == 'es') { // if the route starts with /fr/* set locale to FR
             $locale = 'es';
         }
 

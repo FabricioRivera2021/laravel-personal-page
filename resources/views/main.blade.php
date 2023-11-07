@@ -8,27 +8,18 @@
         <div class="text-4xl max-w-7xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
             <x-card>
                 <h1 class="w-[60rem] font-bold text-slate-500">
-                    WEB <span class="text-orange-400">DEVELOPMENT</span>
+                    @lang('messages.title')
                     <span class="block text-lg text-orange-400 font-thin">
-                        Made by Fabricio Rivera
+                        @lang('messages.madeBy')
                     </span>
-                    {{app()->getLocale()}}
-                    @if (app()->getLocale() == 'es')
-                        <h1>Test</h1>
-                    @endif
                 </h1>
                 <h1>@lang('messages.welcome')</h1>
+                
                 <p class="text-gray-700 text-sm w-[85rem]">
-                    Welcome to my personal web development corner, where I embark on a creative odyssey through the fascinating realm of the web. Here, I'll be sharing my passion for crafting elegant and efficient web solutions, from front-end magic to back-end wizardry. 
-                    Join me as I explore the ever-evolving landscape of technology, one line of code at a time, and let's build the digital future together.
+                    @lang('messages.hero-text-first')
                 </p>
                 <p class="text-gray-700 text-sm w-[85rem]">
-                    I'll be diving into the world of web development with a strong focus on crafting dynamic and visually appealing web experiences. 
-                    My toolkit includes an array of exciting technologies such as <span class='font-semibold text-black'>HTML/CSS</span> for structure 
-                    and styling, the interactivity of <span class='font-semibold text-black'>JavaScript</span>, the versatility of 
-                    <span class='font-semibold text-black'>React</span>, and the robust back-end power of <span class='font-semibold text-black'>PHP</span> 
-                    and <span class='font-semibold text-black'>Laravel</span>. Join me on this thrilling journey as we transform ideas into stunning 
-                    digital reality and create web pages that are both beautiful and functional.
+                    @lang('messages.hero-text-second')
                 </p>
             </x-card>
         </div>
@@ -172,18 +163,18 @@
     </div>
     <div>
         <ul class="text-center">
-            <li class="mb-2 font-semibold text-base">Site sections</li>
+            <li class="mb-2 font-semibold text-base">@lang('messages.siteSections')</li>
             <li class="flex space-x-3 justify-center">
-                <div><a class="hover:underline hover:text-orange-400" href="#">Home</a></div>
-                <div><a class="hover:underline hover:text-orange-400" href="#">Projects</a></div>
-                <div><a class="hover:underline hover:text-orange-400" href="/contact">Contact form</a></div>
+                <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.home')</a></div>
+                <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.proyects')</a></div>
+                <div><a class="hover:underline hover:text-orange-400" href="/{{app()->getLocale()}}/contact">@lang('messages.contact')</a></div>
                 <div><a class="hover:underline hover:text-orange-400" href="#">blog</a></div>
             </li>
         </ul>
     </div>  
     <div>
         <ul class="text-center">
-            <li class="mb-2 font-semibold text-base">Contact information:</li>
+            <li class="mb-2 font-semibold text-base">@lang('messages.contactInfo')</li>
             <li class="flex space-x-3">
                 <div>Fabricio.Rivera2012@gmail.com</div>
                 <div><a class="hover:underline hover:text-orange-400" href="#">github/fabricioRivera</a></div>
@@ -193,9 +184,7 @@
     </div>
     <div>
         <ul class="text-right">
-            <li >&copy; 2023</li>
-            <li >Montevideo, Uruguay</li>
-            <li >Made with Laravel by Fabricio Rivera</li>
+            @lang('messages.info')
         </ul>
     </div>
 </x-footer>

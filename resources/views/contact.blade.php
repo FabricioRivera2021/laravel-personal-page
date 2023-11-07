@@ -30,12 +30,12 @@
     <div>
         <ul>
             <li class="mb-2">
-                <a class="hover:underline hover:text-orange-400" href="{{route('/')}}">
+                <a class="hover:underline hover:text-orange-400" href="/en">
                     English version
                 </a>
             </li>
             <li>
-                <a class="hover:underline hover:text-orange-400" href="{{route('/')}}">
+                <a class="hover:underline hover:text-orange-400" href="/es">
                     Version en español
                 </a>
             </li>
