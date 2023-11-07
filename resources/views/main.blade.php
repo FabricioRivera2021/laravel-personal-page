@@ -43,18 +43,28 @@
                     </span>
                 </div>
                 <div class="flex space-x-2">
-                    <div class="space-y-4">
-                        <p class="text-gray-700 text-sm">
-                            Welcome to my personal web development corner, where I embark on a creative odyssey through the fascinating realm of the web. Here, I'll be sharing my passion for crafting elegant and efficient web solutions, from front-end magic to back-end wizardry. 
-                            Join me as I explore the ever-evolving landscape of technology, one line of code at a time, and let's build the digital future together.
+                    <div class="space-y-4 text-sm">
+                        <p>
+                            Este es mi rincón virtual Permíteme presentarme. Soy Fabricio, un apasionado del mundo digital y un entusiasta del desarrollo web. Desde que 
+                            comencé mi viaje en el mundo de la tecnología, me he embarcado en un emocionante viaje de aprendizaje y creatividad. Mi objetivo es convertir ideas en experiencias digitales asombrosas.
                         </p>
-                        <p class="text-gray-700 text-sm w-[75%]">
-                            I'll be diving into the world of web development with a strong focus on crafting dynamic and visually appealing web experiences. 
-                            My toolkit includes an array of exciting technologies such as <span class='font-semibold text-black'>HTML/CSS</span> for structure 
-                            and styling, the interactivity of <span class='font-semibold text-black'>JavaScript</span>, the versatility of 
-                            <span class='font-semibold text-black'>React</span>, and the robust back-end power of <span class='font-semibold text-black'>PHP</span> 
-                            and <span class='font-semibold text-black'>Laravel</span>. Join me on this thrilling journey as we transform ideas into stunning 
-                            digital reality and create web pages that are both beautiful and functional.
+
+                        <p>
+                            Naci y me crie en Montevideo, Uruguay. Desde chico me empezaron a interesar los temas tecnologicos y desde que tengo uso de razon siempre me encantaron las computadoras.
+                        </p>
+                        
+                        <p>
+                            Mis estudios abarcan muchos temas, he estudiado desde diseño grafico y fotografia (que por cierto puedes ver mis fotos en una pagina que tengo dedicada para eso)
+                        </p>
+                        
+                        <p>
+                            En mi tiempo libre, me gusta mantenerme al tanto de las últimas tendencias tecnológicas, experimentar con nuevas ideas y participar en proyectos 
+                            que desafíen mis habilidades y me permitan crecer como desarrollador web.
+                        </p>
+                        
+                        <p>
+                            Si estás buscando un colaborador apasionado para tu próximo proyecto digital o simplemente deseas conectarte y hablar de tecnología, ¡estoy aquí 
+                            para ayudar! ¡Gracias por visitar mi sitio y espero que encuentres inspiración en mi trabajo y pasión por la tecnología web.
                         </p>
                     </div>
                     <div class="h-[400px] w-[1050px] bg-slate-500 self-center rounded-xl">
