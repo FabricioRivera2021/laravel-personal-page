@@ -6,7 +6,7 @@
     <div class="h-screen bg-background bg-cover bg-center">
 
         <div class="text-4xl max-w-7xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
-            <x-card>
+            <x-card class="rounded-md shadow-md bg-slate-100">
                 <h1 class="w-[60rem] font-bold text-slate-500">
                     @lang('messages.title')
                     <span class="block text-lg text-orange-400 font-thin">
@@ -25,10 +25,10 @@
                 <x-button><a href="#">@lang('messages.heroProyectbtn')</a></x-button>
             </x-card>
         </div>
-        
     </div>
 
     <div>
+        {{-- todo primer bloque --}}
         <div class="text-3xl max-w-7xl mx-auto grid grid-col-4 gap-6 pt-16">
             <x-card class="col-span-3 space-y-7">
                 <div>
@@ -65,9 +65,11 @@
                 </div>
             </x-card>
         </div>
-        <div class="bg-gradient-to-b from-slate-700 to-blue-500">
-            <div class="text-3xl max-w-7xl mx-auto grid grid-col-4 gap-6 pt-16">
-                <x-card class="space-y-3 mt-36">
+
+        {{-- todo segundo bloque --}}
+        <div class="bg-gradient-to-b from-slate-700 to-blue-500 pb-6">
+            <div class="text-3xl max-w-7xl mx-auto grid grid-cols-3 gap-6 pt-16">
+                <x-card class="space-y-3 mt-10 bg-slate-100 rounded-md shadow-md col-span-2">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold">
@@ -87,8 +89,14 @@
                         Welcome to my personal web development corner, where I embark on a creative odyssey through the fascinating realm of the web. Here, I'll be sharing my passion for crafting elegant and efficient web solutions, from front-end magic to back-end wizardry. 
                         Join me as I explore the ever-evolving landscape of technology, one line of code at a time, and let's build the digital future together.
                     </p>
+                    <ul class="text-sm">
+                        <li>item 1</li>
+                        <li>item 1</li>
+                        <li>item 1</li>
+                        <li>item 1</li>
+                    </ul>
                 </x-card>
-                <x-card class="space-y-3">
+                <x-card class="space-y-3 bg-slate-100 mt-20 rounded-md shadow-md col-span-1 row-span-2">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold">
@@ -127,31 +135,7 @@
                         </li>
                     </ol>
                 </x-card>
-                <x-card class="space-y-10">
-                    <div>
-                        <div class="flex justify-start items-center space-x-3 text-slate-500">
-                            <h3 class="max-w-[60rem] font-bold">
-                                TECHNOLOGIES
-                            </h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                                <path fill-rule="evenodd" d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z" clip-rule="evenodd" />
-                            </svg>                 
-                        </div>
-                        <span class="block text-lg text-orange-400 font-thin">
-                            ... that i have used
-                        </span>
-                    </div>
-                    <div class="flex space-x-4 flex-wrap self-center">
-                        <div class="h-16 w-16 bg-slate-300 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-200 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-400 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-300 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-200 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-400 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-300 rounded-md"></div>
-                    </div>
-                </x-card>
-                <x-card class="space-y-10">
+                <x-card class="space-y-10 bg-slate-100 rounded-md shadow-md col-span-2">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold">
