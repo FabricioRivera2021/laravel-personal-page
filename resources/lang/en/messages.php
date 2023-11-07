@@ -22,6 +22,11 @@ return [
                             digital reality and create web pages that are both beautiful and functional.',
     'heroProyectbtn'=> 'My projects',
 
+    //contact
+    'contact-title' => 'Get in touch',
+    'contact-name' => 'Name',
+    'contact-msg' => 'Message',
+
     //footer
     'siteSections'=> 'Site sections',
     'contactInfo'=> 'Contact Information',

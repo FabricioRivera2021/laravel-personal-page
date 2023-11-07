@@ -22,6 +22,11 @@ return [
                             digital y creamos páginas web que son tanto hermosas como funcionales.',
     'heroProyectbtn'=> 'Mis proyectos',
 
+    //contact
+    'contact-title' => 'Ponte en contacto',
+    'contact-name' => 'Nombre',
+    'contact-msg' => 'Mensaje',
+
     //footer
     'siteSections'=> 'Secciones',
     'contactInfo'=> 'Información de contacto',

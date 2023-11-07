@@ -2,22 +2,33 @@
 
 <x-layout>
     <div class="h-screen bg-slate-300">
-        <div class="text-xl max-w-7xl mx-auto h-[calc(100vh-40px)]  flex justify-evenly items-center">
-            <x-card class="flex flex-col items-center justify-center p-10 bg-slate-200 rounded-md shadow-md">
+        <div class="text-xl max-w-[50rem] mx-auto h-[calc(100vh-40px)]  flex justify-evenly items-center">
+            <div class="flex flex-col items-center justify-center p-2 bg-slate-200 rounded-md shadow-md w-full">
+                
+                <div>
+                    <h1 class="text-xl font-semibold text-slate-500 mb-4">@lang('messages.contact-title')</h1>
+                </div>
+                
+                <div class="flex space-x-2 items-center">
 
-                <h1>Ponte en contacto</h1>
-
-                <form class="flex flex-col space-y-4" action="">
-                    <x-input placeholder="Name" id="name" name="name"/>
-                    <x-input type="email" placeholder="Email" id="email" name="email"/>
-                    <textarea 
+                    <form class="flex flex-col space-y-4 w-full" action="">
+                        @csrf
+                        <x-input :placeholder="trans('messages.contact-name')" id="name" name="name"/>
+                        <x-input type="email" placeholder="Email" id="email" name="email"/>
+                        <textarea 
                         class="w-full pr-8 rounded-sm border-0 py-1.5 px-2.5 text-sm ring-1 ring-slate-300 text-slate-400 focus:ring-2" 
-                        name="msg" 
-                        id="" 
+                        name="msg"
+                        id=""
                         cols="30" 
-                        rows="10">Message</textarea>
-                </form>
-            </x-card>
+                        rows="10">@lang('messages.contact-msg')</textarea>
+
+                        <x-button class="shadow-sm">submit</x-button>
+                    </form>
+                
+                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, incidunt!</p>
+                </div>
+            
+            </div>
         </div>
     </div>
 
