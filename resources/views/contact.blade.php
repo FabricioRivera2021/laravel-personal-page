@@ -24,8 +24,6 @@
 
                         <x-button class="shadow-sm">submit</x-button>
                     </form>
-                
-                    <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, incidunt!</p>
                 </div>
             
             </div>

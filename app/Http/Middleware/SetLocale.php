@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Route;
 
 class SetLocale
 {
@@ -17,7 +18,7 @@ class SetLocale
     public function handle(Request $request, Closure $next): Response
     {
         $locale = 'en'; // set en as the fallback locale
-        // dd($request->route('locale'));
+        // dd(Route::currentRouteName());
         if ($request->route('locale') == 'en') { // if the route starts with /es/* set locale to ES
             $locale = 'en';
         } else if ($request->route('locale') == 'es') { // if the route starts with /fr/* set locale to FR

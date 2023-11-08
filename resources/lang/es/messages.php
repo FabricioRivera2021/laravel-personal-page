@@ -27,6 +27,32 @@ return [
     'contact-name' => 'Nombre',
     'contact-msg' => 'Mensaje',
 
+    //about me
+    'aboutMe-about-me' => 'Sobre mi',
+    'aboutMe-about-subtitle' => 'Un poco de historia',
+    'aboutMe-about-text' => '<p>
+                                Este es mi rincón virtual Permíteme presentarme. Soy Fabricio, un apasionado del mundo digital y un entusiasta del desarrollo web. Desde que 
+                                comencé mi viaje en el mundo de la tecnología, me he embarcado en un emocionante viaje de aprendizaje y creatividad. Mi objetivo es convertir ideas en experiencias digitales asombrosas.
+                            </p>
+
+                            <p>
+                                Naci y me crie en Montevideo, Uruguay. Desde chico me empezaron a interesar las computadoras, una cosa llevo a la otra y con el tiempo termine estudiando informática en mi pais.
+                            </p>
+
+                            <p>
+                                Luego de empezar a estudiar en la universidad del trabajo (UTU). Encontre la logica y la programacion muy interesantes. Fue ahi donde empeze a estudiar Bases de datos y programación.
+                            </p>
+
+                            <p>
+                                En mi tiempo libre, me dedico a la fotografia. Tengo una página creada solo para esto donde intento mostrar un poco de mis fotografias al mundo.
+                            </p>
+
+                            <p>
+                                Si estás buscando un colaborador apasionado para tu próximo proyecto digital o simplemente deseas conectarte y hablar de tecnología, ¡estoy aquí 
+                                para ayudar! ¡Gracias por visitar mi sitio y espero que encuentres inspiración en mi trabajo y pasión por la tecnología web.
+                            </p>',
+    
+
     //footer
     'siteSections'=> 'Secciones',
     'contactInfo'=> 'Información de contacto',

@@ -31,41 +31,20 @@
             <x-card class="col-span-3 space-y-7">
                 <div>
                     <div class="flex justify-start items-center space-x-3 text-slate-500">
-                        <h3 class="max-w-[60rem] font-bold">
-                            ABOUT ME
+                        <h3 class="max-w-[60rem] font-bold uppercase">
+                            @lang('messages.aboutMe-about-me')
                         </h3>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                             <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
                         </svg>                      
                     </div>
                     <span class="block text-lg text-orange-400 font-thin">
-                        Story time
+                        @lang('messages.aboutMe-about-subtitle')
                     </span>
                 </div>
                 <div class="flex space-x-2">
                     <div class="space-y-4 text-sm">
-                        <p>
-                            Este es mi rincón virtual Permíteme presentarme. Soy Fabricio, un apasionado del mundo digital y un entusiasta del desarrollo web. Desde que 
-                            comencé mi viaje en el mundo de la tecnología, me he embarcado en un emocionante viaje de aprendizaje y creatividad. Mi objetivo es convertir ideas en experiencias digitales asombrosas.
-                        </p>
-
-                        <p>
-                            Naci y me crie en Montevideo, Uruguay. Desde chico me empezaron a interesar los temas tecnologicos y desde que tengo uso de razon siempre me encantaron las computadoras.
-                        </p>
-                        
-                        <p>
-                            Mis estudios abarcan muchos temas, he estudiado desde diseño grafico y fotografia (que por cierto puedes ver mis fotos en una pagina que tengo dedicada para eso)
-                        </p>
-                        
-                        <p>
-                            En mi tiempo libre, me gusta mantenerme al tanto de las últimas tendencias tecnológicas, experimentar con nuevas ideas y participar en proyectos 
-                            que desafíen mis habilidades y me permitan crecer como desarrollador web.
-                        </p>
-                        
-                        <p>
-                            Si estás buscando un colaborador apasionado para tu próximo proyecto digital o simplemente deseas conectarte y hablar de tecnología, ¡estoy aquí 
-                            para ayudar! ¡Gracias por visitar mi sitio y espero que encuentres inspiración en mi trabajo y pasión por la tecnología web.
-                        </p>
+                        @lang('messages.aboutMe-about-text')
                     </div>
                     <div class="h-[400px] w-[1050px] bg-slate-500 self-center rounded-xl">
                         {{--  --}}
