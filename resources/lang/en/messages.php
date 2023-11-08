@@ -26,6 +26,10 @@ return [
     'contact-title' => 'Get in touch',
     'contact-name' => 'Name',
     'contact-msg' => 'Message',
+    'contact-edu-title' => 'Education',
+    'contact-edu-msg' => '... what have i study',
+    'contact-exp-title' => 'Experience',
+    'contact-exp-msg' => '... a little about my background',
 
     //footer
     'siteSections'=> 'Site sections',

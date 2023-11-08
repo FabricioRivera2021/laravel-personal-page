@@ -26,6 +26,10 @@ return [
     'contact-title' => 'Ponte en contacto',
     'contact-name' => 'Nombre',
     'contact-msg' => 'Mensaje',
+    'contact-edu-title' => 'Educación',
+    'contact-edu-msg' => '... estudios realizados',
+    'contact-exp-title' => 'Experiencia',
+    'contact-exp-msg' => '... un poco sobre mi pasada experiencia',
 
     //footer
     'siteSections'=> 'Secciones',

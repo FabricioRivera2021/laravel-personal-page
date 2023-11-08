@@ -80,8 +80,8 @@
                 <x-card class="space-y-3 mt-10 bg-slate-100 rounded-md shadow-md col-span-2">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
-                            <h3 class="max-w-[60rem] font-bold">
-                                ACADEMICS
+                            <h3 class="max-w-[60rem] font-bold uppercase">
+                                @lang('messages.contact-edu-title')
                             </h3>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                 <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
@@ -89,13 +89,26 @@
                                 <path d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
                             </svg>
                         </div>
-                        <p class="block text-lg text-orange-400 font-thin">
-                            ... what have i studied
+                        <p class="block text-lg text-orange-400 font-thin capitalize">
+                            @lang('messages.contact-edu-msg')
                         </p>
                     </div>
                     <p class="text-gray-700 text-sm ">
-                        Welcome to my personal web development corner, where I embark on a creative odyssey through the fascinating realm of the web. Here, I'll be sharing my passion for crafting elegant and efficient web solutions, from front-end magic to back-end wizardry. 
-                        Join me as I explore the ever-evolving landscape of technology, one line of code at a time, and let's build the digital future together.
+                        I believe that education is a lifelong journey, and my academic experiences have been instrumental in shaping my knowledge and perspective. 
+                        I earned my Bachelor's degree in [Your Field of Study] from [University Name], where I gained a strong foundation in [Key Subjects or Skills]. 
+                        This was just the beginning of my educational adventure, as I continued to explore and expand my horizons. I pursued further studies in 
+                        [Mention Any Advanced Degrees or Courses], where I delved deeper into [Specific Areas of Study]. My academic pursuits have not only equipped 
+                        me with valuable skills but have also instilled in me a passion for continuous learning and growth.
+                    </p>
+                    <p class="text-gray-700 text-sm ">
+                        In addition to formal education, I'm a firm believer in self-directed learning. I've supplemented my academic achievements 
+                        with online courses, workshops, and hands-on projects. These experiences have allowed me to stay up-to-date with the latest 
+                        industry trends and technologies in the ever-evolving field of web development. I am a strong advocate for knowledge sharing 
+                        and have actively participated in [Mention Any Relevant Educational or Community Initiatives] where I've had the opportunity 
+                        to both teach and learn from others. Education is an ongoing journey, and I'm committed to embracing new challenges and expanding 
+                        my skill set to stay at the forefront of my field.
+
+                        Feel free to customize these paragraphs with your specific educational background and experiences to make them a perfect fit for your personal webpage.
                     </p>
                     <ul class="text-sm">
                         <li>item 1</li>
@@ -107,16 +120,16 @@
                 <x-card class="space-y-3 bg-slate-100 mt-20 rounded-md shadow-md col-span-1 row-span-2">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
-                            <h3 class="max-w-[60rem] font-bold">
-                                EXPERIENCE
+                            <h3 class="max-w-[60rem] font-bold uppercase">
+                                @lang('messages.contact-exp-title')
                             </h3>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                 <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z" clip-rule="evenodd" />
                                 <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
                             </svg>                                           
                         </div>
-                        <p class="block text-lg text-orange-400 font-thin">
-                            ... a little background
+                        <p class="block text-lg text-orange-400 font-thin capitalize">
+                            @lang('messages.contact-exp-msg')
                         </p>
                     </div>
                     <ol class="text-sm w-full">
@@ -136,7 +149,7 @@
                         </li>
                         <li class="bg-slate-100 mb-1">
                             <div class="flex items-center justify-between">
-                                <h4 class="text-lg font-semibold">Hospital Policial</h4>
+                                <h4 class="text-lg font-semibold">Hospital Vilardebo</h4>
                                 <p>01/03/2023</p>
                             </div>
                             <p>Pharmaceutical auxiliar</p>
@@ -156,6 +169,9 @@
                         <span class="block text-lg text-orange-400 font-thin">
                             ... that i have used
                         </span>
+                        <p class="text-gray-700 text-sm pt-5">
+                            I wield HTML, CSS, JavaScript, PHP, and Laravel to craft exceptional web applications, seamlessly blending design, interactivity, and robust functionality.
+                        </p>
                     </div>
                     <div class="flex space-x-4 flex-wrap self-center">
                         <div class="h-16 w-16 bg-slate-300 rounded-md"></div>
