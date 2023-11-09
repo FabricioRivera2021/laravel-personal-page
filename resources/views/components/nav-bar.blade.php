@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </li>
-            <li class="border rounded-sm border-slate-500 px-2 hover:bg-slate-600 hover:text-slate-100">
+            <li class="border rounded-sm border-slate-500 px-2 hover:bg-orange-600 hover:text-slate-100">
                 <a href="#">
                         @lang('messages.downloadCV')
                 </a>
