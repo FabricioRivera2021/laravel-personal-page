@@ -20,11 +20,13 @@
                     @lang('messages.hero-text-second')
                 </p>
 
-                <x-button><a href="#">@lang('messages.heroProyectbtn')</a></x-button>
+                <x-button><a href="/{{app()->getLocale()}}/projects">@lang('messages.heroProyectbtn')</a></x-button>
             </x-card>
         </div>
     </div>
 
+
+    {{-- todo ABOUT ME --------------------------------------------------------------------------------------------------------------------------------- --}}
     <div>
         {{-- todo primer bloque --}}
         <div class="text-3xl max-w-7xl mx-auto grid grid-col-4 gap-6 pt-16">
@@ -38,7 +40,7 @@
                             <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
                         </svg>                      
                     </div>
-                    <span class="block text-lg text-orange-400 font-thin">
+                    <span class="block text-lg text-orange-600 font-thin">
                         @lang('messages.aboutMe-about-subtitle')
                     </span>
                 </div>
@@ -60,7 +62,7 @@
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
-                                @lang('messages.contact-edu-title')
+                                @lang('messages.aboutMe-edu-title')
                             </h3>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                 <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
@@ -68,18 +70,18 @@
                                 <path d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
                             </svg>
                         </div>
-                        <p class="block text-lg text-orange-400 font-thin capitalize">
-                            @lang('messages.contact-edu-msg')
+                        <p class="block text-lg text-orange-600 font-thin capitalize">
+                            @lang('messages.aboutMe-edu-msg')
                         </p>
                     </div>
-                    <p class="text-gray-700 text-sm ">
+                    <p class=" text-sm text-red-400 ">
                         I believe that education is a lifelong journey, and my academic experiences have been instrumental in shaping my knowledge and perspective. 
                         I earned my Bachelor's degree in [Your Field of Study] from [University Name], where I gained a strong foundation in [Key Subjects or Skills]. 
                         This was just the beginning of my educational adventure, as I continued to explore and expand my horizons. I pursued further studies in 
                         [Mention Any Advanced Degrees or Courses], where I delved deeper into [Specific Areas of Study]. My academic pursuits have not only equipped 
                         me with valuable skills but have also instilled in me a passion for continuous learning and growth.
                     </p>
-                    <p class="text-gray-700 text-sm ">
+                    <p class="text-red-400 text-sm ">
                         In addition to formal education, I'm a firm believer in self-directed learning. I've supplemented my academic achievements 
                         with online courses, workshops, and hands-on projects. These experiences have allowed me to stay up-to-date with the latest 
                         industry trends and technologies in the ever-evolving field of web development. I am a strong advocate for knowledge sharing 
@@ -100,15 +102,15 @@
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
-                                @lang('messages.contact-exp-title')
+                                @lang('messages.aboutMe-exp-title')
                             </h3>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                 <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z" clip-rule="evenodd" />
                                 <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
                             </svg>                                           
                         </div>
-                        <p class="block text-lg text-orange-400 font-thin capitalize">
-                            @lang('messages.contact-exp-msg')
+                        <p class="block text-lg text-orange-600 font-thin capitalize">
+                            @lang('messages.aboutMe-exp-msg')
                         </p>
                     </div>
                     <ol class="text-sm w-full">
@@ -138,18 +140,18 @@
                 <x-card class="space-y-10 bg-slate-100 rounded-md shadow-md col-span-2">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
-                            <h3 class="max-w-[60rem] font-bold">
-                                TECHNOLOGIES
+                            <h3 class="max-w-[60rem] font-bold uppercase">
+                                @lang('messages.aboutMe-tech-title')
                             </h3>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                 <path fill-rule="evenodd" d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z" clip-rule="evenodd" />
                             </svg>                 
                         </div>
-                        <span class="block text-lg text-orange-400 font-thin">
-                            ... that i have used
+                        <span class="block text-lg text-orange-600 font-thin capitalize">
+                            @lang('messages.aboutMe-tech-msg')
                         </span>
                         <p class="text-gray-700 text-sm pt-5">
-                            I wield HTML, CSS, JavaScript, PHP, and Laravel to craft exceptional web applications, seamlessly blending design, interactivity, and robust functionality.
+                            @lang('messages.aboutMe-tech-text')
                         </p>
                     </div>
                     <div class="flex space-x-4 flex-wrap self-center">
@@ -167,6 +169,7 @@
     </div>
 </x-layout>
 
+{{-- todo FOOTER------------------------------------------------------------------------------------------------------------------------------- --}}
 <x-footer>
     <div>
         <ul>
@@ -203,7 +206,7 @@
             </li>
         </ul>
     </div>
-    <div>
+    <div class="self-end pb-5">
         <ul class="text-right">
             @lang('messages.info')
         </ul>

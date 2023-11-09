@@ -1,6 +1,7 @@
 <?php
  
 return [
+    //? INGLES
     //navbar
     'home' => 'Home',
     'proyects' => 'Projects',
@@ -26,10 +27,6 @@ return [
     'contact-title' => 'Get in touch',
     'contact-name' => 'Name',
     'contact-msg' => 'Message',
-    'contact-edu-title' => 'Education',
-    'contact-edu-msg' => '... what have i study',
-    'contact-exp-title' => 'Experience',
-    'contact-exp-msg' => '... a little about my background',
 
     //about me
     'aboutMe-about-me' => 'About me',
@@ -55,6 +52,15 @@ return [
                                 Si estás buscando un colaborador apasionado para tu próximo proyecto digital o simplemente deseas conectarte y hablar de tecnología, ¡estoy aquí 
                                 para ayudar! ¡Gracias por visitar mi sitio y espero que encuentres inspiración en mi trabajo y pasión por la tecnología web.
                             </p>',
+    'aboutMe-edu-title' => 'Education',
+    'aboutMe-edu-msg' => '... what have i study',
+    'aboutMe-exp-title' => 'Experience',
+    'aboutMe-exp-msg' => '... a little about my background',
+    'aboutMe-tech-title' => 'Technologies',
+    'aboutMe-tech-msg' => 'What would it be?',
+    'aboutMe-tech-text' => 'I wield HTML, CSS, JavaScript, PHP, and Laravel to craft exceptional web applications, seamlessly blending design, interactivity, and robust functionality.',
+
+    
     
 
 

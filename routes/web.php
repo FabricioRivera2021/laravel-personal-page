@@ -33,4 +33,10 @@ Route::group([
                 'locale' => $locale
             ]);
         })->name('contact');
+        Route::get('/projects', function ($locale) {
+            app()->setLocale($locale); // Set the current locale
+            return view('projects', [
+                'locale' => $locale
+            ]);
+        })->name('projects');
 });
