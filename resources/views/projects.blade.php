@@ -3,6 +3,7 @@
     <x-navbar />
 
     <div class="pt-12 text-3xl max-w-7xl mx-auto flex flex-col justify-evenly">
+
         <h2 class="font-semibold uppercase text-slate-600 mt-20 mb-5">Photography site <a class="text-lg underline text-blue-400" href="https://fabriciorivera.art">View site</a> </h2>
         <div>
             <div class="flex items-center justify-between">
@@ -20,6 +21,8 @@
         <div class="flex bg-slate-300 h-[1095px] py-8">
             {{--  --}}
         </div>
+        
+        
         <h2 class="font-semibold uppercase text-slate-600 mt-20 mb-5">Personal website (legacy) <span class="text-lg underline text-blue-400">View site</span> </h2>
         <div>
             <div class="flex items-center justify-between">
