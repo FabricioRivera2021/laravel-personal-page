@@ -7,8 +7,8 @@
             <x-navbar-link href="#">Blog</x-navbar-link>
         </ul>
         <ul class="flex space-x-7 items-center">
-            <x-navbar-link class="text-sm" href="#">Github</x-navbar-link>
-            <x-navbar-link class="text-sm" href="#">LinkedIn</x-navbar-link>
+            <x-navbar-link class="text-sm" href="https://github.com/FabricioRivera2021">Github</x-navbar-link>
+            <x-navbar-link class="text-sm" href="https://www.linkedin.com/in/fabricio-rivera/">LinkedIn</x-navbar-link>
             <x-navbar-link class="text-sm" href="#">Mail</x-navbar-link>
             <li class="flex">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </li>
-            <li class="border rounded-sm border-slate-500 px-2 hover:bg-slate-600 hover:text-slate-100">
+            <li class="border rounded-sm border-slate-500 px-2 hover:bg-orange-600 hover:text-slate-100">
                 <a href="#">
                         @lang('messages.downloadCV')
                 </a>
