@@ -31,29 +31,41 @@ return [
     //about me
     'aboutMe-about-me' => 'About me',
     'aboutMe-about-subtitle' => 'Story time',
-    'aboutMe-about-text' => '<p>
-                                Este es mi rincón virtual Permíteme presentarme. Soy Fabricio, un apasionado del mundo digital y un entusiasta del desarrollo web. Desde que 
-                                comencé mi viaje en el mundo de la tecnología, me he embarcado en un emocionante viaje de aprendizaje y creatividad. Mi objetivo es convertir ideas en experiencias digitales asombrosas.
+    'aboutMe-about-text' => "<p>
+                            This is my virtual corner. Let me introduce myself. I'm Fabricio, a digital enthusiast and a web development enthusiast. 
+                            Since I started my journey in the world of technology, I've embarked on an exciting journey of learning and creativity. My goal is to turn ideas into amazing digital experiences.
                             </p>
-
                             <p>
-                                Naci y me crie en Montevideo, Uruguay. Desde chico me empezaron a interesar las computadoras, una cosa llevo a la otra y con el tiempo termine estudiando informática en mi pais.
+                            I was born and raised in Montevideo, Uruguay. From a young age, I became interested in computers, and one thing led to another, eventually leading me to study computer science in my country.
                             </p>
-
                             <p>
-                                Luego de empezar a estudiar en la universidad del trabajo (UTU). Encontre la logica y la programacion muy interesantes. Fue ahi donde empeze a estudiar Bases de datos y programación.
+                            After starting my studies at the University of Work (UTU), I found logic and programming very interesting. That's where I began to study databases and programming.
                             </p>
-
                             <p>
-                                En mi tiempo libre, me dedico a la fotografia. Tengo una página creada solo para esto donde intento mostrar un poco de mis fotografias al mundo.
+                            In my free time, I dedicate myself to photography. I have a website created just for this, where I try to showcase some of my photographs to the world.
                             </p>
-
                             <p>
-                                Si estás buscando un colaborador apasionado para tu próximo proyecto digital o simplemente deseas conectarte y hablar de tecnología, ¡estoy aquí 
-                                para ayudar! ¡Gracias por visitar mi sitio y espero que encuentres inspiración en mi trabajo y pasión por la tecnología web.
-                            </p>',
+                            If you're looking for a passionate collaborator for your next digital project or simply want to connect and talk about technology, I'm here to help! Thanks for visiting my site, 
+                            and I hope you find inspiration in my work and passion for web technology.
+                            </p>",
     'aboutMe-edu-title' => 'Education',
     'aboutMe-edu-msg' => '... what have i study',
+    'aboutMe-edu-text'=>"<p class=' text-sm'>
+                            I believe that education is a lifelong journey, and my academic experiences have been instrumental in shaping my knowledge and perspective. 
+                            I earned my Bachelor's degree in [Your Field of Study] from [University Name], where I gained a strong foundation in [Key Subjects or Skills]. 
+                            This was just the beginning of my educational adventure, as I continued to explore and expand my horizons. I pursued further studies in 
+                            [Mention Any Advanced Degrees or Courses], where I delved deeper into [Specific Areas of Study]. My academic pursuits have not only equipped 
+                            me with valuable skills but have also instilled in me a passion for continuous learning and growth.
+                        </p>
+                        <p class='text-sm'>
+                            In addition to formal education, I'm a firm believer in self-directed learning. I've supplemented my academic achievements 
+                            with online courses, workshops, and hands-on projects. These experiences have allowed me to stay up-to-date with the latest 
+                            industry trends and technologies in the ever-evolving field of web development. I am a strong advocate for knowledge sharing 
+                            and have actively participated in [Mention Any Relevant Educational or Community Initiatives] where I've had the opportunity 
+                            to both teach and learn from others. Education is an ongoing journey, and I'm committed to embracing new challenges and expanding 
+                            my skill set to stay at the forefront of my field.
+                            Feel free to customize these paragraphs with your specific educational background and experiences to make them a perfect fit for your personal webpage.
+                        </p>",
     'aboutMe-exp-title' => 'Experience',
     'aboutMe-exp-msg' => '... a little about my background',
     'aboutMe-tech-title' => 'Technologies',

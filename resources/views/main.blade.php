@@ -74,23 +74,7 @@
                             @lang('messages.aboutMe-edu-msg')
                         </p>
                     </div>
-                    <p class=" text-sm text-red-400 ">
-                        I believe that education is a lifelong journey, and my academic experiences have been instrumental in shaping my knowledge and perspective. 
-                        I earned my Bachelor's degree in [Your Field of Study] from [University Name], where I gained a strong foundation in [Key Subjects or Skills]. 
-                        This was just the beginning of my educational adventure, as I continued to explore and expand my horizons. I pursued further studies in 
-                        [Mention Any Advanced Degrees or Courses], where I delved deeper into [Specific Areas of Study]. My academic pursuits have not only equipped 
-                        me with valuable skills but have also instilled in me a passion for continuous learning and growth.
-                    </p>
-                    <p class="text-red-400 text-sm ">
-                        In addition to formal education, I'm a firm believer in self-directed learning. I've supplemented my academic achievements 
-                        with online courses, workshops, and hands-on projects. These experiences have allowed me to stay up-to-date with the latest 
-                        industry trends and technologies in the ever-evolving field of web development. I am a strong advocate for knowledge sharing 
-                        and have actively participated in [Mention Any Relevant Educational or Community Initiatives] where I've had the opportunity 
-                        to both teach and learn from others. Education is an ongoing journey, and I'm committed to embracing new challenges and expanding 
-                        my skill set to stay at the forefront of my field.
-
-                        Feel free to customize these paragraphs with your specific educational background and experiences to make them a perfect fit for your personal webpage.
-                    </p>
+                    @lang('messages.aboutMe-edu-text')
                     <ul class="text-sm">
                         <li>item 1</li>
                         <li>item 1</li>
@@ -171,44 +155,46 @@
 
 {{-- todo FOOTER------------------------------------------------------------------------------------------------------------------------------- --}}
 <x-footer>
-    <div>
-        <ul>
-            <li class="mb-2">
-                <a class="hover:underline hover:text-orange-400" href="/en">
-                    English version
-                </a>
-            </li>
-            <li>
-                <a class="hover:underline hover:text-orange-400" href="/es">
-                    Version en español
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div>
-        <ul class="text-center">
-            <li class="mb-2 font-semibold text-base">@lang('messages.siteSections')</li>
-            <li class="flex space-x-3 justify-center">
-                <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.home')</a></div>
-                <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.proyects')</a></div>
-                <div><a class="hover:underline hover:text-orange-400" href="/{{app()->getLocale()}}/contact">@lang('messages.contact')</a></div>
-                <div><a class="hover:underline hover:text-orange-400" href="#">blog</a></div>
-            </li>
-        </ul>
-    </div>  
-    <div>
-        <ul class="text-center">
-            <li class="mb-2 font-semibold text-base">@lang('messages.contactInfo')</li>
-            <li class="flex space-x-3">
-                <div>Fabricio.Rivera2012@gmail.com</div>
-                <div><a class="hover:underline hover:text-orange-400" href="#">github/fabricioRivera</a></div>
-                <div><a class="hover:underline hover:text-orange-400" href="#">linkedin/fabricioRivera</a></div>
-            </li>
-        </ul>
-    </div>
-    <div class="self-end pb-5">
-        <ul class="text-right">
-            @lang('messages.info')
-        </ul>
+    <div class="grid grid-cols-2 grid-rows-2 w-full h-full">
+        <div class="place-content-top justify-self-start">
+            <ul class="text-left">
+                <li class="mb-2 font-semibold text-base">@lang('messages.siteSections')</li>
+                <li class="flex space-x-3 justify-center">
+                    <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.home')</a></div>
+                    <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.proyects')</a></div>
+                    <div><a class="hover:underline hover:text-orange-400" href="/{{app()->getLocale()}}/contact">@lang('messages.contact')</a></div>
+                    <div><a class="hover:underline hover:text-orange-400" href="#">blog</a></div>
+                </li>
+            </ul>
+        </div>  
+        <div class="place-self-top justify-self-end">
+            <ul class="text-right">
+                <li class="mb-2 font-semibold text-base">@lang('messages.contactInfo')</li>
+                <li class="flex space-x-3">
+                    <div>Fabricio.Rivera2012@gmail.com</div>
+                    <div><a class="hover:underline hover:text-orange-400" href="#">github/fabricioRivera</a></div>
+                    <div><a class="hover:underline hover:text-orange-400" href="#">linkedin/fabricioRivera</a></div>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li class="mb-2">
+                    <a class="hover:underline hover:text-orange-400" href="/en">
+                        English version
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:underline hover:text-orange-400" href="/es">
+                        Version en español
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class="text-right">
+                @lang('messages.info')
+            </ul>
+        </div>
     </div>
 </x-footer>
