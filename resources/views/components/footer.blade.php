@@ -6,10 +6,11 @@
                 <ul class="text-left">
                     <li class="mb-2 font-semibold text-base">@lang('messages.siteSections')</li>
                     <li class="flex space-x-3 justify-center">
-                        <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.home')</a></div>
-                        <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.proyects')</a></div>
-                        <div><a class="hover:underline hover:text-orange-400" href="/{{app()->getLocale()}}/contact">@lang('messages.contact')</a></div>
+                        <div><a class="hover:underline hover:text-orange-400" href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</a></div>
+                        <div><a class="hover:underline hover:text-orange-400" href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</a></div>
+                        <div><a class="hover:underline hover:text-orange-400" href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</a></div>
                         <div><a class="hover:underline hover:text-orange-400" href="#">blog</a></div>
+                        <div><a class="hover:underline hover:text-orange-400" href="{{ route('cv', app()->getLocale()) }}">CV</a></div>
                     </li>
                 </ul>
             </div>  

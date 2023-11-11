@@ -1,9 +1,9 @@
 <div class="fixed w-[100vw] bg-slate-700 z-50">
     <nav class="max-w-[90rem] mx-auto h-10 px-20 flex justify-between space-x-24 items-center bg-slate-700 text-slate-100">
         <ul class="flex space-x-7 font-semibold">
-            <x-navbar-link href="/{{app()->getLocale()}}/">@lang('messages.home')</x-navbar-link>
-            <x-navbar-link href="/{{app()->getLocale()}}/projects">@lang('messages.proyects')</x-navbar-link>
-            <x-navbar-link href="/{{app()->getLocale()}}/contact">@lang('messages.contact')</x-navbar-link>
+            <x-navbar-link href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</x-navbar-link>
+            <x-navbar-link href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
+            <x-navbar-link href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
             <x-navbar-link href="#">Blog</x-navbar-link>
         </ul>
         <ul class="flex space-x-7 items-center">
@@ -22,7 +22,7 @@
                 </div>
             </li>
             <li class="border rounded-sm border-slate-500 px-2 hover:bg-orange-600 hover:text-slate-100">
-                <a href="#">
+                <a href="{{ route('cv', app()->getLocale()) }}">
                         @lang('messages.downloadCV')
                 </a>
             </li>

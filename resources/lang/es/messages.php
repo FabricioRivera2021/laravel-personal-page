@@ -27,6 +27,7 @@ return [
     'contact-title' => 'Ponte en contacto',
     'contact-name' => 'Nombre',
     'contact-msg' => 'Mensaje',
+    'contact-submit' => 'Enviar',
 
     //about me
     'aboutMe-about-me' => 'Sobre mi',

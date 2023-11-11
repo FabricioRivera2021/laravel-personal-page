@@ -27,6 +27,7 @@ return [
     'contact-title' => 'Get in touch',
     'contact-name' => 'Name',
     'contact-msg' => 'Message',
+    'contact-submit' => 'Submit',
 
     //about me
     'aboutMe-about-me' => 'About me',
@@ -52,19 +53,15 @@ return [
     'aboutMe-edu-msg' => '... what have i study',
     'aboutMe-edu-text'=>"<p class=' text-sm'>
                             I believe that education is a lifelong journey, and my academic experiences have been instrumental in shaping my knowledge and perspective. 
-                            I earned my Bachelor's degree in [Your Field of Study] from [University Name], where I gained a strong foundation in [Key Subjects or Skills]. 
+                            I earned my Bachelor's degree in computer science from UTU, where I gained a strong foundation in programming and logic. 
                             This was just the beginning of my educational adventure, as I continued to explore and expand my horizons. I pursued further studies in 
-                            [Mention Any Advanced Degrees or Courses], where I delved deeper into [Specific Areas of Study]. My academic pursuits have not only equipped 
-                            me with valuable skills but have also instilled in me a passion for continuous learning and growth.
+                            Photograpy and visual design. My academic pursuits have not only equipped me with valuable skills but have also instilled in me a passion for continuous learning and growth.
                         </p>
                         <p class='text-sm'>
                             In addition to formal education, I'm a firm believer in self-directed learning. I've supplemented my academic achievements 
                             with online courses, workshops, and hands-on projects. These experiences have allowed me to stay up-to-date with the latest 
-                            industry trends and technologies in the ever-evolving field of web development. I am a strong advocate for knowledge sharing 
-                            and have actively participated in [Mention Any Relevant Educational or Community Initiatives] where I've had the opportunity 
-                            to both teach and learn from others. Education is an ongoing journey, and I'm committed to embracing new challenges and expanding 
-                            my skill set to stay at the forefront of my field.
-                            Feel free to customize these paragraphs with your specific educational background and experiences to make them a perfect fit for your personal webpage.
+                            industry trends and technologies in the ever-evolving field of web development. Education is an ongoing journey, and I'm committed 
+                            to embracing new challenges and expanding my skill set to stay at the forefront of my field.
                         </p>",
     'aboutMe-exp-title' => 'Experience',
     'aboutMe-exp-msg' => '... a little about my background',

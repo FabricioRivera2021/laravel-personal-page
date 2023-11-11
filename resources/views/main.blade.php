@@ -75,12 +75,6 @@
                         </p>
                     </div>
                     @lang('messages.aboutMe-edu-text')
-                    <ul class="text-sm">
-                        <li>item 1</li>
-                        <li>item 1</li>
-                        <li>item 1</li>
-                        <li>item 1</li>
-                    </ul>
                 </x-card>
                 <x-card class="space-y-3 bg-slate-100 mt-20 rounded-md shadow-md col-span-1 row-span-2">
                     <div>
@@ -93,31 +87,40 @@
                                 <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
                             </svg>                                           
                         </div>
-                        <p class="block text-lg text-orange-600 font-thin capitalize">
+                        <p class="block text-lg text-orange-600 font-thin capitalize mb-2">
                             @lang('messages.aboutMe-exp-msg')
                         </p>
                     </div>
                     <ol class="text-sm w-full">
-                        <li class="bg-slate-100 mb-1">
-                            <div class="flex items-center justify-between">
+                        <li class="bg-slate-100 mb-5">
+                            <div class="flex items-center justify-between bg-slate-200">
                                 <h4 class="text-lg font-semibold">Hospital Policial</h4>
-                                <p>01/03/2023</p>
+                                <p>01/03/23 - 01/03/23</p>
                             </div>
                             <p>IT - Technical support</p>
+                            <p class="text-slate-500">
+                                Realizando tareas de soporte técnico en el departamento de informática del hospital. Mantenimiento e instalación de equipos.
+                            </p>
                         </li>
-                        <li class="bg-slate-100 mb-1">
-                            <div class="flex items-center justify-between">
+                        <li class="bg-slate-100 mb-5">
+                            <div class="flex items-center justify-between bg-slate-200">
                                 <h4 class="text-lg font-semibold">Hospital Policial</h4>
-                                <p>01/03/2023</p>
+                                <p>01/03/23 - 01/03/23</p>
                             </div>
                             <p>Pharmaceutical auxiliar</p>
+                            <p class="text-slate-500">
+                                En despacho de medicamentos, con tareas como recepción de recetas y control de las mismas. Ademas de realizar controles de stock y vencimientos.
+                            </p>
                         </li>
-                        <li class="bg-slate-100 mb-1">
-                            <div class="flex items-center justify-between">
+                        <li class="bg-slate-100 mb-5">
+                            <div class="flex items-center justify-between bg-slate-200">
                                 <h4 class="text-lg font-semibold">Hospital Vilardebo</h4>
-                                <p>01/03/2023</p>
+                                <p>01/03/23 - 01/03/23</p>
                             </div>
                             <p>Pharmaceutical auxiliar</p>
+                            <p class="text-slate-500">
+                                Como pasantia, atencion al publico y dispensación de medicamentos. Fraccionamiento para salas del hospital (unidosis). Ademas de control de stock y vencimientos.
+                            </p>
                         </li>
                     </ol>
                 </x-card>
@@ -138,14 +141,31 @@
                             @lang('messages.aboutMe-tech-text')
                         </p>
                     </div>
-                    <div class="flex space-x-4 flex-wrap self-center">
-                        <div class="h-16 w-16 bg-slate-300 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-200 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-400 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-300 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-200 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-400 rounded-md"></div>
-                        <div class="h-16 w-16 bg-slate-300 rounded-md"></div>
+                    <div class="flex space-x-6 flex-wrap self-center items-center pt-4">
+                        <div class="w-14 rounded-md">
+                            <img src="{{ Vite::asset('resources/images/icons/html-5.png') }}" class="w-20" alt="icon">
+                        </div>
+                        <div class="w-14 rounded-md">
+                            <img src="{{ Vite::asset('resources/images/icons/css-3.png') }}" class="w-20" alt="icon">
+                        </div>
+                        <div class="w-12 rounded-md">
+                            <img src="{{ Vite::asset('resources/images/icons/js.png') }}" class="w-20" alt="icon">
+                        </div>
+                        <div class="w-16 rounded-md">
+                            <img src="{{ Vite::asset('resources/images/icons/react.png') }}" class="w-20" alt="icon">
+                        </div>
+                        <div class="w-16 rounded-md">
+                            <img src="{{ Vite::asset('resources/images/icons/php.png') }}" class="w-20" alt="icon">
+                        </div>
+                        <div class="w-14 rounded-md">
+                            <img src="{{ Vite::asset('resources/images/icons/laravel.png') }}" class="w-20" alt="icon">
+                        </div>
+                        <div class="w-16 rounded-md">
+                            <img src="{{ Vite::asset('resources/images/icons/tailwind.png') }}" class="w-20" alt="icon">
+                        </div>
+                        <div class="w-16 rounded-md">
+                            <img src="{{ Vite::asset('resources/images/icons/aws.png') }}" class="w-20" alt="icon">
+                        </div>
                     </div>
                 </x-card>
             </div>
