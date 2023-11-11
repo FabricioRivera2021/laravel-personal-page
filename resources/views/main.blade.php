@@ -154,47 +154,4 @@
 </x-layout>
 
 {{-- todo FOOTER------------------------------------------------------------------------------------------------------------------------------- --}}
-<x-footer>
-    <div class="grid grid-cols-2 grid-rows-2 w-full h-full">
-        <div class="place-content-top justify-self-start">
-            <ul class="text-left">
-                <li class="mb-2 font-semibold text-base">@lang('messages.siteSections')</li>
-                <li class="flex space-x-3 justify-center">
-                    <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.home')</a></div>
-                    <div><a class="hover:underline hover:text-orange-400" href="#">@lang('messages.proyects')</a></div>
-                    <div><a class="hover:underline hover:text-orange-400" href="/{{app()->getLocale()}}/contact">@lang('messages.contact')</a></div>
-                    <div><a class="hover:underline hover:text-orange-400" href="#">blog</a></div>
-                </li>
-            </ul>
-        </div>  
-        <div class="place-self-top justify-self-end">
-            <ul class="text-right">
-                <li class="mb-2 font-semibold text-base">@lang('messages.contactInfo')</li>
-                <li class="flex space-x-3">
-                    <div>Fabricio.Rivera2012@gmail.com</div>
-                    <div><a class="hover:underline hover:text-orange-400" href="#">github/fabricioRivera</a></div>
-                    <div><a class="hover:underline hover:text-orange-400" href="#">linkedin/fabricioRivera</a></div>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li class="mb-2">
-                    <a class="hover:underline hover:text-orange-400" href="/en">
-                        English version
-                    </a>
-                </li>
-                <li>
-                    <a class="hover:underline hover:text-orange-400" href="/es">
-                        Version en español
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <ul class="text-right">
-                @lang('messages.info')
-            </ul>
-        </div>
-    </div>
-</x-footer>
+<x-footer />

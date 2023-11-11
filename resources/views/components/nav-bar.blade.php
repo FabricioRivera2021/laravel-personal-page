@@ -7,8 +7,8 @@
             <x-navbar-link href="#">Blog</x-navbar-link>
         </ul>
         <ul class="flex space-x-7 items-center">
-            <x-navbar-link class="text-sm" href="https://github.com/FabricioRivera2021">Github</x-navbar-link>
-            <x-navbar-link class="text-sm" href="https://www.linkedin.com/in/fabricio-rivera/">LinkedIn</x-navbar-link>
+            <x-navbar-link class="text-sm" href="https://github.com/FabricioRivera2021" target="blank">Github</x-navbar-link>
+            <x-navbar-link class="text-sm" href="https://www.linkedin.com/in/fabricio-rivera/" target="blank">LinkedIn</x-navbar-link>
             <x-navbar-link class="text-sm" href="#">Mail</x-navbar-link>
             <li class="flex">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

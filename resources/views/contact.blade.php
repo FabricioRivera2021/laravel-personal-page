@@ -1,15 +1,15 @@
 <x-nav-bar />
 
 <x-layout>
-    <div class="h-screen bg-slate-300">
-        <div class="text-xl max-w-[50rem] mx-auto h-[calc(100vh-40px)]  flex justify-evenly items-center">
-            <div class="flex flex-col items-center justify-center p-2 bg-slate-200 rounded-md shadow-md w-full">
+    <div class="h-screen bg-slate-100">
+        <div class="text-xl max-w-[50rem] mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
+            <div class="flex flex-col items-center justify-center p-5 bg-slate-600 rounded-md shadow-md w-full">
                 
                 <div>
-                    <h1 class="text-xl font-semibold text-slate-500 mb-4">@lang('messages.contact-title')</h1>
+                    <h1 class="text-xl font-semibold text-slate-100 mb-4">@lang('messages.contact-title')</h1>
                 </div>
                 
-                <div class="flex space-x-2 items-center">
+                <div class="flex space-x-2 items-center w-full px-14">
 
                     <form class="flex flex-col space-y-4 w-full" action="">
                         @csrf

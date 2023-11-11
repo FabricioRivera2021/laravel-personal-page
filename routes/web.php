@@ -18,25 +18,22 @@ Route::get('/', function () {
     return redirect('/' . app()->getLocale());
 });
 
-Route::get('/contact', function () {
-    return redirect('/' . app()->getLocale() . '/contact');
-});
-
 Route::group([
     'prefix' => '/{locale}',
     'middleware' => 'locale'],
     function ($locale) {
+        
         Route::get('/', function ($locale) { return view('main', ['locale' => $locale]); })->name('root');
+        
         Route::get('/contact', function ($locale) {
             app()->setLocale($locale); // Set the current locale
-            return view('contact', [
-                'locale' => $locale
-            ]);
-        })->name('contact');
+            return view('contact', ['locale' => $locale]);})->name('contact');
+
         Route::get('/projects', function ($locale) {
             app()->setLocale($locale); // Set the current locale
-            return view('projects', [
-                'locale' => $locale
-            ]);
-        })->name('projects');
+            return view('projects', ['locale' => $locale]);})->name('projects');
+        
+        Route::get('/legacy', function ($locale) {
+            app()->setLocale($locale); // Set the current locale
+            return view('legacy', ['locale' => $locale]);})->name('legacy');
 });
