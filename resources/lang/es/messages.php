@@ -55,12 +55,43 @@ return [
                             </p>',
     'aboutMe-edu-title' => 'Educación',
     'aboutMe-edu-msg' => '... estudios realizados',
+    'aboutMe-edu-text'=>"<p class=' text-sm'>
+                            traducir
+                        </p>
+                        <p class='text-sm'>
+                            traducir
+                        </p>",
     'aboutMe-exp-title' => 'Experiencia',
     'aboutMe-exp-msg' => '... un poco sobre mi pasada experiencia',
+    'aboutMe-exp-item1-place' => 'Dirección nacional de sanidad policial',
+    'aboutMe-exp-item1-rol' => 'IT - Soporte técnico',
+    'aboutMe-exp-item1-desc' => 'Realizando tareas de soporte técnico en el departamento de informática del hospital. Mantenimiento e instalación de equipos.',
+    'aboutMe-exp-item2-place' => 'Dirección nacional de sanidad policial',
+    'aboutMe-exp-item2-rol' => 'Auxiliar de farmacia',
+    'aboutMe-exp-item2-desc' => 'En despacho de medicamentos, con tareas como recepción de recetas y control de las mismas. Ademas de realizar controles de stock y vencimientos.',
+    'aboutMe-exp-item3-place' => 'Salud publica - hospital Vilardebo',
+    'aboutMe-exp-item3-rol' => 'Auxiliar de farmacia - pasantia',
+    'aboutMe-exp-item3-desc' => 'Como pasantia, atencion al publico y dispensación de medicamentos. Fraccionamiento para salas del hospital (unidosis). Ademas de control de stock y vencimientos.',
     'aboutMe-tech-title' => 'Tecnologias',
-    'aboutMe-tech-msg' => 'Cual sera esta vez?',
+    'aboutMe-tech-msg' => '...Cual sera esta vez?',
     'aboutMe-tech-text' => 'Utilizo HTML, CSS, JavaScript, PHP y Laravel para crear aplicaciones web excepcionales, combinando de manera fluida diseño, interactividad y funcionalidad sólida.',
-    
+
+
+    //projects
+    'project-1-title' => 'Sitio de fotografía',
+    'project-1-subtitle' => '',
+    'project-1-desc' => 'Es un sitio web creado con el proposito de demostrar mi trabajo como fotografo, 
+                         fue el segundo sitio web que cree, el mismo esta echo con React y Tailwind CSS. Hosteado desde una 
+                         instancia virtual utilizando los servicios de AWS. Desde dicho sitio se pueden ver fotografias 
+                         relacionadas con los retratos tanto en exteriores como interiores. Ademas de tambien tener fotos de productos. ',
+    'project-2-title' => 'Página personal (legacy)',
+    'project-2-subtitle' => 'version antigua',
+    'project-2-desc' => 'Esta fue la primera página web que publique, echa con HTML/CSS, Javascript y una pizca de PHP. 
+                         La diseñe sin utilizar ningun framework ya que al ser la primera página que iba a realizar para publicar 
+                         en internet queria realizarla con las tecnologias mas basicas. Con el objetivo de mejorar el diseño y aumentar 
+                         las caracteristicas de mi página personal realize una nueva version, echa con Laravel y que implementa un 
+                         Blog al que pienso ir subiendo contenido que pueda ser de utilidad para la comunidad.',
+    'view-site' => 'ver sitio',
 
     //footer
     'siteSections'=> 'Secciones',

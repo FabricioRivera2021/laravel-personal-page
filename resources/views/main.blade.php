@@ -57,8 +57,8 @@
 
         {{-- todo segundo bloque --}}
         <div class="bg-gradient-to-b from-slate-700 to-blue-500 pb-6">
-            <div class="text-3xl max-w-7xl mx-auto grid grid-cols-3 gap-6 pt-16">
-                <x-card class="space-y-3 mt-10 bg-slate-100 rounded-md shadow-md col-span-2">
+            <div class="text-3xl max-w-7xl mx-auto grid grid-cols-4 gap-6 pt-16">
+                <x-card class="space-y-3 mt-10 bg-slate-100 rounded-t-md shadow-md col-span-2 row-span-2">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
@@ -76,7 +76,7 @@
                     </div>
                     @lang('messages.aboutMe-edu-text')
                 </x-card>
-                <x-card class="space-y-3 bg-slate-100 mt-20 rounded-md shadow-md col-span-1 row-span-2">
+                <x-card class="space-y-3 bg-slate-100 mt-20 rounded-t-md shadow-md col-span-2 row-span-2">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
@@ -94,78 +94,86 @@
                     <ol class="text-sm w-full">
                         <li class="bg-slate-100 mb-5">
                             <div class="flex items-center justify-between bg-slate-200">
-                                <h4 class="text-lg font-semibold">Hospital Policial</h4>
+                                <h4 class="text-lg font-semibold">@lang('messages.aboutMe-exp-item1-place')</h4>
                                 <p>01/03/23 - 01/03/23</p>
                             </div>
-                            <p>IT - Technical support</p>
+                            <p>@lang('messages.aboutMe-exp-item1-rol')</p>
                             <p class="text-slate-500">
-                                Realizando tareas de soporte técnico en el departamento de informática del hospital. Mantenimiento e instalación de equipos.
+                                @lang('messages.aboutMe-exp-item1-desc')
                             </p>
                         </li>
                         <li class="bg-slate-100 mb-5">
                             <div class="flex items-center justify-between bg-slate-200">
-                                <h4 class="text-lg font-semibold">Hospital Policial</h4>
+                                <h4 class="text-lg font-semibold">@lang('messages.aboutMe-exp-item2-place')</h4>
                                 <p>01/03/23 - 01/03/23</p>
                             </div>
-                            <p>Pharmaceutical auxiliar</p>
+                            <p>@lang('messages.aboutMe-exp-item2-rol')</p>
                             <p class="text-slate-500">
-                                En despacho de medicamentos, con tareas como recepción de recetas y control de las mismas. Ademas de realizar controles de stock y vencimientos.
+                                @lang('messages.aboutMe-exp-item2-desc')
                             </p>
                         </li>
                         <li class="bg-slate-100 mb-5">
                             <div class="flex items-center justify-between bg-slate-200">
-                                <h4 class="text-lg font-semibold">Hospital Vilardebo</h4>
+                                <h4 class="text-lg font-semibold">@lang('messages.aboutMe-exp-item3-place')</h4>
                                 <p>01/03/23 - 01/03/23</p>
                             </div>
-                            <p>Pharmaceutical auxiliar</p>
+                            <p>@lang('messages.aboutMe-exp-item3-rol')</p>
                             <p class="text-slate-500">
-                                Como pasantia, atencion al publico y dispensación de medicamentos. Fraccionamiento para salas del hospital (unidosis). Ademas de control de stock y vencimientos.
+                                @lang('messages.aboutMe-exp-item3-desc')
                             </p>
                         </li>
                     </ol>
                 </x-card>
-                <x-card class="space-y-10 bg-slate-100 rounded-md shadow-md col-span-2">
-                    <div>
-                        <div class="flex justify-start items-center space-x-3 text-slate-500">
-                            <h3 class="max-w-[60rem] font-bold uppercase">
-                                @lang('messages.aboutMe-tech-title')
-                            </h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                                <path fill-rule="evenodd" d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z" clip-rule="evenodd" />
-                            </svg>                 
+                <x-card class="space-y-10 bg-slate-100 rounded-b-md shadow-md col-span-3">
+                    <div class="flex justify-evenly w-full h-full items-center">    
+                        <div>
+                            <div class="flex justify-start items-center space-x-3 text-slate-500">
+                                <h3 class="max-w-[60rem] font-bold uppercase">
+                                    @lang('messages.aboutMe-tech-title')
+                                </h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                    <path fill-rule="evenodd" d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z" clip-rule="evenodd" />
+                                </svg>                 
+                            </div>
+                            <span class="block text-lg text-orange-600 font-thin capitalize">
+                                @lang('messages.aboutMe-tech-msg')
+                            </span>
                         </div>
-                        <span class="block text-lg text-orange-600 font-thin capitalize">
-                            @lang('messages.aboutMe-tech-msg')
-                        </span>
-                        <p class="text-gray-700 text-sm pt-5">
+                        <div class="flex space-x-4 flex-wrap self-center items-center">
+                            <div class="w-14 rounded-md">
+                                <img src="{{ Vite::asset('resources/images/icons/html-5.png') }}" class="w-20" alt="icon">
+                            </div>
+                            <div class="w-14 rounded-md">
+                                <img src="{{ Vite::asset('resources/images/icons/css-3.png') }}" class="w-20" alt="icon">
+                            </div>
+                            <div class="w-12 rounded-md">
+                                <img src="{{ Vite::asset('resources/images/icons/js.png') }}" class="w-20" alt="icon">
+                            </div>
+                            <div class="w-16 rounded-md">
+                                <img src="{{ Vite::asset('resources/images/icons/react.png') }}" class="w-20" alt="icon">
+                            </div>
+                            <div class="w-16 rounded-md">
+                                <img src="{{ Vite::asset('resources/images/icons/php.png') }}" class="w-20" alt="icon">
+                            </div>
+                            <div class="w-14 rounded-md">
+                                <img src="{{ Vite::asset('resources/images/icons/laravel.png') }}" class="w-20" alt="icon">
+                            </div>
+                            <div class="w-16 rounded-md">
+                                <img src="{{ Vite::asset('resources/images/icons/tailwind.png') }}" class="w-20" alt="icon">
+                            </div>
+                            <div class="w-16 rounded-md">
+                                <img src="{{ Vite::asset('resources/images/icons/aws.png') }}" class="w-20" alt="icon">
+                            </div>
+                        </div>
+                    </div>
+                </x-card>
+                <x-card class="space-y-10 bg-slate-100 rounded-b-md shadow-md col-span-1 row-span-1">
+                    <div class="flex flex-col space-y-2">
+                        <div class="w-full bg-orange-300 h-1"></div>
+                        <p class="text-gray-700 text-sm">
                             @lang('messages.aboutMe-tech-text')
                         </p>
-                    </div>
-                    <div class="flex space-x-6 flex-wrap self-center items-center pt-4">
-                        <div class="w-14 rounded-md">
-                            <img src="{{ Vite::asset('resources/images/icons/html-5.png') }}" class="w-20" alt="icon">
-                        </div>
-                        <div class="w-14 rounded-md">
-                            <img src="{{ Vite::asset('resources/images/icons/css-3.png') }}" class="w-20" alt="icon">
-                        </div>
-                        <div class="w-12 rounded-md">
-                            <img src="{{ Vite::asset('resources/images/icons/js.png') }}" class="w-20" alt="icon">
-                        </div>
-                        <div class="w-16 rounded-md">
-                            <img src="{{ Vite::asset('resources/images/icons/react.png') }}" class="w-20" alt="icon">
-                        </div>
-                        <div class="w-16 rounded-md">
-                            <img src="{{ Vite::asset('resources/images/icons/php.png') }}" class="w-20" alt="icon">
-                        </div>
-                        <div class="w-14 rounded-md">
-                            <img src="{{ Vite::asset('resources/images/icons/laravel.png') }}" class="w-20" alt="icon">
-                        </div>
-                        <div class="w-16 rounded-md">
-                            <img src="{{ Vite::asset('resources/images/icons/tailwind.png') }}" class="w-20" alt="icon">
-                        </div>
-                        <div class="w-16 rounded-md">
-                            <img src="{{ Vite::asset('resources/images/icons/aws.png') }}" class="w-20" alt="icon">
-                        </div>
+                        <div class="w-full bg-orange-300 h-1"></div>
                     </div>
                 </x-card>
             </div>

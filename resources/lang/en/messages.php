@@ -65,11 +65,35 @@ return [
                         </p>",
     'aboutMe-exp-title' => 'Experience',
     'aboutMe-exp-msg' => '... a little about my background',
+    'aboutMe-exp-item1-place' => 'National Police Health Management.',
+    'aboutMe-exp-item1-rol' => 'IT - Technical support',
+    'aboutMe-exp-item1-desc' => 'Doing technical support task such as maintance and installation of computer equipment and printers around the hospital.',
+    'aboutMe-exp-item2-place' => 'National Police Health Management.',
+    'aboutMe-exp-item2-rol' => 'Pharmacy',
+    'aboutMe-exp-item2-desc' => 'Working dispatching medication, doing recepy controls as well as expire date controls and stock',
+    'aboutMe-exp-item3-place' => 'Public health - Vilardebo hospital',
+    'aboutMe-exp-item3-rol' => 'Pharmacy - internship',
+    'aboutMe-exp-item3-desc' => 'Working dispatching medication, doing recepy controls as well as expire date controls and stock. Also preparing medication for pacients in the hospital rooms (unidose)',
     'aboutMe-tech-title' => 'Technologies',
-    'aboutMe-tech-msg' => 'What would it be?',
+    'aboutMe-tech-msg' => '...What would it be?',
     'aboutMe-tech-text' => 'I wield HTML, CSS, JavaScript, PHP, and Laravel to craft exceptional web applications, seamlessly blending design, interactivity, and robust functionality.',
 
     
+    //projects
+    'project-1-title' => 'Photography site',
+    'project-1-subtitle' => '',
+    'project-1-desc' => 'It is a website created with the purpose of showcasing my work as a photographer. 
+                         It was the second website I created, and it is built with React and Tailwind CSS. Hosted from a 
+                         virtual instance using AWS services. From this site, you can view photographs related to portraits 
+                         in both outdoor and indoor settings, as well as product photos.',
+    'project-2-title' => 'Personal page (legacy)',
+    'project-2-subtitle' => 'old version',
+    'project-2-desc' => 'This was the first website I published, made with HTML/CSS, Javascript, and a pinch of PHP. 
+                         I designed it without using any framework because it was the first website I was going to create to 
+                         publish on the internet, and I wanted to do it with the most basic technologies. With the goal of improving
+                         the design and adding more features to my personal page, I created a new version using Laravel, which 
+                         implements a blog where I plan to post content that can be useful to the community.',
+    'view-site' => 'view site',
     
 
 
