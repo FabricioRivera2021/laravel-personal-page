@@ -9,7 +9,7 @@
                         <div><a class="hover:underline hover:text-orange-400" href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</a></div>
                         <div><a class="hover:underline hover:text-orange-400" href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</a></div>
                         <div><a class="hover:underline hover:text-orange-400" href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</a></div>
-                        <div><a class="hover:underline hover:text-orange-400" href="#">blog</a></div>
+                        <div><a class="hover:underline hover:text-orange-400" href="#">Blog</a></div>
                         <div><a class="hover:underline hover:text-orange-400" href="{{ route('cv', app()->getLocale()) }}">CV</a></div>
                     </li>
                 </ul>

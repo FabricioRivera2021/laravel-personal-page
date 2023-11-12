@@ -6,7 +6,7 @@
         <div class="flex flex-col">
             {{-- !? PROYECTO CARD --}}
             <div class="max-w-7xl  justify-self-center self-center pt-12">
-                <h2 class="font-semibold uppercase text-slate-600 mt-20 mb-5 text-xl">Photography site <a class="text-sm underline text-blue-400" href="https://fabriciorivera.art">View site</a> </h2>
+                <h2 class="font-semibold uppercase text-slate-600 mt-20 mb-5 text-xl">Photography site <a class="text-sm underline text-blue-400" href="https://fabriciorivera.art" target="_blank" >View site</a> </h2>
                 <div class="flex justify-center items-center space-x-20">
                     <div>
                         <div class="flex flex-col items-start mb-4">
@@ -35,11 +35,11 @@
             {{-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --}}
             {{-- !? PROYECTO CARD --}}
             <div class="max-w-7xl  justify-self-center self-center pt-12">
-                <h2 class="font-semibold uppercase text-slate-600 mt-20 mb-5 text-xl">Página personal (Legacy) <a class="text-sm underline text-blue-400" href="https://fabriciorivera.art">View site</a> </h2>
+                <h2 class="font-semibold uppercase text-slate-600 mt-20 mb-5 text-xl">Página personal (Legacy) <a class="text-sm underline text-blue-400" href="#">View site</a> </h2>
                 <div class="flex justify-center items-center space-x-20">
                     <div>
                         <div class="flex flex-col items-start mb-4">
-                            <h3 class="text-blue-500 font-semibold mb-2 whitespace-nowrap">fabriciorivera.com old version</h3>
+                            <h3 class="text-blue-500 font-semibold mb-2 whitespace-nowrap">fabriciorivera.com <span class="text-xs text-slate-500">old version</span></h3>
                             <div class="flex space-x-3">
                                 <p class="text-xs border rounded-xl bg-orange-500 px-3 py-0.5 text-slate-100 shadow-md">HTML/CSS</p>
                                 <p class="text-xs border rounded-xl bg-yellow-400 px-3 py-0.5 text-slate-500 shadow-md whitespace-nowrap">Javascript</p>

@@ -22,7 +22,7 @@
                 </div>
             </li>
             <li class="border rounded-sm border-slate-500 px-2 hover:bg-orange-600 hover:text-slate-100">
-                <a href="{{ route('cv', app()->getLocale()) }}">
+                <a href="{{ route('cv', app()->getLocale()) }}" target="_blank">
                         @lang('messages.downloadCV')
                 </a>
             </li>
