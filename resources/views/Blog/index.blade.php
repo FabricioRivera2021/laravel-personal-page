@@ -41,8 +41,6 @@
                     </div>
                 </x-card>
                 {{-- one blog --}}
-
-               
             </div>
         </div>
     <x-footer />
