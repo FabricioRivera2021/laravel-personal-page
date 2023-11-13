@@ -89,8 +89,7 @@ return [
     'project-2-title' => 'Personal page (legacy)',
     'project-2-subtitle' => 'old version',
     'project-2-desc' => 'This was the first website I published, made with HTML/CSS, Javascript, and a pinch of PHP. 
-                         I designed it without using any framework because it was the first website I was going to create to 
-                         publish on the internet, and I wanted to do it with the most basic technologies. With the goal of improving
+                         I designed it without using any framework because it was the first website i , and I wanted to do it with the most basic technologies. With the goal of improving
                          the design and adding more features to my personal page, I created a new version using Laravel, which 
                          implements a blog where I plan to post content that can be useful to the community.',
     'view-site' => 'view site',
