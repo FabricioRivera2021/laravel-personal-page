@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
 
             $table->string('title');
+            $table->string('subTitle');
+            $table->string('madeBy');
             $table->text('desc');
             $table->string('img');
 

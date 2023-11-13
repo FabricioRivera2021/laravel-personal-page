@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog as ModelsBlog;
 use Illuminate\Http\Request;
 
 class Blog extends Controller
@@ -9,9 +10,11 @@ class Blog extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(ModelsBlog $posts)
     {
-        return view('Blog.index');
+        return view('Blog.index', [
+            'posts' => $posts->all()
+        ]);
     }
 
     /**
