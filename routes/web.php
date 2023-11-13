@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Blog;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 
@@ -43,4 +44,6 @@ Route::group([
         Route::get('/cv', function ($locale) {
             return view('showcv', ['locale' => $locale]);
         })->name('cv');
+
+        Route::resource('blog', Blog::class)->only(['index', 'show']);
 });

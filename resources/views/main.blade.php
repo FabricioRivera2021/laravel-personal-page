@@ -11,8 +11,7 @@
                         @lang('messages.madeBy')
                     </span>
                 </h1>
-                <h1>@lang('messages.welcome')</h1>
-                
+                <h2 class="text-slate-500">@lang('messages.welcome')</h2>
                 <p class="text-gray-700 text-sm w-[85rem]">
                     @lang('messages.hero-text-first')
                 </p>
