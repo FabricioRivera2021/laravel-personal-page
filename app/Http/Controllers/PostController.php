@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Blog $posts)
+    public function index(Post $post)
     {
-        return view('Blog.index', [
-            'posts' => $posts->all()
+        return view('posts.index', [
+            'posts' => $post->all()
         ]);
     }
 
@@ -36,12 +36,11 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Blog $post)
+    public function show(string $locale, Post $post)
     {
-        dd($post->get());
-        return view('Blog.show', [
-            'post' => $post->find(1)
-        ]); 
+        return view('posts.show', [
+            'post' => $post
+        ]);
     }
 
     /**
