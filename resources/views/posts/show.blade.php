@@ -1,7 +1,7 @@
 <x-layout>
     <x-navbar />
         <div>
-            <div class="text-4xl max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10">
+            <div class="text-4xl max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10 min-h-screen">
                 {{-- <h2 class="w-full font-semibold text-center text-slate-400 pb-4">
                     One entry
                 </h2> --}}

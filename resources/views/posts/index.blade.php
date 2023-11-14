@@ -19,17 +19,21 @@
                             <div class="flex flex-col w-full text-slate-700">
                                 <p class="text-sm">{{$post->subTitle}}</p>
                                 <div class="flex space-x-3 text-xs items-center">
-                                    <p>By: {{$post->madeBy}}</p>
+                                    <p>By: {{$post->author}}</p>
                                 </div>
                             </div>
                             <div>
                                 <p class="text-sm text-slate-600">
-                                    {{$post->desc}}
+                                    {{$post->body}}
                                 </p>
                             </div>
                         </x-card>
                         <div class="w-full ml-4 flex justify-start">
-                            <button class="bg-blue-500 text-slate-100 text-sm px-4 py-0.5 rounded-sm shadow-sm hover:bg-blue-400 hover:text-slate-200"> Ver </button>
+                            <a href="{{route('posts.show', [
+                                'locale' => app()->getLocale(), 
+                                'post' => $post])}}">
+                                <button class="bg-blue-500 text-slate-100 text-sm px-4 py-0.5 rounded-sm shadow-sm hover:bg-blue-400 hover:text-slate-200"> Ver </button>
+                            </a>
                         </div>
                     </x-card>
                     {{-- one blog --}}
