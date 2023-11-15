@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('author');
             $table->text('body');
             $table->string('img');
-            $table->enum('lang', Post::$lang)->nullable();
+            $table->enum('lang', Post::$lang);
             $table->timestamps();
         });
     }

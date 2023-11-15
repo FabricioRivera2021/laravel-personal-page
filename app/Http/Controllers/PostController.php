@@ -13,7 +13,8 @@ class PostController extends Controller
     public function index(Post $post)
     {
         return view('posts.index', [
-            'posts' => $post->all()
+            'posts' => $post->where('lang', app()->getLocale())
+                ->latest()->get()
         ]);
     }
 
@@ -36,6 +37,7 @@ class PostController extends Controller
             'author' => 'required',
             'body' => 'required',
             'img' => 'required',
+            'lang' => 'required'
         ]);
 
         Post::create([
@@ -44,6 +46,7 @@ class PostController extends Controller
             'author' => $validated['author'],
             'body' => $validated['body'],
             'img' => $validated['img'],
+            'lang' => $validated['lang']
         ]);
 
         return redirect()->route('posts.index', app()->getLocale())

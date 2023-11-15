@@ -33,11 +33,6 @@
                                     {{$post->body}}
                                 </p>
                             </div>
-                            <div>
-                                <span>
-                                    {{$post->lang}}
-                                </span>
-                            </div>
                             <div class="w-full">
                                 <div class="w-full h-44 bg-slate-700">
                                     {{--  --}}
