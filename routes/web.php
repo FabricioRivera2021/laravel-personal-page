@@ -46,5 +46,5 @@ Route::group([
             return view('showcv', ['locale' => $locale]);
         })->name('cv');
 
-        Route::resource('posts', PostController::class)->only(['index','show','create']);
+        Route::resource('posts', PostController::class)->only(['index','show','create','store']);
 });

@@ -30,7 +30,24 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'subTitle' => 'required|max:255',
+            'author' => 'required',
+            'body' => 'required',
+            'img' => 'required',
+        ]);
+
+        Post::create([
+            'title' => $validated['title'],
+            'subTitle' => $validated['subTitle'],
+            'author' => $validated['author'],
+            'body' => $validated['body'],
+            'img' => $validated['img'],
+        ]);
+
+        return redirect()->route('posts.index', app()->getLocale())
+            ->with('success', 'Post created');
     }
 
     /**

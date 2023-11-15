@@ -9,8 +9,12 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title', 'subTitle', 'author', 'body', 'img', 'lang'
+    ];
+
     public static array $lang = [
-        'ES',
-        'EN'
+        'es',
+        'en'
     ];
 }
