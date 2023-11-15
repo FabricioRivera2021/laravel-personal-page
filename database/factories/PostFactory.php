@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,6 +23,7 @@ class PostFactory extends Factory
             'author' => 'Some user',
             'body' => fake()->paragraphs(3, true),
             'img' => fake()->url(),
+            'lang' => fake()->randomElement(Post::$lang)
         ];
     }
 }

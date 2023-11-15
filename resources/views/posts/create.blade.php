@@ -16,6 +16,10 @@
                 <label for="img" class="w-full flex flex-col text-slate-600">Load image
                     <input type="file" name="img" id="img">
                 </label>
+                <label for="lang" class="self-start">Lang: 
+                    <input type="radio" name="lang" id="es" class="ml-1">ES
+                    <input type="radio" name="lang" id="es">EN
+                </label>
                 <button class="bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm">Guardar</button>
             </form>
         </x-card>

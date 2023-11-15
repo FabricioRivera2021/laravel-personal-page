@@ -27,6 +27,11 @@
                                     {!! nl2br(e($post->body)) !!}
                                 </p>
                             </div>
+                            <div>
+                                <span class="text-xs">
+                                    {{$post->lang}}
+                                </span>
+                            </div>
                         </x-card>
                         <div class="w-full ml-4 flex justify-start">
                             <a href="{{route('posts.show', [
