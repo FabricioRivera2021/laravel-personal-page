@@ -20,7 +20,7 @@ class PostFactory extends Factory
             'title' => fake()->text(15),
             'subTitle' => fake()->text(20),
             'author' => 'Some user',
-            'body' => fake()->paragraph(4),
+            'body' => fake()->paragraphs(3, true),
             'img' => fake()->url(),
         ];
     }

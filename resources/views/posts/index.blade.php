@@ -23,8 +23,8 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="text-sm text-slate-600">
-                                    {{$post->body}}
+                                <p class="text-sm text-slate-600 text-left">
+                                    {!! nl2br(e($post->body)) !!}
                                 </p>
                             </div>
                         </x-card>
