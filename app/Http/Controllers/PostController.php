@@ -41,6 +41,8 @@ class PostController extends Controller
             'lang' => 'required'
         ]);
 
+        //validacion del error pendiente
+
         //seteo la imagen
         $img = $request->file('img');
         $path = $img->store('img', 'public');

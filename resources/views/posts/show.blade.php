@@ -15,7 +15,7 @@
                                     </svg>                                  
                                 </a>
                             </p>
-                            <p class="text-xs text-slate-500">20/20/2023</p>
+                            <p class="text-xs text-slate-500">{{$post->created_at}}</p>
                         </div>
                         <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">
@@ -30,11 +30,11 @@
                             </div>
                             <div>
                                 <p class="text-sm text-slate-600">
-                                    {{$post->body}}
+                                    {!! nl2br(e($post->body)) !!}
                                 </p>
                             </div>
                             <div class="w-full">
-                                <div>
+                                <div class="p-5 bg-slate-100 rounded-sm">
                                     <img src="{{Storage::url($post->img)}}" alt="img">
                                 </div>
                             </div>

@@ -24,7 +24,7 @@
                 @forelse ($posts as $post)
                     <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
                         <div class="flex justify-end w-full">
-                            <p class="text-xs text-slate-500">20/20/2023</p>
+                            <p class="text-xs text-slate-500">{{$post->created_at}}</p>
                         </div>
                         <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">
@@ -40,7 +40,7 @@
                             </div>
 
                             <div class="flex justify-between w-full">
-                                <div class="flex flex-col w-full text-slate-700">
+                                <div class="flex flex-col w-full text-slate-700 p-4">
                                     <p class="text-sm">{{$post->subTitle}}</p>
                                     <div class="flex space-x-3 text-xs items-center mb-4">
                                         <p>By: {{$post->author}}</p>
@@ -49,7 +49,7 @@
                                         {!! nl2br(e($post->body)) !!}
                                     </p>
                                 </div>
-                                <div>
+                                <div class="bg-slate-50 p-5">
                                     <img class="w-64" src="{{Storage::url($post->img)}}" alt="img">
                                 </div>
                             </div>
