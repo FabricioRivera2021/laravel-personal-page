@@ -15,7 +15,7 @@
                                     </svg>                                  
                                 </a>
                             </p>
-                            <p class="text-xs text-slate-500">{{$post->created_at}}</p>
+                            <p class="text-xs text-slate-500">{{$post->created_at->format('d M Y')}}</p>
                         </div>
                         <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">

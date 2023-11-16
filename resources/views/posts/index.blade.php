@@ -24,13 +24,13 @@
                 @forelse ($posts as $post)
                     <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
                         <div class="flex justify-end w-full">
-                            <p class="text-xs text-slate-500">{{$post->created_at}}</p>
+                            <p class="text-xs text-slate-500">{{$post->created_at->format('d M Y')}}</p>
                         </div>
                         <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">
                                 <div class="flex items-center justify-between">
-                                    <h4 class="text-xl font-medium text-slate-600">{{$post->title}}</h4>
-                                    <span class="text-xs bg-amber-600 text-slate-200 px-4 py-0.5 rounded-sm shadow-sm">
+                                    <h4 class="text-2xl font-medium text-slate-600">{{$post->title}}</h4>
+                                    <span class="text-xs bg-amber-600 text-slate-200 px-6 py-0.5 rounded-sm shadow-sm">
                                         <p>
                                             {{ strtoupper($post->lang) }}
                                         </p>
@@ -39,18 +39,21 @@
                                 <div class="h-1 w-full bg-orange-100"></div>
                             </div>
 
-                            <div class="flex justify-between h-full items-center">
-                                <div class="flex flex-col text-slate-700 p-4">
-                                    <p class="text-sm">{{$post->subTitle}}</p>
-                                    <div class="flex space-x-3 text-xs items-center mb-4">
-                                        <p>By: {{$post->author}}</p>
-                                    </div>
-                                    <p class="text-sm text-slate-600 text-left">
-                                        {!! nl2br(e($post->body)) !!}
+                            <div class="flex flex-col">
+                                <p class="text-lg">{{$post->subTitle}}</p>
+                                <div class="text-xs font-thin">
+                                    <p>By: {{$post->author}}</p>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <div class="flex flex-col text-slate-700 pr-4">
+                                    <p class="text-sm text-slate-600 text-justify">
+                                        {!! Str::limit(nl2br(e($post->body)), 800) !!}
                                     </p>
                                 </div>
-                                <div class="bg-slate-200 overflow-hidden flex items-center justify-center">
-                                    <img src="{{Storage::url($post->img)}}" alt="img">
+                                <div class="bg-slate-200 max-w-[200px] min-w-[250px] overflow-hidden flex items-center justify-center">
+                                    <img class="h-full" src="{{Storage::url($post->img)}}" alt="img">
                                 </div>
                             </div>
                         </x-card>
