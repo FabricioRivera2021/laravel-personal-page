@@ -39,8 +39,8 @@
                                 <div class="h-1 w-full bg-orange-100"></div>
                             </div>
 
-                            <div class="flex justify-between w-full">
-                                <div class="flex flex-col w-full text-slate-700 p-4">
+                            <div class="flex justify-between h-full items-center">
+                                <div class="flex flex-col text-slate-700 p-4">
                                     <p class="text-sm">{{$post->subTitle}}</p>
                                     <div class="flex space-x-3 text-xs items-center mb-4">
                                         <p>By: {{$post->author}}</p>
@@ -49,8 +49,8 @@
                                         {!! nl2br(e($post->body)) !!}
                                     </p>
                                 </div>
-                                <div class="bg-slate-50 p-5">
-                                    <img class="w-64" src="{{Storage::url($post->img)}}" alt="img">
+                                <div class="bg-slate-200 overflow-hidden flex items-center justify-center">
+                                    <img src="{{Storage::url($post->img)}}" alt="img">
                                 </div>
                             </div>
                         </x-card>

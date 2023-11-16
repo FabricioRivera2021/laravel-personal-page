@@ -13,7 +13,7 @@
                     <input name="subTitle" type="text" class="bg-slate-50 w-full rounded-sm" >
                 </label>
                 <label for="body" class="w-full flex flex-col text-slate-600">Body
-                    <textarea name="body" id="body" cols="30" rows="10" class="rounded-sm"></textarea>
+                    <textarea name="body" id="body" cols="30" rows="10" class="rounded-sm p-2"></textarea>
                 </label>
                 <label for="img" class="w-full flex flex-col text-slate-600">Load image
                     <input type="file" name="img" id="img">
