@@ -46,13 +46,13 @@
                                 </div>
                             </div>
 
-                            <div class="flex justify-between">
-                                <div class="flex flex-col text-slate-700 pr-4">
+                            <div class="flex w-full justify-between">
+                                <div class="flex flex-col text-slate-700 pr-10">
                                     <p class="text-sm text-slate-600 text-justify">
                                         {!! Str::limit(nl2br(e($post->body)), 800) !!}
                                     </p>
                                 </div>
-                                <div class="bg-slate-200 max-w-[200px] min-w-[250px] overflow-hidden flex items-center justify-center">
+                                <div class="bg-slate-200 max-w-[200px] min-w-[250px] overflow-hidden flex items-center justify-center justify-self-end">
                                     <img class="h-full" src="{{Storage::url($post->img)}}" alt="img">
                                 </div>
                             </div>
