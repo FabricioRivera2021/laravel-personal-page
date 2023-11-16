@@ -1,11 +1,11 @@
 <x-layout>
     <x-navbar />
-        <x-card class="rounded-md shadow-md bg-slate-200 pt-10 flex items-center justify-center h-screen">
+        <x-card class="rounded-md shadow-md pt-10 flex items-center justify-center h-screen">
             
             <form enctype="multipart/form-data" action="{{route('posts.store', app()->getLocale())}}" method="POST" class="flex flex-col gap-4 items-center justify-center bg-slate-300 p-5 shadow-md rounded-lg w-[50rem]">
                 @csrf
 
-                <h3>CREATE</h3>
+                <h3 class="font-semibold text-slate-500 text-lg">NEW POST</h3>
                 <label for="title" class="w-full text-slate-600">Title
                     <input name="title" type="text" class="bg-slate-50 w-full rounded-sm" >
                 </label>
