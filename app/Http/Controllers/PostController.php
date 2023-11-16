@@ -31,21 +31,26 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        //valido la data
         $validated = $request->validate([
             'title' => 'required|max:255',
             'subTitle' => 'required|max:255',
             'author' => 'required',
             'body' => 'required',
-            'img' => 'required',
+            'img' => 'required|file|mimes:jpg,jpeg|max:2048',
             'lang' => 'required'
         ]);
+
+        //seteo la imagen
+        $img = $request->file('img');
+        $path = $img->store('img', 'public');
 
         Post::create([
             'title' => $validated['title'],
             'subTitle' => $validated['subTitle'],
             'author' => $validated['author'],
             'body' => $validated['body'],
-            'img' => $validated['img'],
+            'img' => $path,
             'lang' => $validated['lang']
         ]);
 

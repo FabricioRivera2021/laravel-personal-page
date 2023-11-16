@@ -8,7 +8,7 @@
                 {{-- ! Blog cards --}}
                 @if (session('success'))
                     <div role="alert" 
-                        class="mb-8 rounded-md border-l-4 border-green-300 bg-green-100 p-4 text-green-700 text-sm self-start opacity-75">
+                        class="w-full mb-8 rounded-md border-l-4 border-green-300 bg-green-100 p-4 text-green-700 text-sm self-start opacity-75">
                         <p class="font-bold">
                             Success!!
                         </p>
@@ -38,18 +38,20 @@
                                 </div>
                                 <div class="h-1 w-full bg-orange-100"></div>
                             </div>
-                            <div class="flex flex-col w-full text-slate-700">
-                                <p class="text-sm">{{$post->subTitle}}</p>
-                                <div class="flex space-x-3 text-xs items-center">
-                                    <p>By: {{$post->author}}</p>
+
+                            <div class="flex justify-between w-full">
+                                <div class="flex flex-col w-full text-slate-700">
+                                    <p class="text-sm">{{$post->subTitle}}</p>
+                                    <div class="flex space-x-3 text-xs items-center mb-4">
+                                        <p>By: {{$post->author}}</p>
+                                    </div>
+                                    <p class="text-sm text-slate-600 text-left">
+                                        {!! nl2br(e($post->body)) !!}
+                                    </p>
                                 </div>
-                            </div>
-                            <div>
-                                <p class="text-sm text-slate-600 text-left">
-                                    {!! nl2br(e($post->body)) !!}
-                                </p>
-                            </div>
-                            <div class="w-full flex justify-end">
+                                <div>
+                                    <img class="w-64" src="{{Storage::url($post->img)}}" alt="img">
+                                </div>
                             </div>
                         </x-card>
                         <div class="w-full ml-4 flex justify-start">

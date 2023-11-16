@@ -34,8 +34,8 @@
                                 </p>
                             </div>
                             <div class="w-full">
-                                <div class="w-full h-44 bg-slate-700">
-                                    {{--  --}}
+                                <div>
+                                    <img src="{{Storage::url($post->img)}}" alt="img">
                                 </div>
                             </div>
                         </x-card>

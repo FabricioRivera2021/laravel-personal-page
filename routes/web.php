@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -20,8 +21,7 @@ Route::get('/', function () {
     return redirect('/' . app()->getLocale());
 });
 
-
-
+Route::get('/public/{filename}', [ImageController::class, 'getImage'] )->name('private.image');
 
 Route::group([
     'prefix' => '/{locale}',
