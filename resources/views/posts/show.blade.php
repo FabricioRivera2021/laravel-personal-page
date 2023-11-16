@@ -29,12 +29,12 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="text-sm text-slate-600">
+                                <p class="pl-2 pr-10 py-5 text-justify text-sm text-slate-600">
                                     {!! nl2br(e($post->body)) !!}
                                 </p>
                             </div>
                             <div class="w-full">
-                                <div class="p-5 bg-slate-100 rounded-sm">
+                                <div class="p-2 bg-slate-100 rounded-sm">
                                     <img src="{{Storage::url($post->img)}}" alt="img">
                                 </div>
                             </div>
