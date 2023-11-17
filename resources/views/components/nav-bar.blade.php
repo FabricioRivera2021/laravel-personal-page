@@ -5,6 +5,9 @@
             <x-navbar-link href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
             <x-navbar-link href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
             <x-navbar-link href="{{ route('posts.index', app()->getLocale()) }}">Blog</x-navbar-link>
+            @auth
+                <x-navbar-link href="#" class="text-green-500">Auth</x-navbar-link>
+            @endauth
         </ul>
         <ul class="flex space-x-7 items-center">
             <x-navbar-link class="text-sm" href="https://github.com/FabricioRivera2021" target="blank">Github</x-navbar-link>
