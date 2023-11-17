@@ -19,7 +19,7 @@
             <div role="alert" 
                 class="w-[40rem] mb-8 rounded-md border-l-4 border-red-300 bg-red-100 p-4 text-slate-700 opacity-75">
                 <p class="font-bold">
-                    Error!!
+                    Pone bien las credenciales, lptqtpario
                 </p>
                 <p>{{ session('error') }}</p>
             </div>
