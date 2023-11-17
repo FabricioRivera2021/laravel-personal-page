@@ -16,10 +16,18 @@
                     </div>
                 @endif
 
-                {{-- If Autorizated --}}
-                <a class="bg-slate-500 text-slate-100 rounded-sm text-sm px-4 py-1.5 shadow-sm" href="{{route('posts.create', app()->getLocale())}}">
-                    <button>Crear post</button>
-                </a>
+                @auth
+                    <a class="bg-slate-500 text-slate-100 rounded-sm text-sm px-4 py-1.5 shadow-sm" href="{{route('posts.create', app()->getLocale())}}">
+                        <button>Crear post</button>
+                    </a>
+                    <form action="{{ route('auth.destroy') }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="text-sm text-red-400">Logout</button>
+                    </form>
+                @else
+                    <h1>no estas logueado LOQUITA!!</h1>
+                @endauth
 
                 @forelse ($posts as $post)
                     <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
