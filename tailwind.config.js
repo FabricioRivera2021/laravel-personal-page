@@ -9,6 +9,7 @@ export default {
     extend: {
       backgroundImage: {
         'background': "url('/img/background.jpg')",
+        'contact-background': "url('/img/contact-background.jpg')"
       }
     }
   },
