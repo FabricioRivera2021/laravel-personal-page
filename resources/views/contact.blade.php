@@ -4,36 +4,60 @@
     <div class="h-screen bg-slate-100 bg-background bg-cover bg-center">
         <div class="text-xl w-full mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center opacity-95 z-50">
 
-            <div class="flex flex-col items-center justify-center p-10 bg-slate-50 rounded-md shadow-md w-1/2">
+            <div class="flex flex-col items-center justify-center py-2 bg-slate-50 rounded-sm shadow-md w-1/2">
                 
                 
                 <div class="flex w-full">
-                    <div class="flex space-x-2 items-center w-full px-4">
+                    <div class="flex items-center justify-evenly w-full mx-10">
 
-                        <div class="max-w-[35%] h-[92%] bg-slate-300 text-sm flex flex-col justify-end items-center m-5 px-5 rounded-sm shadow-md">
+                        <div class="max-w-[35%] h-[92%] bg-contact-background bg-cover bg-center text-sm flex flex-col justify-between items-center m-5 px-3 rounded-sm shadow-md">
 
-                            <div class=" mb-4">
+                            <div class="mt-4 text-justify text-sm space-y-3 text-slate-600 font-semibold bg-slate-50 bg-opacity-70 p-4 rounded-sm shadow-md">
+                                <p>
+                                    "La comunicación es la clave para entender y ser entendido".
+                                    <br> 
+                                    <span class="whitespace-nowrap italic text-xs">
+                                        <br>
+                                        - Brad Turnbull
+                                    </span> 
+                                </p>
+                            </div>
+
+
+                            <div class="mb-4">
                                 <div>
-                                    <ul class="text-center text-sm space-y-1 text-slate-500 font-semibold whitespace-nowrap">
-                                        <li>
-                                            FabricioRivera2012@gmail.com
-                                        </li>
-                                        <li>
-                                            www.linkedin.com/in/fabricio-rivera/
-                                        </li>
-                                        <li>
-                                            www.github.com/FabricioRivera2021
-                                        </li>
-                                        <li>
-                                            Montevideo, Uruguay.
-                                        </li>
-                                    </ul>
+                                    <div class="text-left text-sm space-y-3 text-slate-600 font-semibold whitespace-nowrap bg-slate-50 bg-opacity-70 p-4 rounded-sm shadow-md">
+                                        <div class="flex items-center space-x-1">
+                                            <img src="{{ Vite::asset('resources/images/icons/twitter2.png') }}" class="w-6" alt="icon">
+                                            <p>
+                                               - twitter
+                                            </p>
+                                        </div>
+                                        <div class="flex items-center space-x-1">
+                                            <img src="{{ Vite::asset('resources/images/icons/linkedin2.png') }}" class="w-6" alt="icon">
+                                            <p>
+                                                - /in/fabricio-rivera
+                                            </p> 
+                                        </div>
+                                        <div class="flex items-center space-x-1">
+                                            <img src="{{ Vite::asset('resources/images/icons/github2.png') }}" class="w-6" alt="icon">
+                                            <p>
+                                                - FabricioRivera2021
+                                            </p> 
+                                        </div>
+                                        <div class="flex items-center space-x-1">
+                                            <img src="{{ Vite::asset('resources/images/icons/email.png') }}" class="w-6" alt="icon">
+                                            <p>
+                                                - Fabricio.Rivera2012@gmail.com
+                                            </p> 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
                         
-                        <form class="flex flex-col space-y-4 w-full" action="">
+                        <form class="flex flex-col space-y-4" action="">
                             @csrf
                             <div>
                                 <h1 class="text-xl font-semibold text-slate-500">@lang('messages.contact-title')</h1>
