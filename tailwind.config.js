@@ -10,6 +10,16 @@ export default {
       backgroundImage: {
         'background': "url('/img/background.jpg')",
         'contact-background': "url('/img/contact-background.jpg')"
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '100ch', // add required value here
+            table: {
+              width: '',
+            }
+          }
+        }
       }
     }
   },

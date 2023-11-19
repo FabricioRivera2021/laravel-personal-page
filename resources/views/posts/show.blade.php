@@ -28,7 +28,7 @@
                                     <p>By: {{$post->author}}</p>
                                 </div>
                             </div>
-                            <article class="prose prose-stone">
+                            <article class="prose prose-xl">
                                     {!! Str::markdown($post->body) !!}
                             </article>
                             <div class="w-full">

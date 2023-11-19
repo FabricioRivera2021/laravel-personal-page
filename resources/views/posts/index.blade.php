@@ -54,9 +54,9 @@
 
                             <div class="flex w-full justify-between">
                                 <div class="flex flex-col text-slate-700 pr-10 h-full">
-                                    <p class="text-sm text-slate-600 text-justify">
-                                        {!! Str::limit(nl2br(e($post->body)), 500) !!}
-                                    </p>
+                                    <div class="prose">
+                                        {!! Str::markdown(Str::limit($post->body, 500)) !!}
+                                    </div>
                                 </div>
                                 <div class="max-w-[200px] min-w-[250px] overflow-hidden flex items-end justify-center justify-self-end">
                                     <img src="{{Storage::url($post->img)}}" alt="img">
