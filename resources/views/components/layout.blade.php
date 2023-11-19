@@ -7,9 +7,9 @@
     <title>Fabricio Rivera</title>
     <link rel="icon" href="{{ asset('favicon.ico') }}"/>
 </head>
-<body>
-
-    {{ $slot }}
+<body x-show="show" class="animate__animated animate__fadeIn bg-gray-100">
+    
+        {{ $slot }}
     
 </body>
 </html>

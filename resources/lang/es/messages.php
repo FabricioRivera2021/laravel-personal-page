@@ -56,10 +56,16 @@ return [
     'aboutMe-edu-title' => 'Educación',
     'aboutMe-edu-msg' => '... estudios realizados',
     'aboutMe-edu-text'=>"<p class=' text-sm'>
-                            traducir
+                            Creo que la educación es un viaje de por vida, y mis experiencias académicas han sido fundamentales para dar forma a mi conocimiento y perspectiva. Obtuve mi 
+                            licenciatura en informática de la UTU, donde adquirí una sólida base en programación y lógica. Esto fue solo el comienzo de mi aventura educativa, ya que 
+                            continué explorando y ampliando mis horizontes. Busqué estudios adicionales en fotografía y diseño visual. Mis esfuerzos académicos no solo me han dotado de 
+                            habilidades valiosas, sino que también me han inculcado una pasión por el aprendizaje continuo y el crecimiento.
                         </p>
                         <p class='text-sm'>
-                            traducir
+                            Además de la educación formal, creo firmemente en el aprendizaje autodirigido. He complementado mis logros académicos con cursos en línea, 
+                            talleres y proyectos prácticos. Estas experiencias me han permitido mantenerme al día con las últimas tendencias y tecnologías de la industria 
+                            en el siempre cambiante campo del desarrollo web. La educación es un viaje continuo, y estoy comprometido a aceptar nuevos desafíos y ampliar 
+                            mi conjunto de habilidades para permanecer en la vanguardia de mi campo.
                         </p>",
     'aboutMe-exp-title' => 'Experiencia',
     'aboutMe-exp-msg' => '... un poco sobre mi pasada experiencia',

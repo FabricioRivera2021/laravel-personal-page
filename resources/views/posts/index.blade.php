@@ -25,8 +25,6 @@
                         @method('DELETE')
                         <button class="text-sm text-red-400">Logout</button>
                     </form>
-                @else
-                    <h1>no estas logueado LOQUITA!!</h1>
                 @endauth
 
                 @forelse ($posts as $post)
@@ -55,13 +53,13 @@
                             </div>
 
                             <div class="flex w-full justify-between">
-                                <div class="flex flex-col text-slate-700 pr-10">
+                                <div class="flex flex-col text-slate-700 pr-10 h-full">
                                     <p class="text-sm text-slate-600 text-justify">
-                                        {!! Str::limit(nl2br(e($post->body)), 800) !!}
+                                        {!! Str::limit(nl2br(e($post->body)), 500) !!}
                                     </p>
                                 </div>
-                                <div class="bg-slate-200 max-w-[200px] min-w-[250px] overflow-hidden flex items-center justify-center justify-self-end">
-                                    <img class="h-full" src="{{Storage::url($post->img)}}" alt="img">
+                                <div class="max-w-[200px] min-w-[250px] overflow-hidden flex items-end justify-center justify-self-end">
+                                    <img src="{{Storage::url($post->img)}}" alt="img">
                                 </div>
                             </div>
                         </x-card>

@@ -1,6 +1,6 @@
 <x-layout>
     <x-navbar />
-        <div>
+        <main>
             <div class="text-4xl max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10 min-h-screen">
                 {{-- <h2 class="w-full font-semibold text-center text-slate-400 pb-4">
                     One entry
@@ -28,11 +28,9 @@
                                     <p>By: {{$post->author}}</p>
                                 </div>
                             </div>
-                            <div>
-                                <p class="pl-2 pr-10 py-5 text-justify text-sm text-slate-600">
-                                    {!! nl2br(e($post->body)) !!}
-                                </p>
-                            </div>
+                            <article class="prose prose-stone">
+                                    {!! Str::markdown($post->body) !!}
+                            </article>
                             <div class="w-full">
                                 <div class="p-2 bg-slate-100 rounded-sm">
                                     <img src="{{Storage::url($post->img)}}" alt="img">
@@ -40,8 +38,10 @@
                             </div>
                         </x-card>
                     </x-card>
+
+                    
                     {{-- one blog --}}
             </div>
-        </div>
+        </main>
     <x-footer />
 </x-layout>
