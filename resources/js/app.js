@@ -17,3 +17,9 @@ const editor = new Editor({
     height: '600px',
     usageStatistics: false, // Optional: Disable tracking
 });
+
+document.querySelector('#form').addEventListener('submit', e => {
+  e.preventDefault();
+  document.querySelector('#body').value = editor.getMarkdown();
+  e.target.submit();
+});
