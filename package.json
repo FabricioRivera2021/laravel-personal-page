@@ -15,6 +15,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@toast-ui/editor": "^3.2.2",
         "animate.css": "^4.1.1"
     }
 }
