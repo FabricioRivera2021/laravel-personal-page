@@ -157,3 +157,9 @@ document.querySelector('#form').addEventListener('submit', e => {
   document.querySelector('#body').value = editor.getMarkdown();
   e.target.submit();
 });
+
+document.querySelector('#form').addEventListener('submit', e => {
+  e.preventDefault();
+  document.querySelector('#body').value = editor.getMarkdown();
+  e.target.submit();
+});

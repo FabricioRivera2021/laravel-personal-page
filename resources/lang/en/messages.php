@@ -99,5 +99,5 @@ return [
     //footer
     'siteSections'=> 'Site sections',
     'contactInfo'=> 'Contact Information',
-    'info'=> '<li >&copy; 2023</li><li >Montevideo, Uruguay</li><li >Made with Laravel by Fabricio Rivera</li>',
+    'info'=> '<li >&copy; 2023</li><li >Montevideo, Uruguay</li><li >Made with Laravel</li>',
 ];

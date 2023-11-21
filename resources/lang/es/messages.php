@@ -102,5 +102,5 @@ return [
     //footer
     'siteSections'=> 'Secciones',
     'contactInfo'=> 'Información de contacto',
-    'info'=> '<li >&copy; 2023</li><li >Montevideo, Uruguay</li><li >Echo con Laravel por Fabricio Rivera</li>',
+    'info'=> '<li >&copy; 2023</li><li >Montevideo, Uruguay</li><li >Echo con Laravel</li>',
 ];

@@ -37,7 +37,7 @@ class PostController extends Controller
             'subTitle' => 'required|max:255',
             'author' => 'required',
             'body' => 'required',
-            'img' => 'required|file|mimes:jpg,jpeg|max:2048',
+            'img' => 'required|file|mimes:jpg,jpeg,png|max:2048',
             'lang' => 'required'
         ]);
 
