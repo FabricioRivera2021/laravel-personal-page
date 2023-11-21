@@ -10,7 +10,7 @@
                 <div class="flex w-full">
                     <div class="flex items-center justify-evenly w-full mx-10">
 
-                        <div class="max-w-[35%] min-w-[237px] h-[92%] bg-gradient-to-b from-slate-200 to-slate-100 text-sm flex flex-col justify-between items-center m-5 px-3 rounded-sm shadow-md">
+                        <div class="max-w-[35%] min-w-[237px] h-[92%] bg-gradient-to-b from-slate-200 to-slate-100 text-sm flex flex-col justify-between items-start m-5 px-3 rounded-sm shadow-md">
 
                             <div class="mt-4 text-justify text-sm space-y-3 text-slate-500 font-semibold p-4">
                                 <p>
@@ -25,7 +25,7 @@
                             {{-- 237 --}}
 
 
-                            <div class="mb-4">
+                            <div class="mb-4 ml-3">
                                 <div>
                                     <div class="text-left text-sm space-y-3 text-slate-600 font-semibold whitespace-nowrap p-1">
                                         <div class="flex items-center space-x-1">
