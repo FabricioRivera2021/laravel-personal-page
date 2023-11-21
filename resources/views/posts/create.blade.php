@@ -1,3 +1,8 @@
+
+{{-- ! <img src="/storage/img/YmLswek4HWqDif2xJMKFIX3Wmdto5g8dVGzFazf7.jpg" alt="img" /> --}}
+
+{{-- Para agregar imagenes, una forma seria guardarlas en el storage y desde ahi sacar el link --}}
+
 <x-layout>
     <x-navbar />
         <x-card class="rounded-md shadow-md flex items-center justify-center">

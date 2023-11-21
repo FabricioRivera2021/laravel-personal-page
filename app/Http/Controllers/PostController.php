@@ -44,8 +44,8 @@ class PostController extends Controller
         //validacion del error pendiente
 
         //seteo la imagen
-        $img = $request->file('img');
-        $path = $img->store('img', 'public');
+        $img = $request->file('img'); //archivo de la imagen
+        $path = $img->store('img', 'public'); //path de la imagen ! IMPORTANTE !
 
         Post::create([
             'title' => $validated['title'],
