@@ -1,10 +1,12 @@
 <x-layout>
     <x-navbar />
-        <div>
-            <div class="text-4xl max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10">
-                <h2 class="w-full font-semibold text-center text-slate-400 pb-4">
-                    All entries
-                </h2>
+        <div class="bg-gradient-to-r from-slate-300 to-zinc-300">
+            <div class="text-4xl max-w-7xl mx-auto pt-32 pb-10 flex flex-col justify-evenly items-center space-y-10">
+                <div class="text-xl w-full font-semibold text-left text-slate-600">
+                    <div class="w-full">
+                        <input class="p-1 rounded-md shadow-md" type="text" placeholder="buscar">
+                    </div>
+                </div>
                 {{-- ! Blog cards --}}
                 @if (session('success'))
                     <div role="alert" 

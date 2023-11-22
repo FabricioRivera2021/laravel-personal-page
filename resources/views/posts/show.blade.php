@@ -19,23 +19,23 @@
                         </div>
                         <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">
-                                <h4 class="text-xl font-medium text-slate-600">{{$post->title}}</h4>
+                                <div class="flex justify-between items-end">
+                                    <h4 class="text-3xl font-semibold text-slate-600">{{$post->title}}</h4>
+                                    <p class="text-sm">By: {{$post->author}}</p>
+                                </div>
                                 <div class="h-1 w-full bg-orange-100"></div>
                             </div>
                             <div class="flex flex-col w-full text-slate-700">
-                                <p class="text-sm">{{$post->subTitle}}</p>
-                                <div class="flex space-x-3 text-xs items-center">
-                                    <p>By: {{$post->author}}</p>
+                                <p class="text-lg">{{$post->subTitle}}</p>
+                            </div>
+                            <div class="w-full flex justify-center pt-5">
+                                <div class="p-2 bg-slate-100 rounded-sm">
+                                    <img class="max-h-[30rem]" src="{{Storage::url($post->img)}}" alt="img">
                                 </div>
                             </div>
                             <article class="prose prose-xl">
                                     {!! Str::markdown($post->body) !!}
                             </article>
-                            <div class="w-full">
-                                <div class="p-2 bg-slate-100 rounded-sm">
-                                    <img src="{{Storage::url($post->img)}}" alt="img">
-                                </div>
-                            </div>
                         </x-card>
                     </x-card>
 

@@ -1,6 +1,5 @@
 
 {{-- ! <img src="/storage/img/YmLswek4HWqDif2xJMKFIX3Wmdto5g8dVGzFazf7.jpg" alt="img" /> --}}
-
 {{-- Para agregar imagenes, una forma seria guardarlas en el storage y desde ahi sacar el link --}}
 
 <x-layout>
@@ -19,8 +18,8 @@
                     </label>
                     <div class="flex flex-col space-y-2 w-full">
                         <label for="editor" class="text-gray-600 font-semibold">Content</label>
-                        <div id="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-slate-100"></div>
-                        <input type="hidden" name="body" id="body">
+                        <div id="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-slate-100">
+                        </div>
                     </div>
                     <input type="hidden" name="body" id="body">
                     <label for="img" class="w-full flex flex-col text-slate-600">Load image
