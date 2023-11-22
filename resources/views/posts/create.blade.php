@@ -18,8 +18,7 @@
                     </label>
                     <div class="flex flex-col space-y-2 w-full">
                         <label for="editor" class="text-gray-600 font-semibold">Content</label>
-                        <div id="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-slate-100">
-                        </div>
+                        <div id="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-slate-100"></div>
                     </div>
                     <input type="hidden" name="body" id="body">
                     <label for="img" class="w-full flex flex-col text-slate-600">Load image
@@ -32,6 +31,15 @@
                     <input type="hidden" name="author" value="guest">
                     <button class="bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm">Guardar</button>
                 </form>
+                
+                <label for="imgUpload">
+                    <input id="imgUpload" name="imgUpload" type="file" accept="image/*">
+                </label>
+                <button id="uploadImageButton" type="submit">Upload img</button>
+                
+                <div>
+                    <p id="imageUrl"></p>
+                </div>
                 
                 @if (session('error'))
                 <div role="alert" 

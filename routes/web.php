@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostImgUploadController;
 use App\Http\Middleware\Authenticate;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
@@ -35,8 +36,6 @@ Route::resource('auth', AuthController::class)
 Route::delete('logout', fn() => to_route('auth.destroy'))->name('logout');
 Route::delete('auth', [AuthController::class, 'destroy'])->name('auth.destroy');
 
-
-
 Route::group([
     'prefix' => '/{locale}',
     'middleware' => 'locale'],
@@ -67,4 +66,8 @@ Route::group([
         });
 
         Route::resource('posts', PostController::class)->only(['index','show']);
+
+        Route::post('posts/uploadImg', function(){
+            return 'hello';
+        })->name('uploadImg');
 });
