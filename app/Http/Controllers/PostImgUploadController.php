@@ -10,6 +10,7 @@ class PostImgUploadController extends Controller
     public function uploadImg(Request $request)
     {
         // Validate the uploaded file
+        dd($request);
         $request->validate([
             'image' => 'required|image|mimes:jpg',
         ]);

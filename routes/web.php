@@ -32,6 +32,10 @@ Route::get('login', fn() => to_route('auth.create'))->name('login'); //redirects
 Route::resource('auth', AuthController::class)
     ->only(['create', 'store']);
 
+Route::post('/uploadImg', function(){
+    return dd('hello');
+});
+
 
 Route::delete('logout', fn() => to_route('auth.destroy'))->name('logout');
 Route::delete('auth', [AuthController::class, 'destroy'])->name('auth.destroy');
@@ -66,8 +70,4 @@ Route::group([
         });
 
         Route::resource('posts', PostController::class)->only(['index','show']);
-
-        Route::post('posts/uploadImg', function(){
-            return 'hello';
-        })->name('uploadImg');
 });

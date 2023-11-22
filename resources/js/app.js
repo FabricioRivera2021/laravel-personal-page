@@ -30,23 +30,22 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault()
 
       let formData = new FormData();
-      formData.append('img',document.getElementById('imgUpload').files[0]);
+      formData.append('img', document.getElementById('imgUpload').files[0]);
+
+      console.log(formData)
 
       const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-
-
-      
+      console.log(editor);
       // Create a FormData object to send the file
       // Send the Fetch request
-      fetch('uploadImg', {
+      fetch('/uploadImg', {
         method: 'POST',
         body: formData,
         headers: {
           'X-CSRF-TOKEN': csrfToken,
-      },
+        },
       })
-      .then(
-        response => console.log(response.json()))
+      .then(response => response.json())
       .then(data => {
           // Display the public URL of the stored file
           document.getElementById('imageUrl').textContent = 'Image URL: ' + data.url;
