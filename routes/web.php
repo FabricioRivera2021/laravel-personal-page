@@ -32,9 +32,7 @@ Route::get('login', fn() => to_route('auth.create'))->name('login'); //redirects
 Route::resource('auth', AuthController::class)
     ->only(['create', 'store']);
 
-Route::post('/uploadImg', function(){
-    return dd('hello');
-});
+Route::post('/uploadImg', [PostImgUploadController::class, 'uploadImg']);
 
 
 Route::delete('logout', fn() => to_route('auth.destroy'))->name('logout');

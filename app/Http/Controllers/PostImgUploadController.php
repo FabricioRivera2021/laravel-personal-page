@@ -10,17 +10,16 @@ class PostImgUploadController extends Controller
     public function uploadImg(Request $request)
     {
         // Validate the uploaded file
-        dd($request);
         $request->validate([
-            'image' => 'required|image|mimes:jpg',
+            'img' => 'required',
         ]);
-
+        
         // Store the image in the public storage folder
-        $path = $request->file('image')->store('public/img');
-
+        $path = $request->file('img')->store('public/img');
+        
         // Get the public URL of the stored file
         $url = Storage::url($path);
-
+        
         // Return the URL as a JSON response
         return response()->json(['url' => $url]);
     }

@@ -29,13 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('uploadImageButton').addEventListener('click', function (e) {
       e.preventDefault()
 
-      let formData = new FormData();
+      let formData = new FormData(), key;
       formData.append('img', document.getElementById('imgUpload').files[0]);
 
-      console.log(formData)
-
       const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-      console.log(editor);
       // Create a FormData object to send the file
       // Send the Fetch request
       fetch('/uploadImg', {
