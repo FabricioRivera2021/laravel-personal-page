@@ -21,7 +21,13 @@
                         <div id="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-slate-100"></div>
                     </div>
                     <input type="hidden" name="body" id="body">
-                    <label for="img" class="w-full flex flex-col text-slate-600">Load image
+                    <div class="flex space-x-2 self-start">
+                        <label for="imgUpload">Cargar imagen
+                            <input id="imgUpload" name="imgUpload" type="file" accept="image/*">
+                        </label>
+                        <button id="uploadImageButton" type="submit" class="bg-slate-200 px-5 rounded-md shadow-md">Añadir</button>
+                    </div>
+                    <label for="img" class="w-full flex flex-col text-slate-600">Load Thumbnail
                         <input type="file" name="img" id="img">
                     </label>
                     <label for="lang" class="self-start">Lang: 
@@ -31,11 +37,6 @@
                     <input type="hidden" name="author" value="guest">
                     <button class="bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm">Guardar</button>
                 </form>
-                
-                <label for="imgUpload">
-                    <input id="imgUpload" name="imgUpload" type="file" accept="image/*">
-                </label>
-                <button id="uploadImageButton" type="submit">Upload img</button>
                 
                 <div>
                     <p id="imageUrl"></p>

@@ -28,11 +28,6 @@
                             <div class="flex flex-col w-full text-slate-700">
                                 <p class="text-lg">{{$post->subTitle}}</p>
                             </div>
-                            <div class="w-full flex justify-center pt-5">
-                                <div class="p-2 bg-slate-100 rounded-sm">
-                                    <img class="max-h-[30rem]" src="{{Storage::url($post->img)}}" alt="img">
-                                </div>
-                            </div>
                             <article class="prose prose-xl">
                                     {!! Str::markdown($post->body) !!}
                             </article>
