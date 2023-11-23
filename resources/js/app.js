@@ -32,15 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
       let formData = new FormData(), key;
       formData.append('img', document.getElementById('imgUpload').files[0]);
 
-      const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+      // const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
       // Create a FormData object to send the file
       // Send the Fetch request
       fetch('/uploadImg', {
         method: 'POST',
         body: formData,
-        headers: {
-          'X-CSRF-TOKEN': csrfToken,
-        },
       })
       .then(response => response.json())
       .then(data => {
