@@ -28,7 +28,7 @@
                             <div class="flex flex-col w-full text-slate-700">
                                 <p class="text-lg">{{$post->subTitle}}</p>
                             </div>
-                            <article class="prose prose-xl">
+                            <article class="prose prose-xl text-justify mx-6 pr-10 pt-10">
                                     {!! Str::markdown($post->body) !!}
                             </article>
                         </x-card>
