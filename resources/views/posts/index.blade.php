@@ -1,10 +1,10 @@
 <x-layout>
     <x-navbar />
-        <div class="bg-gradient-to-r from-slate-200 to-zinc-100">
+        <div class="bg-gradient-to-r from-slate-300 to-zinc-300">
             <div class="text-4xl max-w-7xl mx-auto pt-32 pb-10 flex flex-col justify-evenly items-center space-y-10">
                 <div class="text-xl w-full font-semibold text-left text-slate-600">
                     <div class="w-full">
-                        <input class="p-0.5 rounded-sm shadow-md" type="text" placeholder="buscar">
+                        <input class="p-1 rounded-md shadow-md" type="text" placeholder="buscar">
                     </div>
                 </div>
                 {{-- ! Blog cards --}}
@@ -30,11 +30,11 @@
                 @endauth
 
                 @forelse ($posts as $post)
-                    <x-card class="rounded-lg shadow-lg bg-slate-100 min-w-full">
+                    <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
                         <div class="flex justify-end w-full">
                             <p class="text-xs text-slate-500">{{$post->created_at->format('d M Y')}}</p>
                         </div>
-                        <x-card class="w-full bg-slate-50 rounded-md shadow-sm hover:cursor-pointer">
+                        <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">
                                 <div class="flex items-center justify-between">
                                     <h4 class="text-2xl font-medium text-slate-600">{{$post->title}}</h4>
@@ -55,23 +55,23 @@
                             </div>
 
                             <div class="flex w-full justify-between">
-                                <div class="text-slate-700 h-full p-5">
+                                <div class="flex flex-col text-slate-700 pr-10 h-full">
                                     <div class="prose">
                                         {!! Str::markdown(Str::limit($post->body, 500)) !!}
                                     </div>
                                 </div>
-                                {{-- <div class="max-w-[200px] min-w-[250px] overflow-hidden flex items-end justify-center justify-self-end">
+                                <div class="max-w-[200px] min-w-[250px] overflow-hidden flex items-end justify-center justify-self-end">
                                     <img src="{{Storage::url($post->img)}}" alt="img">
-                                </div> --}}
-                            </div>
-                            <div class="w-full mr-5 flex justify-start">
-                                <a href="{{route('posts.show', [
-                                    'locale' => app()->getLocale(), 
-                                    'post' => $post])}}">
-                                    <button class="bg-blue-200 text-slate-700 text-sm px-4 py-0.5 rounded-sm shadow-sm hover:bg-slate-700 hover:text-slate-100"> Ver </button>
-                                </a>
+                                </div>
                             </div>
                         </x-card>
+                        <div class="w-full ml-4 flex justify-start">
+                            <a href="{{route('posts.show', [
+                                'locale' => app()->getLocale(), 
+                                'post' => $post])}}">
+                                <button class="bg-blue-500 text-slate-100 text-sm px-4 py-0.5 rounded-sm shadow-sm hover:bg-blue-400 hover:text-slate-200"> Ver </button>
+                            </a>
+                        </div>
                     </x-card>
                     {{-- one blog --}}
                 @empty
