@@ -21,16 +21,20 @@
                             <div class="w-full flex flex-col justify-center">
                                 <div class="flex justify-between items-end">
                                     <h4 class="text-3xl font-semibold text-slate-600">{{$post->title}}</h4>
-                                    <p class="text-sm">By: {{$post->author}}</p>
                                 </div>
                                 <div class="h-1 w-full bg-orange-100"></div>
                             </div>
                             <div class="flex flex-col w-full text-slate-700">
                                 <p class="text-lg">{{$post->subTitle}}</p>
                             </div>
-                            <article class="prose prose-xl">
+                            <article class="prose prose-xl text-justify">
                                     {!! Str::markdown($post->body) !!}
                             </article>
+                            <div class="text-sm pt-10">
+                                <div>
+                                    By: {{$post->author}}
+                                </div>
+                            </div>
                         </x-card>
                     </x-card>
 
