@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => response.json())
       .then(data => {
           // Display the public URL of the stored file
-          document.getElementById('imageUrl').textContent = 'Image URL: ' + data.url;
+          let img = document.getElementById('imageUrl').textContent = '<img src="' + data.url + '" alt="img" />';
+          editor.insertText(img);
       })
       .catch(error => {
           // Handle errors if any
