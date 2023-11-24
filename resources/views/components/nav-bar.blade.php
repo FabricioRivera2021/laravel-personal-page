@@ -5,15 +5,15 @@
             <x-navbar-link href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
             <x-navbar-link href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
             <x-navbar-link href="{{ route('posts.index', app()->getLocale()) }}">Blog</x-navbar-link>
+            @auth
             <x-navbar-link href="#" class="text-orange-400">
-                @auth
-                    <form action="{{ route('auth.destroy') }}" method="POST" class="h-fit">
-                        @csrf
-                        @method('DELETE')
-                        <button class="text-sm h-[10px]">LOGOUT</button>
-                    </form>
-                @endauth
+                <form action="{{ route('auth.destroy') }}" method="POST" class="h-fit">
+                    @csrf
+                    @method('DELETE')
+                    <button class="text-sm h-[10px]">LOGOUT</button>
+                </form>
             </x-navbar-link>
+            @endauth
         </ul>
         <ul class="flex space-x-7 items-center">
             <x-navbar-link class="text-sm" href="https://github.com/FabricioRivera2021" target="blank">Github</x-navbar-link>
@@ -25,12 +25,12 @@
                 </svg>                  
                 <div>
                     <div class="px-1 bg-transparent bg-slate-200 focus:ring-blue-500 appearance-none space-x-1 flex">
-                        <a class="text-slate-100 text-xs hover:text-blue-300" href="/en">EN</a>
-                        <a class="text-slate-100 text-xs hover:text-blue-300" href="/es">ES</a>
+                        <a class="text-slate-100 text-xs hover:text-orange-400" href="/en">EN</a>
+                        <a class="text-slate-100 text-xs hover:text-orange-400" href="/es">ES</a>
                     </div>
                 </div>
             </li>
-            <li class="border rounded-sm border-slate-500 px-2 hover:bg-orange-600 hover:text-slate-100">
+            <li class="border rounded-sm border-slate-500 px-2 hover:bg-blue-400 hover:text-slate-100">
                 <a href="{{ route('cv', app()->getLocale()) }}" target="_blank">
                         @lang('messages.downloadCV')
                 </a>

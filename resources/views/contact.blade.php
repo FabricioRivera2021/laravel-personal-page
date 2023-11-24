@@ -31,7 +31,7 @@
                                         <div class="flex items-center space-x-1">
                                             <img src="{{ Vite::asset('resources/images/icons/twitter2.png') }}" class="w-6" alt="icon">
                                             <p class="text-xs">
-                                               - twitter
+                                               - Fabricio0rivera
                                             </p>
                                         </div>
                                         <div class="flex items-center space-x-1">
