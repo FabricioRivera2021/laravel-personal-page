@@ -25,11 +25,6 @@
                     <a class="bg-slate-500 text-slate-100 rounded-sm text-sm px-4 py-1.5 shadow-sm" href="{{route('posts.create', app()->getLocale())}}">
                         <button>Crear post</button>
                     </a>
-                    <form action="{{ route('auth.destroy') }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button class="text-sm text-red-400">Logout</button>
-                    </form>
                 @endauth
 
                 @forelse ($posts as $post)
