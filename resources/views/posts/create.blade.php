@@ -36,6 +36,7 @@
                         <input id="imgUpload" name="imgUpload" type="file" accept="image/*" class="hidden">
                     </label>
                     <button id="uploadImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Añadir</button>
+                    <button id="clearImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Limpiar</button>
                 </div>
                 
                 <div>

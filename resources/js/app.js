@@ -49,9 +49,29 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 
-  // Limpiar 
+  // cancelar
+  img = document.getElementById('imageUrl')
   document.getElementById('clearImageButton').addEventListener('click', function (e) {
-    console.log(e);
-  });
+    //verificar que tenga algo  
+    if (img.textContent) 
+      { 
+        console.log(img.textContent.split('"'));
 
+        fetch('/deleteImg', {
+          method: 'DELETE',
+          body: id,
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Display the public URL of the stored file
+            console.log(data.url);
+            // editor.deleteSelection;
+            img.textContent = ''
+        })
+        .catch(error => {
+            // Handle errors if any
+            console.error('Error:', error);
+        });
+      }
+  });
 });

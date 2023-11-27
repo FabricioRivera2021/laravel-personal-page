@@ -34,6 +34,8 @@ Route::resource('auth', AuthController::class)
 
 Route::post('/uploadImg', [PostImgUploadController::class, 'uploadImg']);
 
+Route::delete('/deleteImg', [PostImgUploadController::class, 'deleteImg']);
+
 
 Route::delete('logout', fn() => to_route('auth.destroy'))->name('logout');
 Route::delete('auth', [AuthController::class, 'destroy'])->name('auth.destroy');

@@ -23,6 +23,14 @@ class PostImgUploadController extends Controller
         // Return the URL as a JSON response
         return response()->json(['url' => $url]);
     }
+
+    public function deleteImg(String $id)
+    {
+        $delete = Storage::delete($id);
+        
+        // Return the URL as a JSON response
+        return response()->json(['url' => '']);
+    }
     /**
      * Store a newly created resource in storage.
      */
