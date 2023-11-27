@@ -55,7 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
     //verificar que tenga algo  
     if (img.textContent) 
       { 
-        console.log(img.textContent.split('"'));
+        const file = img.textContent
+        const match = file.match(/\/([^\/]+)\.jpg/);
+        // console.log(match);
+        const id = match
 
         fetch('/deleteImg', {
           method: 'DELETE',
