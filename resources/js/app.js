@@ -25,8 +25,8 @@ document.querySelector('#form').addEventListener('submit', e => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Attach a click event to the button
-  document.getElementById('imgUpload').addEventListener('click', function (e) {
+  // Attach a click event to the button, AÑADIR IMAGEN
+  document.getElementById('uploadImageButton').addEventListener('click', function (e) {
       let formData = new FormData(), key;
       formData.append('img', document.getElementById('imgUpload').files[0]);
 
@@ -41,11 +41,17 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
           // Display the public URL of the stored file
           let img = document.getElementById('imageUrl').textContent = '<img src="' + data.url + '" alt="img" />';
-          // editor.insertText(img);
+          editor.insertText(img);
       })
       .catch(error => {
           // Handle errors if any
           console.error('Error:', error);
       });
   });
+
+  // Limpiar 
+  document.getElementById('clearImageButton').addEventListener('click', function (e) {
+    console.log(e);
+  });
+
 });

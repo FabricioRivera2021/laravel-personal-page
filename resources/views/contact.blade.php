@@ -1,6 +1,7 @@
-<x-nav-bar />
-
 <x-layout>
+
+    <x-nav-bar />
+
     <div class="h-screen bg-slate-100 bg-background bg-cover bg-center">
         <div class="text-xl w-full mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center opacity-95 z-50">
 
@@ -8,17 +9,17 @@
                 
                 
                 <div class="flex w-full">
-                    <div class="flex items-center justify-evenly w-full mx-10">
+                    <div class="flex items-end justify-evenly w-full mx-10 mb-4">
 
-                        <div class="max-w-[35%] min-w-[237px] h-[92%] bg-gradient-to-b from-slate-200 to-slate-100 text-sm flex flex-col justify-between items-start m-5 px-3 rounded-sm shadow-md">
+                        <div class="max-w-[35%] min-w-[237px] h-[92%] bg-gradient-to-b from-slate-200 to-slate-100 text-sm flex flex-col justify-between items-start px-3 rounded-sm shadow-md">
 
                             <div class="mt-4 text-justify text-sm space-y-3 text-slate-500 font-semibold p-4">
                                 <p>
-                                    "La comunicación es la clave para entender y ser entendido".
+                                    @lang('messages.contact-quote')
                                     <br> 
                                     <span class="whitespace-nowrap italic text-xs">
                                         <br>
-                                        - Brad Turnbull
+                                        @lang('messages.contact-quote-author')
                                     </span> 
                                 </p>
                             </div>
@@ -69,7 +70,7 @@
                                     <x-input type="email" placeholder="Email" id="email" name="email"/>
                                 </div>
                                 <div class="w-full space-y-4">
-                                    <x-input :placeholder="trans('messages.contact-Organization')" id="name" name="name"/>
+                                    <x-input :placeholder="trans('messages.contact-organization')" id="name" name="name"/>
                                     <x-input :placeholder="trans('messages.contact-subject')" name="name"/>
                                 </div>
                             </div>
@@ -80,7 +81,7 @@
                             cols="30" 
                             rows="10">@lang('messages.contact-msg')</textarea>
 
-                            <x-button class="shadow-sm border-slate-200 text-lg rounded-sm">@lang('messages.contact-submit')</x-button>
+                            <x-button class="shadow-md border-slate-200 text-lg rounded-sm">@lang('messages.contact-submit')</x-button>
                         </form>
                         
                     </div>

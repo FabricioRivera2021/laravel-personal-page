@@ -27,7 +27,11 @@ return [
     'contact-title' => 'Ponte en contacto',
     'contact-name' => 'Nombre',
     'contact-msg' => 'Mensaje',
+    'contact-organization' => 'Organización',
+    'contact-subject' => 'Asunto',
     'contact-submit' => 'Enviar',
+    'contact-quote' => 'La comunicación es la clave para entender y ser entendido.',
+    'contact-quote-author' => '- Brad Turnbull',
 
     //about me
     'aboutMe-about-me' => 'Sobre mi',

@@ -27,7 +27,12 @@ return [
     'contact-title' => 'Get in touch',
     'contact-name' => 'Name',
     'contact-msg' => 'Message',
+    'contact-organization' => 'Organization',
+    'contact-subject' => 'Subject',
     'contact-submit' => 'Submit',
+    'contact-quote' => 'Much unhappiness has come into the world because of bewilderment and things left unsaid.',
+    'contact-quote-author' => '- Fyodor Dostoevsky',
+
 
     //about me
     'aboutMe-about-me' => 'About me',
