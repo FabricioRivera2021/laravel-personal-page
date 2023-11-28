@@ -100,8 +100,8 @@ class PostController extends Controller
 
         $post->update($validated);
 
-        return redirect()->route('posts.index', app()->getLocale())
-            ->with('success', 'Post created');
+        return redirect()->route('posts.show', ['locale' => app()->getLocale(), 'post' => $post])
+            ->with('success', 'Post edited');
     }
 
 }
