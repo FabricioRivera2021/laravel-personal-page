@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -68,6 +69,39 @@ class PostController extends Controller
         return view('posts.show', [
             'post' => $post
         ]);
+    }
+
+    public function edit(string $locale, Post $post)
+    {
+        //show the edit form
+        return view('posts.edit', [
+            'post' => $post
+        ]);
+    }
+
+    public function update(Request $request, Post $post)
+    {
+        // update the resource
+        //valido la data
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'subTitle' => 'required|max:255',
+            'author' => 'required',
+            'body' => 'required',
+            'img' => 'required|file|mimes:jpg,jpeg,png|max:2048',
+            'lang' => 'required'
+        ]);
+
+        //validacion del error pendiente
+
+        //seteo la imagen
+        $img = $request->file('img'); //archivo de la imagen
+        $path = $img->store('img', 'public'); //path de la imagen ! IMPORTANTE !
+
+        $post->update($validated);
+
+        return redirect()->route('posts.index', app()->getLocale())
+            ->with('success', 'Post created');
     }
 
 }

@@ -1,12 +1,10 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostImgUploadController;
 use App\Http\Middleware\Authenticate;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,18 +22,14 @@ Route::get('/', function () {
     return redirect('/' . app()->getLocale());
 });
 
-
 Route::get('/public/{filename}', [ImageController::class, 'getImage'] )->name('private.image');
-
 
 Route::get('login', fn() => to_route('auth.create'))->name('login'); //redirects to the create page
 Route::resource('auth', AuthController::class)
     ->only(['create', 'store']);
 
 Route::post('/uploadImg', [PostImgUploadController::class, 'uploadImg']);
-
 Route::delete('/deleteImg', [PostImgUploadController::class, 'deleteImg']);
-
 
 Route::delete('logout', fn() => to_route('auth.destroy'))->name('logout');
 Route::delete('auth', [AuthController::class, 'destroy'])->name('auth.destroy');
@@ -66,7 +60,7 @@ Route::group([
         
         Route::middleware(Authenticate::class)->group(function (){
             Route::resource('posts', PostController::class)
-            ->only(['create','store']);
+            ->only(['create','store','edit','update']);
         });
 
         Route::resource('posts', PostController::class)->only(['index','show']);
