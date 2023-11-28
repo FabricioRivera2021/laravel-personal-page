@@ -79,7 +79,7 @@ class PostController extends Controller
         ]);
     }
 
-    public function update(Request $request, Post $post)
+    public function update(Request $request, string $locale, String $id)
     {
         // update the resource
         //valido la data
@@ -91,6 +91,8 @@ class PostController extends Controller
             'img' => 'required|file|mimes:jpg,jpeg,png|max:2048',
             'lang' => 'required'
         ]);
+
+        $post = \App\Models\Post::find($id);
 
         //validacion del error pendiente
 

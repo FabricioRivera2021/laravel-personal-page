@@ -3,7 +3,7 @@
         <x-card class="rounded-md shadow-md flex items-center justify-center">
             <div class="mt-[5rem]">
 
-                <form id="form" enctype="multipart/form-data" action="{{ route('posts.update', [ 'locale' => app()->getLocale() , $post ]) }}" method="POST" class="flex flex-col gap-4 items-center justify-center py-5 w-[65rem]">
+                <form id="form" enctype="multipart/form-data" action="{{ route( 'posts.update', ['locale' => app()->getLocale(), 'post' => $post->id] ) }}" method="POST" class="flex flex-col gap-4 items-center justify-center py-5 w-[65rem]">
                     @csrf
                     @method('PUT')
                     <h3 class="font-semibold text-slate-500 text-lg">EDIT POST</h3>
@@ -36,7 +36,7 @@
                     <label for="img" class="text-sm self-start text-slate-100 flex flex-col hover:cursor-pointer bg-blue-600 px-3 py-0.5 rounded-sm items-center shadow-sm hover:bg-slate-200 hover:text-slate-600">Load Thumbnail
                         <input class="hidden" type="file" name="img" id="img">
                         @error('img')
-                        <div class="mt-1 text-xs text-red-500">
+                        <div class="mt-1 text-xs text-red-400">
                             {{ $message }}
                         </div>
                         @enderror
