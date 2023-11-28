@@ -7,10 +7,10 @@
                     @csrf
                     <h3 class="font-semibold text-slate-500 text-lg">EDIT POST</h3>
                     <label for="title" class="w-full text-slate-600">Title
-                        <input name="title" type="text" class="bg-slate-50 w-full rounded-sm" >
+                        <input name="title" type="text" class="bg-slate-50 w-full rounded-sm" value="{{$post->title}}">
                     </label>
                     <label for="subTitle" class="w-full text-slate-600">SubTitle
-                        <input name="subTitle" type="text" class="bg-slate-50 w-full rounded-sm" >
+                        <input name="subTitle" type="text" class="bg-slate-50 w-full rounded-sm" value="{{$post->subTitle}}">
                     </label>
                     <div class="flex flex-col space-y-2 w-full">
                         <label for="editor" class="text-gray-600 font-semibold">Content</label>
