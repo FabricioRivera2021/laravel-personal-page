@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    //_______________________________________________________________INDEX_____________________________________________________________
     public function index(Post $post)
     {
         return view('posts.index', [
@@ -19,17 +17,13 @@ class PostController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    //_______________________________________________________________CREATE_____________________________________________________________
     public function create()
     {
         return view('posts.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    //_______________________________________________________________STORE_____________________________________________________________
     public function store(Request $request)
     {
         //valido la data
@@ -61,9 +55,7 @@ class PostController extends Controller
             ->with('success', 'Post created');
     }
 
-    /**
-     * Display the specified resource.
-     */
+    //_______________________________________________________________SHOW_____________________________________________________________
     public function show(string $locale, Post $post)
     {
         return view('posts.show', [
@@ -71,6 +63,7 @@ class PostController extends Controller
         ]);
     }
 
+    //_______________________________________________________________EDIT_____________________________________________________________
     public function edit(string $locale, Post $post)
     {
         //show the edit form
@@ -79,7 +72,8 @@ class PostController extends Controller
         ]);
     }
 
-    public function update(Request $request, string $locale, String $id)
+    //_______________________________________________________________UPDATE_____________________________________________________________
+    public function update(Request $request, String $locale, Post $post)
     {
         // update the resource
         //valido la data
@@ -92,7 +86,7 @@ class PostController extends Controller
             'lang' => 'required'
         ]);
 
-        $post = \App\Models\Post::find($id);
+        // $post = \App\Models\Post::find($id);
 
         //validacion del error pendiente
 
@@ -102,8 +96,19 @@ class PostController extends Controller
 
         $post->update($validated);
 
-        return redirect()->route('posts.show', ['locale' => app()->getLocale(), 'post' => $post])
+        return redirect()->route( 'posts.index', ['locale' => app()->getLocale()] )
             ->with('success', 'Post edited');
+    }
+
+    //_______________________________________________________________DESTROY_____________________________________________________________
+    public function destroy(String $locale, Post $post)
+    {
+        if($post){
+            $post->delete();
+        }
+
+        return redirect()->route( 'posts.index', ['locale' => app()->getLocale()] )
+        ->with('success', 'Post removed');
     }
 
 }

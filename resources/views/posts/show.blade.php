@@ -35,6 +35,14 @@
                                     By: {{$post->author}}
                                 </div>
                             </div>
+                            @auth
+                                <form action="{{ route('posts.destroy', ['locale' => app()->getLocale(), 'post' => $post]) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="text-sm text-red-500 hover:underline">Eliminar post</button>
+                                </form>
+                                {{-- <a class="text-sm text-red-500 hover:underline" href="{{ route('posts.destroy', ['locale' => app()->getLocale(), 'post' => $post]) }}">Eliminar post</a> --}}
+                            @endauth
                         </x-card>
                     </x-card>
 

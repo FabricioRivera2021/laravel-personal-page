@@ -60,7 +60,7 @@ Route::group([
         
         Route::middleware(Authenticate::class)->group(function (){
             Route::resource('posts', PostController::class)
-            ->only(['create','store','edit','update']);
+            ->only(['create','store','edit','update','destroy']);
         });
 
         Route::resource('posts', PostController::class)->only(['index','show']);
