@@ -11,6 +11,13 @@
                     </label>
                     <button class="text-sm text-blue-500 hover:underline">search</button>
                 </form>
+                
+                <div x-data="{ message: '' }">
+                    <input type="text" x-model="message">
+                 
+                    <span x-text="message">
+                </div>
+                
                 {{-- ! Blog cards --}}
                 @if (session('success'))
                     <div role="alert" 
