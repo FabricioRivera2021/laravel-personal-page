@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -11,9 +10,14 @@ class PostController extends Controller
     //_______________________________________________________________INDEX_____________________________________________________________
     public function index(Post $post)
     {
+        $search = request()->only(
+            'search'
+        );
+
+
         return view('posts.index', [
             'posts' => $post->where('lang', app()->getLocale())
-                ->latest()->get()
+                ->latest()->filter($search)->get()
         ]);
     }
 
@@ -32,7 +36,7 @@ class PostController extends Controller
             'subTitle' => 'required|max:255',
             'author' => 'required',
             'body' => 'required',
-            'img' => 'required|file|mimes:jpg,jpeg,png|max:2048',
+            'img' => 'file|mimes:jpg,jpeg,png|max:2048',
             'lang' => 'required'
         ]);
 
@@ -40,7 +44,7 @@ class PostController extends Controller
 
         //seteo la imagen
         $img = $request->file('img'); //archivo de la imagen
-        $path = $img->store('img', 'public'); //path de la imagen ! IMPORTANTE !
+        ($img) ? $path = $img->store('img', 'public') : ''; //path de la imagen - si la imagen no viene se devuelve ''
 
         Post::create([
             'title' => $validated['title'],
@@ -82,7 +86,7 @@ class PostController extends Controller
             'subTitle' => 'required|max:255',
             'author' => 'required',
             'body' => 'required',
-            'img' => 'required|file|mimes:jpg,jpeg,png|max:2048',
+            'img' => 'file|mimes:jpg,jpeg,png|max:2048',
             'lang' => 'required'
         ]);
 
@@ -92,7 +96,7 @@ class PostController extends Controller
 
         //seteo la imagen
         $img = $request->file('img'); //archivo de la imagen
-        $path = $img->store('img', 'public'); //path de la imagen ! IMPORTANTE !
+        ($img) ? $path = $img->store('img', 'public') : ''; //path de la imagen ! IMPORTANTE !
 
         $post->update($validated);
 
