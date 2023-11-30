@@ -3,16 +3,16 @@
         <div class="bg-gradient-to-r from-slate-300 to-zinc-300">
             <div class="text-4xl max-w-7xl mx-auto pt-32 pb-10 flex flex-col justify-evenly items-center space-y-10">
                 <form action="{{ route('posts.index', [ 'locale' => app()->getLocale() ]) }}" method="GET" class="flex flex-col items-start text-xl w-full font-semibold text-left text-slate-600">
-                    <div class="flex items-end space-x-3 mb-2">
+                    <div class="flex items-center space-x-4">
                         <label for="search" class="w-fit flex items-center bg-white px-1 text-slate-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 p-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                             </svg>                          
                             <input name="search" class="p-2 focus:ring-0 border-0 text-sm outline-none" type="text" placeholder="buscar" value="{{ request('search') }}">
                         </label>
-                        <button type="submit" class="text-sm text-blue-500 hover:underline">search</button>
+                        <button type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">search</button>
+                        <a href="{{ route('posts.index', [ 'locale' => app()->getLocale() ]) }}" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Clear</a>
                     </div>
-                    <a href="{{ route('posts.index', [ 'locale' => app()->getLocale() ]) }}" class="underline text-slate-600 text-sm">Clear</a>
                 </form>
                 
                 {{-- ! Blog cards --}}

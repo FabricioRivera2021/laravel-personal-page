@@ -1,4 +1,7 @@
 <x-layout>
+
+    <x-navbar />
+
     <div class="h-screen bg-slate-100 bg-background bg-cover bg-center">
         <div class="text-xl w-full mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center opacity-95 z-50">
 

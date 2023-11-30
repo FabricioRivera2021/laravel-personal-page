@@ -22,17 +22,9 @@ class Post extends Model
         'en'
     ];
 
-    public function scopeFilter(Builder|QueryBuilder $query, array $filters): Builder|QueryBuilder
+    public function scopeTitle(Builder $query, string $title): Builder //Illuminate\Database\Eloquent\Builder;
     {
-        return $query->when($filters['search'] ?? null, function($query, $search) {
-            $query->where(function ($query) use ($search){
-                $query->where('title','LIKE','%'. $search .'%') //con el orWhere busca en uno o en el otro
-                ->orWhere('subtitle', 'LIKE', '%'. $search . '%')
-                ->orWhere('body', 'LIKE', '%'. $search . '%');
-            });
-        });
+        return $query->where('title', 'LIKE', '%'. $title .'%');
     }
-
-
 }
 

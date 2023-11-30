@@ -14,13 +14,14 @@ class PostController extends Controller
             'search'
         );
 
-        $books = Post::when($search, function ($query, $search) {
+        $posts = Post::when($search, function ($query, $search) {
             return $query->title($search);
         });
 
+        $posts = $post->where('lang', app()->getLocale())->latest()->filter($posts)->get();
+
         return view('posts.index', [
-            'posts' => $post->where('lang', app()->getLocale())
-                ->latest()->filter($search)->get()
+            'posts' => $posts
         ]);
     }
 
