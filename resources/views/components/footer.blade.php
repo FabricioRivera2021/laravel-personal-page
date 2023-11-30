@@ -18,22 +18,22 @@
                 <div class="text-right">
                     <div class="flex space-x-4 items-center justify-end">
                         <div>
-                            <a class="hover:underline hover:text-orange-400" href="#">
+                            <a class="hover:underline hover:text-orange-400" href="https://github.com/FabricioRivera2021" target="_blank">
                                 <img src="{{ Vite::asset('resources/images/icons/github.png') }}" class="w-6" alt="icon">
                             </a>
                         </div>
                         <div>
-                            <a class="hover:underline hover:text-orange-400" href="#">
+                            <a class="hover:underline hover:text-orange-400" href="https://www.instagram.com" target="_blank">
                                 <img src="{{ Vite::asset('resources/images/icons/instagram.png') }}" class="w-6" alt="icon">
                             </a>
                         </div>
                         <div>
-                            <a class="hover:underline hover:text-orange-400" href="#">
+                            <a class="hover:underline hover:text-orange-400" href="https://www.linkedin.com/in/fabricio-rivera/" target="_blank">
                                 <img src="{{ Vite::asset('resources/images/icons/linkedin.png') }}" class="w-6" alt="icon">
                             </a>
                         </div>
                         <div>
-                            <a class="hover:underline hover:text-orange-400" href="#">
+                            <a class="hover:underline hover:text-orange-400" href="https://www.twitter.com" target="_blank">
                                 <img src="{{ Vite::asset('resources/images/icons/twitter.png') }}" class="w-6" alt="icon">
                             </a>
                         </div>

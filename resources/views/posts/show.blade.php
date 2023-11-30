@@ -2,9 +2,6 @@
     <x-navbar />
         <main>
             <div class="text-4xl max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10 min-h-screen">
-                {{-- <h2 class="w-full font-semibold text-center text-slate-400 pb-4">
-                    One entry
-                </h2> --}}
                 {{-- ! Blog cards --}}
                     <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
                         <div class="flex justify-between w-full">
@@ -35,11 +32,21 @@
                                     By: {{$post->author}}
                                 </div>
                             </div>
+                            @auth
+                            <div class="flex flex-col justify-start items-start border rounded-sm p-2">
+                                <form action="{{ route('posts.destroy', ['locale' => app()->getLocale(), 'post' => $post]) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="bg-gray-200 text-sm text-red-600 hover:underline px-3">Eliminar post</button>
+                                </form>
+                                <div>
+                                    <a class="bg-gray-200 text-sm text-emerald-600 hover:underline px-3" href="{{ route('posts.edit', ['locale' => app()->getLocale(), 'post' => $post]) }}">Editar Post</a>
+                                </div>
+                                {{-- <a class="text-sm text-red-500 hover:underline" href="{{ route('posts.destroy', ['locale' => app()->getLocale(), 'post' => $post]) }}">Eliminar post</a> --}}
+                            </div>
+                            @endauth
                         </x-card>
                     </x-card>
-
-                    
-                    {{-- one blog --}}
             </div>
         </main>
     <x-footer />

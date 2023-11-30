@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "@toast-ui/editor": "^3.2.2",
+        "alpinejs": "^3.13.3",
         "animate.css": "^4.1.1"
     }
 }

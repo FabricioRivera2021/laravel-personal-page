@@ -1,6 +1,6 @@
+<x-nav-bar />
 
 <x-layout>
-    <x-nav-bar />
     <div class="h-screen bg-background bg-cover bg-center">
 
         <div class="text-4xl max-w-7xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
