@@ -14,6 +14,9 @@ class PostController extends Controller
             'search'
         );
 
+        $books = Post::when($search, function ($query, $search) {
+            return $query->title($search);
+        });
 
         return view('posts.index', [
             'posts' => $post->where('lang', app()->getLocale())
