@@ -11,12 +11,12 @@ class PostController extends Controller
     public function index(Request $request, Post $post)
     {
         $search = $request->input('search');
-
+        
+        $posts = $post->where('lang', app()->getLocale())->latest()->get();
+        
         $posts = Post::when($search, function ($query, $search) {
             return $query->title($search);
         })->get();
-
-        $posts = $post->where('lang', app()->getLocale())->latest()->get();
 
         return view('posts.index', [
             'posts' => $posts

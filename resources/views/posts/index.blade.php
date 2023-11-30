@@ -32,6 +32,7 @@
                     </a>
                 @endauth
 
+                
                 @forelse ($posts as $post)
                     <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
                         <div class="flex justify-end w-full">
