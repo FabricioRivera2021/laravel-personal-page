@@ -8,17 +8,15 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     //_______________________________________________________________INDEX_____________________________________________________________
-    public function index(Post $post)
+    public function index(Request $request, Post $post)
     {
-        $search = request()->only(
-            'search'
-        );
+        $search = $request->input('search');
 
         $posts = Post::when($search, function ($query, $search) {
             return $query->title($search);
-        });
+        })->get();
 
-        $posts = $post->where('lang', app()->getLocale())->latest()->filter($posts)->get();
+        $posts = $post->where('lang', app()->getLocale())->latest()->get();
 
         return view('posts.index', [
             'posts' => $posts
