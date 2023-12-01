@@ -25,7 +25,7 @@
                     </label>
                     <div class="flex flex-col space-y-2 w-full">
                         <label for="editor" class="text-gray-600 font-semibold">Content</label>
-                        <div id="editor" name="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-slate-100">{{$post->body}}</div>
+                        <div id="editor" name="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-slate-100">{!! Str::markdown($post->body) !!}</div>
                         @error('editor')
                         <div class="mt-1 text-xs text-red-500">
                             {{ $message }}
