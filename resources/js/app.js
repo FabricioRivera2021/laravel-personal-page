@@ -9,12 +9,6 @@ import.meta.glob([
 import Editor from '@toast-ui/editor'
 import '@toast-ui/editor/dist/toastui-editor.css';
 
-import Alpine from 'alpinejs'
- 
-window.Alpine = Alpine
- 
-Alpine.start()
-
 // Initialize the editor
 const editor = new Editor({
     el: document.querySelector('#editor'),
@@ -32,7 +26,7 @@ document.querySelector('#form').addEventListener('submit', e => {
 
 document.addEventListener('DOMContentLoaded', function () {
   // Attach a click event to the button
-  document.getElementById('imgUpload').addEventListener('click', function (e) {
+  document.getElementById('uploadImageButton').addEventListener('click', function (e) {
       let formData = new FormData(), key;
       formData.append('img', document.getElementById('imgUpload').files[0]);
 
@@ -47,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
           // Display the public URL of the stored file
           let img = document.getElementById('imageUrl').textContent = '<img src="' + data.url + '" alt="img" />';
-          // editor.insertText(img);
+          editor.insertText(img);
       })
       .catch(error => {
           // Handle errors if any
