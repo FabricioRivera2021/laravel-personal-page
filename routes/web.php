@@ -34,6 +34,10 @@ Route::delete('/deleteImg', [PostImgUploadController::class, 'deleteImg']);
 Route::delete('logout', fn() => to_route('auth.destroy'))->name('logout');
 Route::delete('auth', [AuthController::class, 'destroy'])->name('auth.destroy');
 
+Route::get('/legacy', function(){
+    return view('legacy');
+});
+
 Route::group([
     'prefix' => '/{locale}',
     'middleware' => 'locale'],
