@@ -1,6 +1,6 @@
 <x-layout>
     <x-navbar />
-        <div class="bg-gradient-to-r from-slate-300 to-zinc-300">
+        <div class="bg-gradient-to-r from-slate-300 to-zinc-300 min-h-screen">
             <div class="text-4xl max-w-7xl mx-auto pt-32 pb-10 flex flex-col justify-evenly items-center space-y-10">
                 <form action="{{ route('posts.index', [ 'locale' => app()->getLocale() ]) }}" method="GET" class="flex flex-col items-start text-xl w-full font-semibold text-left text-slate-600">
                     <div class="flex items-center space-x-4">
@@ -35,8 +35,9 @@
                 
                 @forelse ($posts as $post)
                     <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
-                        <div class="flex justify-end w-full">
-                            <p class="text-xs text-slate-500">{{$post->created_at->format('d M Y')}}</p>
+                        <div class="flex flex-col items-end justify-end w-full">
+                            <p class="text-xs text-slate-500"> Created: {{ $post->created_at->format('d M Y') }} </p>
+                            <p class="text-xs text-slate-500"> Last modified: {{$post->updated_at->format('d M Y')}}</p>
                         </div>
                         <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">
@@ -79,8 +80,10 @@
                     </x-card>
                     {{-- one blog --}}
                 @empty
-                    <div>
-                        no hay posts disponibles
+                    <div class="h-full w-full flex items-center justify-center">
+                        <div class="p-10 rounded-2xl border border-slate-600 border-dotted text-slate-500 font-semibold">
+                            No hay Posts para mostrar
+                        </div>
                     </div>
                 @endforelse
             </div>
