@@ -6,6 +6,12 @@ import.meta.glob([
     '../files/**',
   ]);
 
+import Alpine from 'alpinejs'
+ 
+window.Alpine = Alpine
+ 
+Alpine.start()
+
 import Editor from '@toast-ui/editor'
 import '@toast-ui/editor/dist/toastui-editor.css';
 
