@@ -1,6 +1,6 @@
 <div
 x-data="{ isOpen: false }"
-class="relative antialiased min-h-screen lg:flex"
+class="relative antialiased min-h-screen  lg:flex"
 @keydown.escape.window="isOpen = false"
 >
     <div class="fixed w-[100vw] bg-slate-700 z-50">
@@ -32,7 +32,7 @@ class="relative antialiased min-h-screen lg:flex"
             />
         </svg>
         </button>
-        <nav class="transform transition duration-300 inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto h-20 sm:h-10 px-20 flex flex-col sm:flex-row justify-between space-x-24 items-center bg-slate-700 text-slate-100"
+        <nav class="transform transition duration-300 inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto sm:h-10 sm:px-20 flex flex-col sm:flex-row items-start sm:justify-between sm:space-x-24 sm:items-center bg-slate-700 text-slate-800"
         :class="{'-translate-x-full opacity-0':isOpen === false, 'translate-x-0 opacity-100': isOpen === true}">
             <ul class="flex flex-col sm:flex-row md:space-x-7 font-semibold">
                 <x-navbar-link href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</x-navbar-link>
@@ -49,7 +49,7 @@ class="relative antialiased min-h-screen lg:flex"
                 </x-navbar-link>
                 @endauth
             </ul>
-            <ul class="flex space-x-7 items-center">
+            <ul class="flex flex-col sm:flex-row md:space-x-7">
                 <x-navbar-link class="text-sm" href="https://github.com/FabricioRivera2021" target="blank">Github</x-navbar-link>
                 <x-navbar-link class="text-sm" href="https://www.linkedin.com/in/fabricio-rivera/" target="blank">LinkedIn</x-navbar-link>
                 <x-navbar-link class="text-sm" href="#">Mail</x-navbar-link>
