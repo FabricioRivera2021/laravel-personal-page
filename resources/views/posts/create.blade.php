@@ -4,7 +4,7 @@
 
 <x-layout>
     <x-navbar />
-        <x-card class="rounded-md shadow-md flex items-center justify-center">
+        <x-card class="rounded-md shadow-md flex items-center justify-center mx-auto">
             <div class="mt-[5rem]">
 
                 <form id="form" enctype="multipart/form-data" action="{{route('posts.store', app()->getLocale())}}" method="POST" class="flex flex-col gap-4 items-center justify-center py-5 w-[65rem]">

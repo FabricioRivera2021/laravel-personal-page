@@ -1,7 +1,7 @@
 <x-layout>
     <x-navbar />
         <main>
-            <div class="text-4xl max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10 min-h-screen">
+            <div class="text-4xl md:max-w-6xl 2xl:max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10 min-h-screen">
                 {{-- ! Blog cards --}}
                     <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
                         <div class="flex justify-between w-full">

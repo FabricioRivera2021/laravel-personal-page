@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-card class="h-screen flex justify-center items-center">
+    <x-card class="h-screen flex justify-center items-center mx-auto">
 
         <form action="{{route('auth.store')}}" method="POST" class="flex flex-col gap-4 items-center justify-center bg-slate-300 p-5 shadow-md rounded-lg w-[40rem]">
             @csrf

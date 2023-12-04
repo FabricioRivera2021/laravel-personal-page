@@ -1,7 +1,7 @@
 <x-layout>
     <x-navbar />
         <div class="bg-gradient-to-r from-slate-300 to-zinc-300 min-h-screen">
-            <div class="text-4xl max-w-7xl mx-auto pt-32 pb-10 flex flex-col justify-evenly items-center space-y-10">
+            <div class="text-4xl md:max-w-6xl 2xl:max-w-7xl mx-auto pt-32 pb-10 flex flex-col justify-evenly items-center space-y-10">
                 <form action="{{ route('posts.index', [ 'locale' => app()->getLocale() ]) }}" method="GET" class="flex flex-col items-start text-xl w-full font-semibold text-left text-slate-600">
                     <div class="flex items-center space-x-4">
                         <label for="search" class="w-fit flex items-center bg-white px-1 text-slate-400">
