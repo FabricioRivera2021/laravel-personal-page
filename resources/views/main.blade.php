@@ -2,7 +2,7 @@
     <x-nav-bar />
     <div class="h-screen bg-background bg-cover bg-center">
 
-        <div class="text-4xl max-w-7xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
+        <div class="text-4xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
             <x-card class="rounded-md shadow-md bg-slate-100">
                 <h1 class="w-[60rem] font-bold text-slate-500">
                     @lang('messages.title')
@@ -11,10 +11,10 @@
                     </span>
                 </h1>
                 <h2 class="text-slate-500">@lang('messages.welcome')</h2>
-                <p class="text-gray-700 text-sm w-[85rem]">
+                <p class="text-gray-700 text-sm md:max-w-6xl 2xl:max-w-7xl">
                     @lang('messages.hero-text-first')
                 </p>
-                <p class="text-gray-700 text-sm w-[85rem]">
+                <p class="text-gray-700 text-sm md:max-w-6xl 2xl:max-w-7xl">
                     @lang('messages.hero-text-second')
                 </p>
 
@@ -27,7 +27,7 @@
     {{-- todo ABOUT ME --------------------------------------------------------------------------------------------------------------------------------- --}}
     <div>
         {{-- todo primer bloque --}}
-        <div class="text-3xl max-w-7xl mx-auto grid grid-col-4 gap-6 pt-16">
+        <div class="text-3xl md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-col-4 gap-6 pt-16">
             <x-card class="col-span-3 space-y-7">
                 <div>
                     <div class="flex justify-start items-center space-x-3 text-slate-500">
@@ -46,7 +46,7 @@
                     <div class="space-y-4 text-sm">
                         @lang('messages.aboutMe-about-text')
                     </div>
-                    <div class="h-[400px] w-[1050px] bg-slate-500 self-center rounded-xl">
+                    <div class=" bg-slate-500 self-center rounded-xl">
                         {{--  --}}
                     </div>
                 </div>
@@ -55,7 +55,7 @@
 
         {{-- todo segundo bloque --}}
         <div class="bg-gradient-to-b from-slate-700 to-blue-500 pb-6">
-            <div class="text-3xl max-w-7xl mx-auto grid grid-cols-4 gap-6 pt-16">
+            <div class="text-3xl  md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-4 gap-6 pt-16">
                 <x-card class="space-y-3 mt-10 bg-slate-100 rounded-t-md shadow-md col-span-2 row-span-2">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
@@ -137,29 +137,32 @@
                                 @lang('messages.aboutMe-tech-msg')
                             </span>
                         </div>
-                        <div class="flex space-x-4 flex-wrap self-center items-center">
-                            <div class="w-14 rounded-md">
+                        <div class="flex space-x-3 flex-wrap self-center items-center">
+                            <div class="2xl:w-12 md:w-9 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/html-5.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="w-14 rounded-md">
+                            <div class="2xl:w-12 md:w-9 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/css-3.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="w-12 rounded-md">
+                            <div class="2xl:w-12 md:w-9 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/js.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="w-16 rounded-md">
+                            <div class="2xl:w-14 md:w-9 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/react.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="w-16 rounded-md">
+                            <div class="2xl:w-14 md:w-9 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/php.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="w-14 rounded-md">
+                            <div class="2xl:w-12 md:w-9 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/laravel.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="w-16 rounded-md">
+                            <div class="2xl:w-16 md:w-9 rounded-md">
+                                <img src="{{ Vite::asset('resources/images/icons/mySql.png') }}" class="w-20" alt="icon">
+                            </div>
+                            <div class="2xl:w-14 md:w-9 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/tailwind.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="w-16 rounded-md">
+                            <div class="2xl:w-14 md:w-9 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/aws.png') }}" class="w-20" alt="icon">
                             </div>
                         </div>
