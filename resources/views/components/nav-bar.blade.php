@@ -1,10 +1,11 @@
 <div
 x-data="{ isOpen: false }"
-class="relative antialiased min-h-screen  lg:flex"
+class="relative antialiased lg:flex"
 @keydown.escape.window="isOpen = false"
 >
-    <div class="fixed w-[100vw] bg-slate-700 z-50">
-        <button class="p-2 rounded hover:bg-blue-800" @click="isOpen = true">
+    <div class="fixed w-[100vw] bg-slate-700 opacity-90 z-50"
+            :class="{'':isOpen === false, 'h-[100vh]':isOpen === true}">
+        <button class="p-2 text-orange-500 bg-slate-700 hover:bg-slate-100" @click="isOpen = ! isOpen">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -18,25 +19,11 @@ class="relative antialiased min-h-screen  lg:flex"
             />
         </svg>
         </button>
-        <button class="p-2 rounded hover:bg-blue-800" @click="isOpen = false">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-        >
-            <path
-            fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"
-            />
-        </svg>
-        </button>
-        <nav class="transform transition duration-300 inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto sm:h-10 h-[70vh] 
+        <nav class=" inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto sm:h-10  
                     sm:px-20 flex flex-col sm:flex-row p-5 justify-between sm:space-x-24 sm:items-center
                     bg-slate-700 text-slate-100"
-                :class="{'-translate-x-full opacity-0':isOpen === false, 'translate-x-0 opacity-100': isOpen === true}">
-            <ul class="flex flex-col sm:flex-row md:space-x-7 space-y-3 font-semibold w-1/2">
+                :class="{'-translate-x-full opacity-0 hidden h-[0vh]':isOpen === false, 'translate-x-0 opacity-100 h-[70vh]': isOpen === true}">
+            <ul class="flex flex-col sm:flex-row md:space-x-7 space-y-3 font-semibold w-1/3">
                 <x-navbar-link href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</x-navbar-link>
                 <x-navbar-link href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
                 <x-navbar-link href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
