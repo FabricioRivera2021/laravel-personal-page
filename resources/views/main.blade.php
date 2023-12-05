@@ -1,20 +1,20 @@
 <x-layout>
     <x-nav-bar />
-    <div class="h-screen bg-background bg-cover bg-center">
+    <div class="h-screen bg-background bg-cover bg-center antialiased">
 
-        <div class="text-4xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
+        <div class="text-2xl md:text-4xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
             <x-card class="rounded-md shadow-md bg-slate-100">
                 <h1 class="w-[60rem] font-bold text-slate-500">
                     @lang('messages.title')
-                    <span class="block text-lg text-orange-400 font-thin">
+                    <span class="block text-sm md:text-lg text-orange-400 font-thin">
                         @lang('messages.madeBy')
                     </span>
                 </h1>
-                <h2 class="text-slate-500">@lang('messages.welcome')</h2>
-                <p class="text-gray-700 text-sm md:max-w-6xl 2xl:max-w-7xl">
+                <h2 class="text-slate-500 text-lg">@lang('messages.welcome')</h2>
+                <p class="text-gray-700 text-sm max-w-md md:max-w-6xl 2xl:max-w-7xl">
                     @lang('messages.hero-text-first')
                 </p>
-                <p class="text-gray-700 text-sm md:max-w-6xl 2xl:max-w-7xl">
+                <p class="text-gray-700 text-sm max-w-md md:max-w-6xl 2xl:max-w-7xl">
                     @lang('messages.hero-text-second')
                 </p>
 

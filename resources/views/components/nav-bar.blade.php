@@ -1,6 +1,6 @@
 <div
 x-data="{ isOpen: false }"
-class="relative antialiased lg:flex"
+class="antialiased lg:flex"
 @keydown.escape.window="isOpen = false"
 >
     <div class="fixed w-[100vw] bg-slate-700 opacity-90 z-50"
@@ -19,7 +19,7 @@ class="relative antialiased lg:flex"
             />
         </svg>
         </button>
-        <nav class=" inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto sm:h-10  
+        <nav class="md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto sm:h-10  
                     sm:px-20 flex flex-col sm:flex-row p-5 justify-between sm:space-x-24 sm:items-center
                     bg-slate-700 text-slate-100"
                 :class="{'-translate-x-full opacity-0 hidden h-[0vh]':isOpen === false, 'translate-x-0 opacity-100 h-[70vh]': isOpen === true}">
