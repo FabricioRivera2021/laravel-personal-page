@@ -1,11 +1,11 @@
 <div
 x-data="{ isOpen: false }"
-class="antialiased lg:flex"
+class="relative antialiased lg:flex"
 @keydown.escape.window="isOpen = false"
 >
-    <div class="fixed w-[100vw] bg-slate-700 opacity-90 z-50"
+    <div class="fixed w-[100vw] md:h-10 bg-slate-700 opacity-90 z-50"
             :class="{'':isOpen === false, 'h-[100vh]':isOpen === true}">
-        <button class="p-2 text-orange-500 bg-slate-700 hover:bg-slate-100" @click="isOpen = ! isOpen">
+        <button class="p-2 text-orange-500 bg-slate-700 hover:bg-slate-100 md:hidden" @click="isOpen = ! isOpen">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -19,7 +19,7 @@ class="antialiased lg:flex"
             />
         </svg>
         </button>
-        <nav class="md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto sm:h-10  
+        <nav class="md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto md:h-10  
                     sm:px-20 flex flex-col sm:flex-row p-5 justify-between sm:space-x-24 sm:items-center
                     bg-slate-700 text-slate-100"
                 :class="{'-translate-x-full opacity-0 hidden h-[0vh]':isOpen === false, 'translate-x-0 opacity-100 h-[70vh]': isOpen === true}">

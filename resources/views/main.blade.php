@@ -27,8 +27,8 @@
     {{-- todo ABOUT ME --------------------------------------------------------------------------------------------------------------------------------- --}}
     <div>
         {{-- todo primer bloque --}}
-        <div class="text-3xl md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-col-4 gap-6 pt-16">
-            <x-card class="col-span-3 space-y-7">
+        <div class="text-xl sm:text-3xl md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-col-1 md:grid-col-4 md:gap-6 pt-6 md:pt-16">
+            <x-card class="col-span-2 space-y-7 place-self-center">
                 <div>
                     <div class="flex justify-start items-center space-x-3 text-slate-500">
                         <h3 class="max-w-[60rem] font-bold uppercase">
@@ -43,7 +43,7 @@
                     </span>
                 </div>
                 <div class="flex space-x-2">
-                    <div class="space-y-4 text-sm">
+                    <div class="space-y-4 text-justify text-sm">
                         @lang('messages.aboutMe-about-text')
                     </div>
                     <div class=" bg-slate-500 self-center rounded-xl">
@@ -55,8 +55,8 @@
 
         {{-- todo segundo bloque --}}
         <div class="bg-gradient-to-b from-slate-700 to-blue-500 pb-6">
-            <div class="text-3xl  md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-4 gap-6 pt-16">
-                <x-card class="space-y-3 mt-10 bg-slate-100 rounded-t-md shadow-md col-span-2 row-span-2">
+            <div class="text-3xl  md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-1 md:gap-6 pt-16">
+                <x-card class="space-y-3 mt-10 bg-slate-100 rounded-t-md shadow-md col-span-2 row-span-2 place-self-center">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
@@ -74,7 +74,7 @@
                     </div>
                     @lang('messages.aboutMe-edu-text')
                 </x-card>
-                <x-card class="space-y-3 bg-slate-100 mt-20 rounded-t-md shadow-md col-span-2 row-span-2">
+                <x-card class="space-y-3 bg-slate-100 mt-5 md:mt-20 rounded-t-md shadow-md col-span-2 row-span-2 place-self-center">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
@@ -122,8 +122,8 @@
                         </li>
                     </ol>
                 </x-card>
-                <x-card class="space-y-10 bg-slate-100 rounded-b-md shadow-md col-span-3">
-                    <div class="flex justify-evenly w-full h-full items-center">    
+                <x-card class="space-y-10 bg-slate-100 mt-5 rounded-b-md shadow-md col-span-3 place-self-center">
+                    <div class="flex flex-col md:flex-row justify-evenly w-full h-full items-center">    
                         <div>
                             <div class="flex justify-start items-center space-x-3 text-slate-500">
                                 <h3 class="max-w-[60rem] font-bold uppercase">
@@ -137,38 +137,38 @@
                                 @lang('messages.aboutMe-tech-msg')
                             </span>
                         </div>
-                        <div class="flex space-x-3 flex-wrap self-center items-center">
-                            <div class="2xl:w-12 md:w-9 rounded-md">
+                        <div class="flex space-x-3 flex-wrap self-center items-center pt-4">
+                            <div class="2xl:w-12 md:w-9 w-8 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/html-5.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-12 md:w-9 rounded-md">
+                            <div class="2xl:w-12 md:w-9 w-8 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/css-3.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-12 md:w-9 rounded-md">
+                            <div class="2xl:w-12 md:w-9 w-8 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/js.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-14 md:w-9 rounded-md">
+                            <div class="2xl:w-14 md:w-9 w-8 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/react.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-14 md:w-9 rounded-md">
+                            <div class="2xl:w-14 md:w-9 w-8 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/php.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-12 md:w-9 rounded-md">
+                            <div class="2xl:w-12 md:w-9 w-8 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/laravel.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-16 md:w-9 rounded-md">
+                            <div class="2xl:w-16 md:w-9 w-8 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/mySql.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-14 md:w-9 rounded-md">
+                            <div class="2xl:w-14 md:w-9 w-8 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/tailwind.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-14 md:w-9 rounded-md">
+                            <div class="2xl:w-14 md:w-9 w-8 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/aws.png') }}" class="w-20" alt="icon">
                             </div>
                         </div>
                     </div>
                 </x-card>
-                <x-card class="space-y-10 bg-slate-100 rounded-b-md shadow-md col-span-1 row-span-1">
+                <x-card class="space-y-10 bg-slate-100 mt-5 rounded-b-md shadow-md col-span-1 row-span-1 place-self-center">
                     <div class="flex flex-col space-y-2">
                         <div class="w-full bg-orange-300 h-1"></div>
                         <p class="text-gray-700 text-sm">
