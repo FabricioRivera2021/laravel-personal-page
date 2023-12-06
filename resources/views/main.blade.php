@@ -4,7 +4,7 @@
 
         <div class="text-2xl md:text-4xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
             <x-card class="rounded-md shadow-md bg-slate-100">
-                <h1 class="w-[60rem] font-bold text-slate-500">
+                <h1 class="sm:w-[60rem] font-bold text-slate-500">
                     @lang('messages.title')
                     <span class="block text-sm md:text-lg text-orange-400 font-thin">
                         @lang('messages.madeBy')
