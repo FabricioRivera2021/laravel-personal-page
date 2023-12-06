@@ -171,9 +171,9 @@
                 <x-card class="space-y-10 bg-slate-100 mt-5 rounded-b-md shadow-md col-span-1 row-span-1 place-self-center">
                     <div class="flex flex-col space-y-2">
                         <div class="w-full bg-orange-300 h-1"></div>
-                        <p class="text-gray-700 text-sm">
-                            @lang('messages.aboutMe-tech-text')
-                        </p>
+                            <p class="text-gray-700 text-sm">
+                                @lang('messages.aboutMe-tech-text')
+                            </p>
                         <div class="w-full bg-orange-300 h-1"></div>
                     </div>
                 </x-card>
