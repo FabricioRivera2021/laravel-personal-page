@@ -1,5 +1,5 @@
 <div
-x-data="{ isOpen: false }"
+x-data="{ isOpen: true }"
 class="antialiased lg:flex bg-slate-700 h-10 w-screen fixed z-50"
 @keydown.escape.window="isOpen = false"
 >
@@ -20,14 +20,13 @@ class="antialiased lg:flex bg-slate-700 h-10 w-screen fixed z-50"
     <div class="h-screen fixed md:h-10 bg-slate-700 transform transition duration-300"
             :class="{'-translate-x-[200px] opacity-0 z-0 h-0':isOpen === false, 'translate-x-0 opacity-90 z-50':isOpen === true}">
         <nav class="transform transition duration-300 inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto md:h-10
-                    sm:px-20 flex flex-col sm:flex-row p-5 justify-evenly sm:space-x-24 sm:items-center
-                    bg-slate-700 text-slate-100"
+                    sm:px-20 flex flex-col sm:flex-row p-5 justify-evenly sm:justify-between sm:space-x-24 sm:items-center bg-slate-700 text-slate-100"
                 :class="{'-translate-x-[200px] opacity-100 h-[70vh]':isOpen === false, 'translate-x-0 w-fit opacity-100 h-[70vh]': isOpen === true}">
-            <ul class="flex flex-col sm:flex-row md:space-x-7 space-y-3 font-semibold w-3/4">
+            <ul class="flex flex-col sm:flex-row md:space-x-7 space-y-3 sm:space-y-0 font-semibold w-3/4">
                 <x-navbar-link @click="isOpen = false" href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</x-navbar-link>
-                <x-navbar-link href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
-                <x-navbar-link href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
-                <x-navbar-link href="{{ route('posts.index', app()->getLocale()) }}">Blog</x-navbar-link>
+                <x-navbar-link @click="isOpen = false" href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
+                <x-navbar-link @click="isOpen = false" href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
+                <x-navbar-link @click="isOpen = false" href="{{ route('posts.index', app()->getLocale()) }}">Blog</x-navbar-link>
                 @auth
                 <x-navbar-link href="#" class="text-orange-400">
                     <form action="{{ route('auth.destroy') }}" method="POST" class="h-fit">
@@ -38,7 +37,7 @@ class="antialiased lg:flex bg-slate-700 h-10 w-screen fixed z-50"
                 </x-navbar-link>
                 @endauth
             </ul>
-            <ul class="flex flex-col sm:flex-row md:space-x-7 w-1/2 space-y-2 self-start">
+            <ul class="flex flex-col sm:flex-row md:space-x-7 w-1/2 space-y-2 sm:space-y-0 self-start">
                 <x-navbar-link class="text-sm" href="https://github.com/FabricioRivera2021" target="blank">Github</x-navbar-link>
                 <x-navbar-link class="text-sm" href="https://www.linkedin.com/in/fabricio-rivera/" target="blank">LinkedIn</x-navbar-link>
                 <x-navbar-link class="text-sm" href="#">Mail</x-navbar-link>
