@@ -18,8 +18,8 @@ class="antialiased lg:flex bg-slate-700 h-10 w-screen fixed z-50"
     </svg>
     </button>
     <div class="h-screen fixed md:h-10 bg-slate-700 transform transition duration-300"
-            :class="{'opacity-0 z-0 h-0':isOpen === false, 'opacity-90 z-50':isOpen === true}">
-        <nav class="transform transition duration-300 inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto md:h-10 
+            :class="{'-translate-x-[200px] opacity-0 z-0 h-0':isOpen === false, 'translate-x-0 opacity-90 z-50':isOpen === true}">
+        <nav class="transform transition duration-300 inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto md:h-10
                     sm:px-20 flex flex-col sm:flex-row p-5 justify-evenly sm:space-x-24 sm:items-center
                     bg-slate-700 text-slate-100"
                 :class="{'-translate-x-[200px] opacity-100 h-[70vh]':isOpen === false, 'translate-x-0 w-fit opacity-100 h-[70vh]': isOpen === true}">

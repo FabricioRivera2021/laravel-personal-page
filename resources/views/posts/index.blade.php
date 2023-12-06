@@ -39,7 +39,7 @@
                             <p class="text-xs text-slate-500"> Created: {{ $post->created_at->format('d M Y') }} </p>
                             <p class="text-xs text-slate-500"> Last modified: {{$post->updated_at->format('d M Y')}}</p>
                         </div>
-                        <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
+                        <x-card class="w-full rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">
                                 <div class="flex items-center justify-between">
                                     <h4 class="text-2xl font-medium text-slate-600">{{$post->title}}</h4>
@@ -61,7 +61,7 @@
 
                             <div class="flex w-full justify-between">
                                 <div class="flex flex-col text-slate-700 h-full">
-                                    <div class="prose text-xs sm:text-sm">
+                                    <div class="prose prose-sm sm:prose-xl text-xs sm:text-sm">
                                         {!! Str::markdown(Str::limit($post->body, 500)) !!}
                                     </div>
                                 </div>

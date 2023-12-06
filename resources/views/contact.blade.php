@@ -57,7 +57,7 @@
                             <div>
                                 <h1 class="text-xl font-semibold text-slate-500">@lang('messages.contact-title')</h1>
                             </div>
-                            <div class="flex justify-between space-x-4">
+                            <div class="flex flex-col justify-between sm:space-x-4 space-y-4 sm:space-y-0">
                                 <div class="w-full space-y-4">
                                     <x-input :placeholder="trans('messages.contact-name')" id="name" name="name"/>
                                     <x-input type="email" placeholder="Email" id="email" name="email"/>
