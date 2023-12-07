@@ -1,10 +1,10 @@
 <x-layout>
     <x-navbar />
         <div class="bg-gradient-to-r from-slate-300 to-zinc-300 min-h-screen">
-            <div class="text-4xl md:max-w-6xl 2xl:max-w-7xl mx-auto pt-32 pb-10 flex flex-col justify-evenly items-center space-y-10">
+            <div class="text-4xl max-w-xs md:max-w-6xl 2xl:max-w-7xl mx-auto pt-32 pb-10 flex flex-col justify-evenly items-center space-y-10">
                 <form action="{{ route('posts.index', [ 'locale' => app()->getLocale() ]) }}" method="GET" class="flex flex-col items-start text-xl w-full font-semibold text-left text-slate-600">
-                    <div class="flex items-center space-x-4">
-                        <label for="search" class="w-fit flex items-center bg-white px-1 text-slate-400">
+                    <div class="flex flex-col md:flex-row md:items-center items-start space-y-2 md:space-y-0 md:space-x-4">
+                        <label for="search" class="sm:w-fit flex items-center bg-white px-1 text-slate-400">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 p-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                             </svg>                          
@@ -39,7 +39,7 @@
                             <p class="text-xs text-slate-500"> Created: {{ $post->created_at->format('d M Y') }} </p>
                             <p class="text-xs text-slate-500"> Last modified: {{$post->updated_at->format('d M Y')}}</p>
                         </div>
-                        <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
+                        <x-card class="w-full rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">
                                 <div class="flex items-center justify-between">
                                     <h4 class="text-2xl font-medium text-slate-600">{{$post->title}}</h4>
@@ -61,7 +61,7 @@
 
                             <div class="flex w-full justify-between">
                                 <div class="flex flex-col text-slate-700 h-full">
-                                    <div class="prose">
+                                    <div class="prose prose-sm sm:prose-xl text-xs sm:text-sm">
                                         {!! Str::markdown(Str::limit($post->body, 500)) !!}
                                     </div>
                                 </div>

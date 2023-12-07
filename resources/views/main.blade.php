@@ -1,20 +1,20 @@
 <x-layout>
     <x-nav-bar />
-    <div class="h-screen bg-background bg-cover bg-center">
+    <div class="h-screen bg-background bg-cover bg-center antialiased">
 
-        <div class="text-4xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
-            <x-card class="rounded-md shadow-md bg-slate-100">
-                <h1 class="w-[60rem] font-bold text-slate-500">
+        <div class="text-2xl md:text-4xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
+            <x-card class="rounded-md p-3 shadow-md bg-slate-100">
+                <h1 class="sm:w-[70rem] font-bold text-slate-500">
                     @lang('messages.title')
-                    <span class="block text-lg text-orange-400 font-thin">
+                    <span class="block text-sm md:text-lg text-orange-400 font-thin">
                         @lang('messages.madeBy')
                     </span>
                 </h1>
-                <h2 class="text-slate-500">@lang('messages.welcome')</h2>
-                <p class="text-gray-700 text-sm md:max-w-6xl 2xl:max-w-7xl">
+                <h2 class="text-slate-500 text-lg">@lang('messages.welcome')</h2>
+                <p class="text-gray-700 text-sm max-w-md md:max-w-6xl 2xl:max-w-7xl">
                     @lang('messages.hero-text-first')
                 </p>
-                <p class="text-gray-700 text-sm md:max-w-6xl 2xl:max-w-7xl">
+                <p class="text-gray-700 text-sm max-w-md md:max-w-6xl 2xl:max-w-7xl">
                     @lang('messages.hero-text-second')
                 </p>
 
@@ -27,8 +27,8 @@
     {{-- todo ABOUT ME --------------------------------------------------------------------------------------------------------------------------------- --}}
     <div>
         {{-- todo primer bloque --}}
-        <div class="text-3xl md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-col-4 gap-6 pt-16">
-            <x-card class="col-span-3 space-y-7">
+        <div class="text-xl sm:text-3xl md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-col-1 md:grid-col-4 md:gap-6 pt-6 md:pt-16">
+            <x-card class="col-span-2 p-2 space-y-7 place-self-center">
                 <div>
                     <div class="flex justify-start items-center space-x-3 text-slate-500">
                         <h3 class="max-w-[60rem] font-bold uppercase">
@@ -43,7 +43,7 @@
                     </span>
                 </div>
                 <div class="flex space-x-2">
-                    <div class="space-y-4 text-sm">
+                    <div class="space-y-4 text-justify text-sm">
                         @lang('messages.aboutMe-about-text')
                     </div>
                     <div class=" bg-slate-500 self-center rounded-xl">
@@ -55,8 +55,8 @@
 
         {{-- todo segundo bloque --}}
         <div class="bg-gradient-to-b from-slate-700 to-blue-500 pb-6">
-            <div class="text-3xl  md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-4 gap-6 pt-16">
-                <x-card class="space-y-3 mt-10 bg-slate-100 rounded-t-md shadow-md col-span-2 row-span-2">
+            <div class="text-xl sm:text-3xl md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 md:gap-6 pt-16">
+                <x-card class="space-y-3 p-3 mt-10 bg-slate-100 rounded-t-md shadow-md col-span-2 row-span-2 place-self-center md:place-self-auto">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
@@ -74,7 +74,7 @@
                     </div>
                     @lang('messages.aboutMe-edu-text')
                 </x-card>
-                <x-card class="space-y-3 bg-slate-100 mt-20 rounded-t-md shadow-md col-span-2 row-span-2">
+                <x-card class="space-y-3 p-3 bg-slate-100 mt-5 md:mt-20 rounded-t-md shadow-md col-span-2 row-span-2 place-self-center md:place-self-auto">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
@@ -91,8 +91,8 @@
                     </div>
                     <ol class="text-sm w-full">
                         <li class="bg-slate-100 mb-5">
-                            <div class="flex items-center justify-between bg-slate-200">
-                                <h4 class="text-lg font-semibold">@lang('messages.aboutMe-exp-item1-place')</h4>
+                            <div class="flex items-center justify-between bg-slate-200 mb-2">
+                                <h4 class="text-sm md:text-lg font-semibold">@lang('messages.aboutMe-exp-item1-place')</h4>
                                 <p>01/03/23 - 01/03/23</p>
                             </div>
                             <p>@lang('messages.aboutMe-exp-item1-rol')</p>
@@ -101,8 +101,8 @@
                             </p>
                         </li>
                         <li class="bg-slate-100 mb-5">
-                            <div class="flex items-center justify-between bg-slate-200">
-                                <h4 class="text-lg font-semibold">@lang('messages.aboutMe-exp-item2-place')</h4>
+                            <div class="flex items-center justify-between bg-slate-200 mb-2">
+                                <h4 class="text-sm md:text-lg font-semibold">@lang('messages.aboutMe-exp-item2-place')</h4>
                                 <p>01/03/23 - 01/03/23</p>
                             </div>
                             <p>@lang('messages.aboutMe-exp-item2-rol')</p>
@@ -111,8 +111,8 @@
                             </p>
                         </li>
                         <li class="bg-slate-100 mb-5">
-                            <div class="flex items-center justify-between bg-slate-200">
-                                <h4 class="text-lg font-semibold">@lang('messages.aboutMe-exp-item3-place')</h4>
+                            <div class="flex items-center justify-between bg-slate-200 mb-2">
+                                <h4 class="text-sm md:text-lg font-semibold">@lang('messages.aboutMe-exp-item3-place')</h4>
                                 <p>01/03/23 - 01/03/23</p>
                             </div>
                             <p>@lang('messages.aboutMe-exp-item3-rol')</p>
@@ -122,8 +122,8 @@
                         </li>
                     </ol>
                 </x-card>
-                <x-card class="space-y-10 bg-slate-100 rounded-b-md shadow-md col-span-3">
-                    <div class="flex justify-evenly w-full h-full items-center">    
+                <x-card class="space-y-10 p-5 bg-slate-100 mt-5 rounded-b-md shadow-md col-span-3 place-self-center md:place-self-auto">
+                    <div class="flex flex-col md:flex-row justify-evenly w-full h-full items-start sm:items-center">    
                         <div>
                             <div class="flex justify-start items-center space-x-3 text-slate-500">
                                 <h3 class="max-w-[60rem] font-bold uppercase">
@@ -137,43 +137,43 @@
                                 @lang('messages.aboutMe-tech-msg')
                             </span>
                         </div>
-                        <div class="flex space-x-3 flex-wrap self-center items-center">
-                            <div class="2xl:w-12 md:w-9 rounded-md">
+                        <div class="flex space-x-1 flex-nowrap sm:flex-wrap self-center items-center pt-4">
+                            <div class="2xl:w-12 md:w-9 sm:w-8 w-7 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/html-5.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-12 md:w-9 rounded-md">
+                            <div class="2xl:w-12 md:w-9 sm:w-8 w-7 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/css-3.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-12 md:w-9 rounded-md">
+                            <div class="2xl:w-12 md:w-9 sm:w-8 w-7 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/js.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-14 md:w-9 rounded-md">
+                            <div class="2xl:w-14 md:w-9 sm:w-8 w-7 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/react.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-14 md:w-9 rounded-md">
+                            <div class="2xl:w-14 md:w-9 sm:w-8 w-7 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/php.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-12 md:w-9 rounded-md">
+                            <div class="2xl:w-12 md:w-9 sm:w-8 w-7 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/laravel.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-16 md:w-9 rounded-md">
+                            <div class="2xl:w-16 md:w-9 sm:w-8 w-7 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/mySql.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-14 md:w-9 rounded-md">
+                            <div class="2xl:w-14 md:w-9 sm:w-8 w-7 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/tailwind.png') }}" class="w-20" alt="icon">
                             </div>
-                            <div class="2xl:w-14 md:w-9 rounded-md">
+                            <div class="2xl:w-14 md:w-9 sm:w-8 w-7 rounded-md">
                                 <img src="{{ Vite::asset('resources/images/icons/aws.png') }}" class="w-20" alt="icon">
                             </div>
                         </div>
                     </div>
                 </x-card>
-                <x-card class="space-y-10 bg-slate-100 rounded-b-md shadow-md col-span-1 row-span-1">
+                <x-card class="space-y-10 p-5 bg-slate-100 mt-5 rounded-b-md shadow-md col-span-1 row-span-1 place-self-center">
                     <div class="flex flex-col space-y-2">
                         <div class="w-full bg-orange-300 h-1"></div>
-                        <p class="text-gray-700 text-sm">
-                            @lang('messages.aboutMe-tech-text')
-                        </p>
+                            <p class="text-gray-700 text-sm">
+                                @lang('messages.aboutMe-tech-text')
+                            </p>
                         <div class="w-full bg-orange-300 h-1"></div>
                     </div>
                 </x-card>

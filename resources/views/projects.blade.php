@@ -5,9 +5,9 @@
     <div class="w-full">
         <div class="flex flex-col bg-slate-100">
             {{-- !? PROYECTO CARD --}}
-            <div class="max-w-7xl  justify-self-center self-center pt-12">
-                <h2 class="font-semibold uppercase text-slate-600 mt-20 mb-5 text-xl">@lang('messages.project-1-title') <a class="text-sm underline text-blue-400" href="https://fabriciorivera.art" target="_blank" >@lang('messages.view-site')</a> </h2>
-                <div class="flex justify-center items-center space-x-20">
+            <div class="max-w-xl md:max-w-7xl justify-self-center self-center md:pt-12">
+                <h2 class="font-semibold uppercase text-slate-600 mt-20 ml-5 mb-5 text-xl">@lang('messages.project-1-title') <a class="text-sm underline text-blue-400" href="https://fabriciorivera.art" target="_blank" >@lang('messages.view-site')</a> </h2>
+                <div class="flex flex-col md:flex-row justify-center items-center md:space-x-20">
                     <div>
                         <div class="flex flex-col items-start mb-4">
                             <h3 class="text-blue-500 font-semibold mb-2 whitespace-nowrap">Fabricio Rivera Fotografia</h3>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-2 mx-auto gap-5 p-20">
+            <div class="grid grid-cols-2 mx-auto gap-5 p-5 md:p-20">
                 <div class="col-span-2 place-self-center rounded-sm shadow-md">
                     <img class="rounded-md" src="{{Vite::asset('resources/images/screenshots/photography/main.jpg')}}" alt="">
                 </div>
@@ -48,9 +48,9 @@
 
             {{-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --}}
             {{-- !? PROYECTO CARD --}}
-            <div class="max-w-7xl  justify-self-center self-center pt-12">
-                <h2 class="font-semibold uppercase text-slate-600 mt-20 mb-5 text-xl">@lang('messages.project-2-title') <a class="text-sm underline text-blue-400" href="{{ route('legacy', app()->getLocale() )}}" target="_blank">@lang('messages.view-site')</a> </h2>
-                <div class="flex justify-center items-center space-x-20">
+            <div class="max-w-7xl  justify-self-center self-center md:pt-12">
+                <h2 class="font-semibold uppercase text-slate-600 mt-20 ml-5 mb-5 text-xl">@lang('messages.project-2-title') <a class="text-sm underline text-blue-400" href="{{ route('legacy', app()->getLocale() )}}" target="_blank">@lang('messages.view-site')</a> </h2>
+                <div class="flex flex-col md:flex-row justify-center items-center md:space-x-20">
                     <div>
                         <div class="flex flex-col items-start mb-4">
                             <h3 class="text-blue-500 font-semibold mb-2 whitespace-nowrap">fabriciorivera.com <span class="text-xs text-slate-500">@lang('messages.project-2-subtitle')</span></h3>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-2 mx-auto gap-5 bg-slate-100 p-20 shadow-lg ">
+            <div class="grid grid-cols-2 mx-auto gap-5 bg-slate-100 p-5 md:p-20 shadow-lg ">
                 <div class="col-span-2 place-self-center rounded-sm shadow-md">
                     <img class="rounded-md" src="{{Vite::asset('resources/images/screenshots/old-personal-page/main.jpg')}}" alt="">
                 </div>

@@ -4,15 +4,10 @@
 
     <div class="h-screen bg-slate-100 bg-background bg-cover bg-center">
         <div class="text-xl w-full mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center opacity-95 z-50">
-
             <div class="flex flex-col items-center justify-center py-2 bg-slate-50 min-w-min rounded-sm shadow-md w-1/2">
-                
-                
                 <div class="flex w-full">
                     <div class="flex items-end justify-evenly w-full mx-10 mb-4">
-
-                        <div class="max-w-[35%] min-w-[237px] h-[92%] bg-gradient-to-b from-slate-200 to-slate-100 text-sm flex flex-col justify-between items-start px-3 rounded-sm shadow-md">
-
+                        <div class="hidden max-w-[35%] min-w-[237px] h-[92%] bg-gradient-to-b from-slate-200 to-slate-100 text-sm xl:flex flex-col justify-between items-start px-3 rounded-sm shadow-md">
                             <div class="mt-4 text-justify text-sm space-y-3 text-slate-500 font-semibold p-4">
                                 <p>
                                     @lang('messages.contact-quote')
@@ -24,7 +19,6 @@
                                 </p>
                             </div>
                             {{-- 237 --}}
-
 
                             <div class="mb-4 ml-3">
                                 <div>
@@ -56,7 +50,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         
                         <form class="flex flex-col space-y-4 min-w-[237px]" action="">
@@ -64,7 +57,7 @@
                             <div>
                                 <h1 class="text-xl font-semibold text-slate-500">@lang('messages.contact-title')</h1>
                             </div>
-                            <div class="flex justify-between space-x-4">
+                            <div class="flex flex-col sm:flex-row justify-between sm:space-x-4 space-y-4 sm:space-y-0">
                                 <div class="w-full space-y-4">
                                     <x-input :placeholder="trans('messages.contact-name')" id="name" name="name"/>
                                     <x-input type="email" placeholder="Email" id="email" name="email"/>
@@ -82,13 +75,9 @@
                             rows="10">@lang('messages.contact-msg')</textarea>
 
                             <x-button class="shadow-md border-slate-200 text-lg rounded-sm">@lang('messages.contact-submit')</x-button>
-                        </form>
-                        
+                        </form>                  
                     </div>
-                 </div>
-
-
-            
+                 </div>         
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <x-layout>
     <x-navbar />
         <main>
-            <div class="text-4xl md:max-w-6xl 2xl:max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10 min-h-screen">
+            <div class="text-lg md:text-4xl max-w-xs md:max-w-6xl 2xl:max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10 min-h-screen">
                 {{-- ! Blog cards --}}
                     <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
                         <div class="flex justify-between w-full">
@@ -17,17 +17,17 @@
                         <x-card class="w-full bg-slate-50 rounded-md shadow-sm">
                             <div class="w-full flex flex-col justify-center">
                                 <div class="flex justify-between items-end">
-                                    <h4 class="text-3xl font-semibold text-slate-600">{{$post->title}}</h4>
+                                    <h4 class="md:text-3xl font-semibold text-slate-600">{{$post->title}}</h4>
                                 </div>
                                 <div class="h-1 w-full bg-orange-100"></div>
                             </div>
                             <div class="flex flex-col w-full text-slate-700">
                                 <p class="text-lg">{{$post->subTitle}}</p>
                             </div>
-                            <article class="prose prose-xl text-justify prose-code:text-slate-200">
+                            <article class="prose text-xs sm:prose-xs text-justify prose-code:text-slate-200">
                                     {!! Str::markdown($post->body) !!}
                             </article>
-                            <div class="text-sm pt-10">
+                            <div class="text-xs sm:text-sm pt-10">
                                 <div>
                                     By: {{$post->author}}
                                 </div>

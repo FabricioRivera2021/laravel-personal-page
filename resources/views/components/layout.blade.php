@@ -11,10 +11,10 @@
     <link rel="icon" href="{{ asset('favicon.ico') }}"/>
 </head>
 <body>
-    {{-- <div class="animate__animated animate__fadeIn bg-gray-100"> --}}
+    <div class="animate__animated animate__fadeIn bg-gray-100">
 
         {{ $slot }}
         
-    {{-- </div> --}}
+    </div>
 </body>
 </html>
