@@ -34,12 +34,12 @@
 
                 
                 @forelse ($posts as $post)
-                    <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
+                    <x-card class="rounded-sm shadow-lg bg-slate-100 p-3 min-w-full">
                         <div class="flex flex-col items-end justify-end w-full">
                             <p class="text-xs text-slate-500"> Created: {{ $post->created_at->format('d M Y') }} </p>
                             <p class="text-xs text-slate-500"> Last modified: {{$post->updated_at->format('d M Y')}}</p>
                         </div>
-                        <x-card class="w-full rounded-md shadow-sm">
+                        <x-card class="w-full">
                             <div class="w-full flex flex-col justify-center">
                                 <div class="flex items-center justify-between">
                                     <h4 class="text-2xl font-medium text-slate-600">{{$post->title}}</h4>
