@@ -1,9 +1,9 @@
 <div
-x-data="{ isOpen: true }"
+x-data="{ drawerOpen: window.innerWidth > 768 }" @resize.window="drawerOpen = window.innerWidth > 768"
 class="antialiased lg:flex bg-slate-700 h-10 w-screen fixed z-50"
 @keydown.escape.window="isOpen = false"
 >
-    <button class="p-1 text-orange-500 rounded m-1 bg-slate-700 hover:bg-slate-100 md:hidden z-50" @click="isOpen = ! isOpen">
+    <button class="p-1 text-orange-500 rounded m-1 bg-slate-700 hover:bg-slate-100 md:hidden z-50" @click="drawerOpen = !drawerOpen">
         <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5"
@@ -18,10 +18,11 @@ class="antialiased lg:flex bg-slate-700 h-10 w-screen fixed z-50"
     </svg>
     </button>
     <div class="h-screen fixed md:h-10 bg-slate-700 transform transition duration-300 sm:w-full"
-            :class="{'-translate-x-[200px] opacity-0 z-0 h-0':isOpen === false, 'translate-x-0 opacity-90 z-50':isOpen === true}">
-        <nav class="transform transition duration-300 inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto md:h-10 w-full
+            :class="{'-translate-x-[200px] opacity-0 z-0 h-0':drawerOpen === false, 'translate-x-0 opacity-90 z-50':drawerOpen === true}">
+        <nav x-show="drawerOpen" 
+            class="transform transition duration-300 inset-0 md:max-w-[80rem] 2xl:max-w-[90rem] mx-auto md:h-10 w-full
                     sm:px-20 flex flex-col sm:flex-row p-5 justify-evenly sm:justify-between sm:space-x-24 sm:items-center bg-slate-700 text-slate-100"
-                :class="{'-translate-x-[200px] h-[70vh]':isOpen === false, 'translate-x-0 w-fit opacity-100 h-[70vh]': isOpen === true}">
+                :class="{'-translate-x-[200px] h-[70vh]':drawerOpen === false, 'translate-x-0 w-fit opacity-100 h-[70vh]': drawerOpen === true}">
             <ul class="flex flex-col sm:flex-row md:space-x-7 space-y-3 sm:space-y-0 font-semibold w-3/4">
                 <x-navbar-link href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</x-navbar-link>
                 <x-navbar-link href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
