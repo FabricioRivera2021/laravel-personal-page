@@ -4,7 +4,7 @@
 
         <div class="text-2xl md:text-4xl mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center">
             <x-card class="rounded-md p-3 shadow-md bg-slate-100">
-                <h1 class="sm:w-[70rem] font-bold text-slate-500">
+                <h1 class="sm:max-w-[70rem] font-bold text-slate-500">
                     @lang('messages.title')
                     <span class="block text-sm md:text-lg text-orange-400 font-thin">
                         @lang('messages.madeBy')
@@ -55,7 +55,7 @@
 
         {{-- todo segundo bloque --}}
         <div class="bg-gradient-to-b from-slate-700 to-blue-500 pb-6">
-            <div class="text-xl sm:text-3xl md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 md:gap-6 pt-16">
+            <div class="text-xl sm:text-3xl md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 md:gap-2 pt-16">
                 <x-card class="space-y-3 p-3 mt-10 bg-slate-100 rounded-t-md shadow-md col-span-2 row-span-2 place-self-center md:place-self-auto">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
