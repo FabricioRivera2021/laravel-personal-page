@@ -1,6 +1,6 @@
 <x-layout>
     <x-navbar />
-        <div class="bg-gradient-to-r from-slate-300 to-zinc-300 min-h-screen">
+        <div class="bg-slate-100 min-h-screen">
             <div class="text-4xl max-w-xs md:max-w-6xl 2xl:max-w-7xl mx-auto pt-32 pb-10 flex flex-col justify-evenly items-center space-y-10">
                 <form action="{{ route('posts.index', [ 'locale' => app()->getLocale() ]) }}" method="GET" class="flex flex-col items-start text-xl w-full font-semibold text-left text-slate-600">
                     <div class="flex flex-col md:flex-row md:items-center items-start space-y-2 md:space-y-0 md:space-x-4">
@@ -34,7 +34,7 @@
 
                 
                 @forelse ($posts as $post)
-                    <x-card class="rounded-sm shadow-lg bg-slate-100 p-3 min-w-full">
+                    <x-card class="bg-slate-50 rounded-sm p-3 min-w-full shadow-sm">
                         <div class="flex flex-col items-end justify-end w-full">
                             <p class="text-xs text-slate-500"> Created: {{ $post->created_at->format('d M Y') }} </p>
                             <p class="text-xs text-slate-500"> Last modified: {{$post->updated_at->format('d M Y')}}</p>
@@ -42,14 +42,14 @@
                         <x-card class="w-full">
                             <div class="w-full flex flex-col justify-center">
                                 <div class="flex items-center justify-between">
-                                    <h4 class="text-2xl font-medium text-slate-600">{{$post->title}}</h4>
-                                    <span class="text-xs bg-amber-600 text-slate-200 px-6 py-0.5 rounded-sm shadow-sm">
+                                    <h4 class="text-2xl md:text-3xl font-medium text-slate-600">{{$post->title}}</h4>
+                                    <span class="text-xs bg-orange-400 text-slate-200 px-6 py-0.5 rounded-sm shadow-sm">
                                         <p>
                                             {{ strtoupper($post->lang) }}
                                         </p>
                                     </span>
                                 </div>
-                                <div class="h-1 w-full bg-orange-100"></div>
+                                <div class="h-0.5 w-full bg-slate-600"></div>
                             </div>
 
                             <div class="flex flex-col">

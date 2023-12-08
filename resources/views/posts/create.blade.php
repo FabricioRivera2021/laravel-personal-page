@@ -2,6 +2,8 @@
 {{-- ! <img src="/storage/img/YmLswek4HWqDif2xJMKFIX3Wmdto5g8dVGzFazf7.jpg" alt="img" /> --}}
 {{-- Para agregar imagenes, una forma seria guardarlas en el storage y desde ahi sacar el link --}}
 
+{{-- Vite::asset('public/storage/img/lN0pkaItEaZFs1Yc0RVx19WCE9dPzWfNkHj1tIdz.jpg') --}}
+
 <x-layout>
     <x-navbar />
         <x-card class="rounded-md shadow-md flex items-center justify-center mx-auto">
@@ -31,12 +33,24 @@
                     <input type="hidden" name="author" value="guest">
                     <button class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Guardar</button>
                 </form>
-                <div class="flex space-x-2">
+                <div x-data="{}" 
+                    class="flex space-x-2">
                     <label for="imgUpload" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600 hover:cursor-pointer">Cargar imagen
                         <input id="imgUpload" name="imgUpload" type="file" accept="image/*" class="hidden">
                     </label>
                     <button id="uploadImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Añadir</button>
                     <button id="clearImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Limpiar</button>
+                </div>
+
+
+                <div>
+                    <img id="imagePreview" src="#" class="w-44 mt-2" alt="imagen">
+                </div>
+                <div x-data="{ dialogOpen: imagePreview.src !== '#' }"
+                    >
+                    <div x-show="{ dialogOpen }">
+                        <p>Hola mundo</p>
+                    </div>
                 </div>
                 
                 <div>
@@ -56,3 +70,44 @@
         </x-card>
     <x-footer />
 </x-layout>
+
+{{-- If you are fetching the image source dynamically from a JavaScript file that interacts with a Laravel controller, you need to make sure that you set the value of imagePreviewSrc in your Alpine.js data based on the fetched data.
+
+Here's a general example of how you might structure your code:
+
+    Initialize the Alpine.js data with a default or initial imagePreviewSrc value.
+    Fetch the image source data from your Laravel controller using JavaScript.
+    Update the imagePreviewSrc value in the Alpine.js data with the fetched data.
+
+html
+
+<div x-data="{ imagePreviewSrc: 'initial_default_value' }">
+    <!-- Your image tag with x-bind to dynamically set the src attribute -->
+    <img x-bind:src="imagePreviewSrc" alt="Image Preview">
+
+    <!-- Fetch data and update imagePreviewSrc -->
+    <button @click="fetchImageSrc">Fetch Image</button>
+
+    <script>
+        function fetchImageSrc() {
+            // Make a fetch request to your Laravel controller
+            fetch('/your-laravel-endpoint')
+                .then(response => response.json())
+                .then(data => {
+                    // Update the imagePreviewSrc with the fetched data
+                    imagePreviewSrc = data.src;
+                })
+                .catch(error => {
+                    console.error('Error fetching image source:', error);
+                });
+        }
+    </script>
+</div>
+
+In this example:
+
+    The fetchImageSrc function is triggered when the button is clicked.
+    It makes a fetch request to your Laravel controller endpoint.
+    Upon a successful response, it updates the imagePreviewSrc value with the fetched data.
+
+Ensure that your Laravel controller returns the appropriate JSON response containing the image source (data.src) for this to work correctly. Adjust the code based on your specific implementation. --}}

@@ -32,7 +32,8 @@ document.querySelector('#form').addEventListener('submit', e => {
 
 document.addEventListener('DOMContentLoaded', function () {
   // Attach a click event to the button
-  document.getElementById('uploadImageButton').addEventListener('click', function (e) {
+  document.getElementById('imgUpload').addEventListener('change', function (e) {
+      e.preventDefault();
       let formData = new FormData(), key;
       formData.append('img', document.getElementById('imgUpload').files[0]);
 
@@ -47,7 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
           // Display the public URL of the stored file
           let img = document.getElementById('imageUrl').textContent = '<img src="' + data.url + '" alt="img" />';
-          editor.insertText(img);
+          editor.insertText(img)
+          imagePreview.setAttribute('src', data.url)
       })
       .catch(error => {
           // Handle errors if any
@@ -56,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // cancelar
-  img = document.getElementById('imageUrl')
   document.getElementById('clearImageButton').addEventListener('click', function (e) {
+    img = document.getElementById('imageUrl')
     //verificar que tenga algo  
     if (img.textContent) 
       { 

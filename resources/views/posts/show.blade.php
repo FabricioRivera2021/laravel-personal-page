@@ -3,7 +3,7 @@
         <main>
             <div class="text-lg md:text-4xl max-w-xs md:max-w-6xl 2xl:max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10 min-h-screen">
                 {{-- ! Blog cards --}}
-                <x-card class="rounded-lg shadow-lg bg-slate-100 p-3 min-w-full">
+                <x-card class="p-3 min-w-full">
                     <div class="flex justify-between w-full">
                         <p class="pl-2 text-xs text-slate-500">
                             <a href="{{route('posts.index', app()->getLocale())}}">
@@ -12,14 +12,17 @@
                                 </svg>                                  
                             </a>
                         </p>
-                        <p class="text-xs text-slate-500">{{$post->created_at->format('d M Y')}}</p>
+                        <div class="flex flex-col items-end justify-end w-full">
+                            <p class="text-xs text-slate-500"> Created: {{ $post->created_at->format('d M Y') }} </p>
+                            <p class="text-xs text-slate-500"> Last modified: {{$post->updated_at->format('d M Y')}}</p>
+                        </div>
                     </div>
                     <x-card class="w-full">
                         <div class="w-full flex flex-col justify-center">
                             <div class="flex justify-between items-end">
                                 <h4 class="md:text-3xl font-semibold text-slate-600">{{$post->title}}</h4>
                             </div>
-                            <div class="h-1 w-full bg-orange-100"></div>
+                            <div class="h-0.5 w-full bg-slate-400"></div>
                         </div>
                         <div class="flex flex-col w-full text-slate-700">
                             <p class="text-lg">{{$post->subTitle}}</p>

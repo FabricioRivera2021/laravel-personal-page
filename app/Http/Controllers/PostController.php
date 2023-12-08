@@ -19,8 +19,6 @@ class PostController extends Controller
             return $query->title($search);
         })->where('lang', app()->getLocale())->latest()->get();
     
-        
-
         return view('posts.index', [
             'posts' => $posts
         ]);

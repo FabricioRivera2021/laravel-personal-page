@@ -6,7 +6,7 @@
         <div class="flex flex-col bg-slate-100">
             {{-- !? PROYECTO CARD --}}
             <div class="max-w-xl md:max-w-7xl justify-self-center self-center md:pt-12">
-                <h2 class="font-semibold uppercase text-slate-600 mt-20 ml-5 mb-5 text-xl">@lang('messages.project-1-title') <a class="text-sm underline text-blue-400" href="https://fabriciorivera.art" target="_blank" >@lang('messages.view-site')</a> </h2>
+                <h2 class="font-semibold uppercase text-slate-600 mt-20 ml-5 mb-5 text-xl">@lang('messages.project-1-title') <a class="text-sm font-light underline text-blue-400" href="https://fabriciorivera.art" target="_blank" >@lang('messages.view-site')</a> </h2>
                 <div class="flex flex-col md:flex-row justify-center items-center md:space-x-20">
                     <div>
                         <div class="flex flex-col items-start mb-4">
@@ -49,7 +49,7 @@
             {{-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --}}
             {{-- !? PROYECTO CARD --}}
             <div class="max-w-7xl  justify-self-center self-center md:pt-12">
-                <h2 class="font-semibold uppercase text-slate-600 mt-20 ml-5 mb-5 text-xl">@lang('messages.project-2-title') <a class="text-sm underline text-blue-400" href="{{ route('legacy', app()->getLocale() )}}" target="_blank">@lang('messages.view-site')</a> </h2>
+                <h2 class="font-semibold uppercase text-slate-600 mt-20 ml-5 mb-5 text-xl">@lang('messages.project-2-title') <a class="text-sm font-light underline text-blue-400" href="{{ route('legacy', app()->getLocale() )}}" target="_blank">@lang('messages.view-site')</a> </h2>
                 <div class="flex flex-col md:flex-row justify-center items-center md:space-x-20">
                     <div>
                         <div class="flex flex-col items-start mb-4">

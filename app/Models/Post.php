@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Builder;
 class Post extends Model
 {
 
-
     use HasFactory;
 
     protected $fillable = [
