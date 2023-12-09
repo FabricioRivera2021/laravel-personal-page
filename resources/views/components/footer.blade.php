@@ -1,6 +1,6 @@
 <footer class="bg-slate-800">
     <div class="h-[3px] w-full bg-slate-400"></div>
-    <div class=" bg-slate-800 flex space-x-10 justify-between items-start pt-10 text-slate-100 text-xs max-w-xs md:max-w-6xl 2xl:max-w-7xl mx-auto pb-6">
+    <div class=" bg-slate-800 flex space-x-10 justify-between items-start pt-10 text-slate-100 text-xs max-w-xs md:max-w-6xl 2xl:max-w-7xl mx-auto pb-6 px-5">
         <div class="grid grid-cols-2 md:grid-rows-2 w-full h-full">
             <div class="place-content-top justify-self-start">
                 <ul class="text-left">

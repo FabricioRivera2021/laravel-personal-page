@@ -6,8 +6,8 @@
 
 <x-layout>
     <x-navbar />
-        <x-card class="rounded-md shadow-md flex items-center justify-center mx-auto">
-            <div class="mt-[5rem]">
+        <x-card class="flex items-center justify-center mx-auto">
+            <div class="mt-[2rem]">
 
                 <form id="form" enctype="multipart/form-data" action="{{route('posts.store', app()->getLocale())}}" method="POST" class="flex flex-col gap-4 items-center justify-center py-5 w-[65rem]">
                     @csrf
@@ -33,24 +33,19 @@
                     <input type="hidden" name="author" value="guest">
                     <button class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Guardar</button>
                 </form>
-                <div x-data="{}" 
-                    class="flex space-x-2">
+                <div  x-data="{ clickable: false }"
+                    class="flex flex-col">
                     <label for="imgUpload" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600 hover:cursor-pointer">Cargar imagen
-                        <input id="imgUpload" name="imgUpload" type="file" accept="image/*" class="hidden">
+                        <input id="imgUpload" name="imgUpload" type="file" accept="image/*" class="hidden" x-on:change="clickable = true">
                     </label>
-                    <button id="uploadImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Añadir</button>
-                    <button id="clearImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Limpiar</button>
-                </div>
-
-
-                <div>
-                    <img id="imagePreview" src="#" class="w-44 mt-2" alt="imagen">
-                </div>
-                <div x-data="{ dialogOpen: imagePreview.src !== '#' }"
-                    >
-                    <div x-show="{ dialogOpen }">
-                        <p>Hola mundo</p>
+                    <div class="flex flex-col">
+                        <img id="imagePreview" class="w-44 mt-2 p-3" alt="" >
+                        <div class="flex space-x-2 py-1">
+                            <button x-show="clickable" x-on:click="clickable = false" id="uploadImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Añadir</button>
+                            <button x-show="clickable" id="clearImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Limpiar</button>
+                        </div>
                     </div>
+                    {{-- x-show="clickable" --}}
                 </div>
                 
                 <div>
@@ -71,7 +66,9 @@
     <x-footer />
 </x-layout>
 
-{{-- If you are fetching the image source dynamically from a JavaScript file that interacts with a Laravel controller, you need to make sure that you set the value of imagePreviewSrc in your Alpine.js data based on the fetched data.
+{{-- If you are fetching the image source dynamically from a JavaScript file that interacts with a 
+    Laravel controller, you need to make sure that you set the value of imagePreviewSrc in your Alpine.js 
+    data based on the fetched data.
 
 Here's a general example of how you might structure your code:
 
@@ -110,4 +107,5 @@ In this example:
     It makes a fetch request to your Laravel controller endpoint.
     Upon a successful response, it updates the imagePreviewSrc value with the fetched data.
 
-Ensure that your Laravel controller returns the appropriate JSON response containing the image source (data.src) for this to work correctly. Adjust the code based on your specific implementation. --}}
+Ensure that your Laravel controller returns the appropriate JSON response containing the image 
+source (data.src) for this to work correctly. Adjust the code based on your specific implementation. --}}

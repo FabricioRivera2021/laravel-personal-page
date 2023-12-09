@@ -1,4 +1,3 @@
-
 import './bootstrap';
 import.meta.glob([
     '../images/**',
@@ -6,10 +5,8 @@ import.meta.glob([
     '../files/**',
   ]);
 
-import Alpine from 'alpinejs'
- 
+import Alpine from 'alpinejs' 
 window.Alpine = Alpine
- 
 Alpine.start()
 
 import Editor from '@toast-ui/editor'
@@ -31,7 +28,7 @@ document.querySelector('#form').addEventListener('submit', e => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Attach a click event to the button
+  //-----------------------------------------------Previsualizar la imagen------------------------------------------------------
   document.getElementById('imgUpload').addEventListener('change', function (e) {
       e.preventDefault();
       let formData = new FormData(), key;
@@ -47,9 +44,17 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => response.json())
       .then(data => {
           // Display the public URL of the stored file
-          let img = document.getElementById('imageUrl').textContent = '<img src="' + data.url + '" alt="img" />';
-          editor.insertText(img)
-          imagePreview.setAttribute('src', data.url)
+          // A esta altura la imagen ya esta guardada en el storage
+          let imgMarkdown = document.getElementById('imageUrl').textContent = '<img src="' + data.url + '" alt="img" />';
+          let imgPrev = document.getElementById('imagePreview').src = data.url;
+          //-----------------------------------------------Añadir al markdown----------------------------------------------------------
+          document.getElementById('uploadImageButton').addEventListener('click', function (e) {   
+              e.preventDefault();
+              if (imgPrev) {
+                editor.insertText(imgMarkdown);
+                return document.getElementById('imagePreview').src = '';
+              }
+          });
       })
       .catch(error => {
           // Handle errors if any
