@@ -51,24 +51,30 @@ document.addEventListener('DOMContentLoaded', function () {
               e.preventDefault();
               if (imgPrev) {
                 editor.insertText(imgMarkdown);
+
+                imgMarkdown = ''
+                formData.delete('img')
                 return document.getElementById('imagePreview').src = '';
               }
           });
           document.getElementById('clearImageButton').addEventListener('click', function (e) {   
               e.preventDefault();
               if (imgPrev) {
-                const match = imgPrev.match(/\/([^\/]+)\.jpg/);
-                const id = match
-                console.log(id);
+                let formData = new FormData();
+                formData.append('_method', "DELETE");
+
+                const id = imgPrev.replace('/storage/img', '');
+                // const match = imgPrev.match(/\/([^\/]+)\.jpg/);
+                // const id = match
         
-                fetch('/deleteImg', {
-                  method: 'DELETE',
-                  body: id,
+                fetch('/deleteImg' + id, {
+                  method: 'POST',
+                  body: formData,
                 })
                 .then(response => response.json())
                 .then(data => {
                     // Display the public URL of the stored file
-                    console.log(data.url);
+                    console.log(data);
                 })
                 .catch(error => {
                     // Handle errors if any
@@ -82,6 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
           // Handle errors if any
           console.error('Error:', error);
       });
+
+      this.removeEventListener
   });
 
   // cancelar

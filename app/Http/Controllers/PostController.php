@@ -43,7 +43,7 @@ class PostController extends Controller
             'lang' => 'required'
         ]);
         
-        dd($validated);
+        // dd($validated);
         //validacion del error pendiente
 
         //seteo la imagen
