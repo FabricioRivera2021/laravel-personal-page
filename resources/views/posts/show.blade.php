@@ -13,10 +13,10 @@
                             </a>
                         </p>
                         <div class="flex flex-col items-end justify-end w-full">
-                            <p class="text-xs text-slate-500"> Created: {{ $post->created_at->format('d M Y') }} </p>
+                            <p class="text-xs text-slate-500"> @lang('messages.blog-created-at') {{ $post->created_at->format('d M Y') }} </p>
                             <p class="text-xs text-slate-500">
                                 @if($post->updated_at > $post->created_at) 
-                                    Last modified: {{$post->updated_at->format('d M Y')}}
+                                    @lang('messages.blog-modify-at') {{$post->updated_at->format('d M Y')}}
                                 @endif
                             </p>
                         </div>
@@ -36,7 +36,7 @@
                         </article>
                         <div class="text-xs sm:text-sm pt-10">
                             <div>
-                                By: {{$post->author}}
+                                @lang('messages.blog-by') {{$post->author}}
                             </div>
                         </div>
                         @auth

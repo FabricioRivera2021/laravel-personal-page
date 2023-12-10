@@ -93,7 +93,7 @@
                         <li class="bg-slate-100 mb-5">
                             <div class="flex items-center justify-between bg-slate-200 mb-2">
                                 <h4 class="text-sm md:text-lg font-semibold">@lang('messages.aboutMe-exp-item1-place')</h4>
-                                <p>01/03/23 - 01/03/23</p>
+                                <p>02/05/23</p>
                             </div>
                             <p>@lang('messages.aboutMe-exp-item1-rol')</p>
                             <p class="text-slate-500">
@@ -103,7 +103,7 @@
                         <li class="bg-slate-100 mb-5">
                             <div class="flex items-center justify-between bg-slate-200 mb-2">
                                 <h4 class="text-sm md:text-lg font-semibold">@lang('messages.aboutMe-exp-item2-place')</h4>
-                                <p>01/03/23 - 01/03/23</p>
+                                <p>01/01/20 - 02/05/23</p>
                             </div>
                             <p>@lang('messages.aboutMe-exp-item2-rol')</p>
                             <p class="text-slate-500">
@@ -113,7 +113,7 @@
                         <li class="bg-slate-100 mb-5">
                             <div class="flex items-center justify-between bg-slate-200 mb-2">
                                 <h4 class="text-sm md:text-lg font-semibold">@lang('messages.aboutMe-exp-item3-place')</h4>
-                                <p>01/03/23 - 01/03/23</p>
+                                <p>01/01/18 - 02/07/18</p>
                             </div>
                             <p>@lang('messages.aboutMe-exp-item3-rol')</p>
                             <p class="text-slate-500">

@@ -98,6 +98,17 @@ return [
                          the design and adding more features to my personal page, I created a new version using Laravel, which 
                          implements a blog where I plan to post content that can be useful to the community.',
     'view-site' => 'view site',
+
+
+    //blog
+    'blog-search-input' => 'Search',
+    'blog-search-btn' => 'Search',
+    'blog-clear-btn' => 'Clear',
+    'blog-created-at' => 'Created:',
+    'blog-modify-at' => 'Modified:',
+    'blog-see' => 'See post',
+    'blog-by' => 'By:',
+    'blog-no-post' => 'No posts to show',
     
 
 

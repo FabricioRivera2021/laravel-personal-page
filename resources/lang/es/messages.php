@@ -103,6 +103,16 @@ return [
                          Blog al que pienso ir subiendo contenido que pueda ser de utilidad para la comunidad.',
     'view-site' => 'ver sitio',
 
+    //blog
+    'blog-search-input' => 'Buscar',
+    'blog-search-btn' => 'Buscar',
+    'blog-clear-btn' => 'Restablecer',
+    'blog-created-at' => 'Creado:',
+    'blog-modify-at' => 'Modificado:',
+    'blog-see' => 'Ver post',
+    'blog-by' => 'Autor:',
+    'blog-no-post' => 'No hay posts para mostrar',
+
     //footer
     'siteSections'=> 'Secciones',
     'contactInfo'=> 'Información de contacto',

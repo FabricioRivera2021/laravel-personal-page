@@ -8,10 +8,10 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 p-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                             </svg>                          
-                            <input name="search" class="p-2 focus:ring-0 border-0 text-sm outline-none" type="text" placeholder="buscar" value="{{ request('search') }}">
+                            <input name="search" class="p-2 focus:ring-0 border-0 text-sm outline-none" type="text" placeholder="{{trans('messages.blog-search-input')}}" value="{{ request('search') }}">
                         </label>
-                        <button type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">search</button>
-                        <a href="{{ route('posts.index', [ 'locale' => app()->getLocale() ]) }}" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Clear</a>
+                        <button type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">@lang('messages.blog-search-btn')</button>
+                        <a href="{{ route('posts.index', [ 'locale' => app()->getLocale() ]) }}" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">@lang('messages.blog-clear-btn')</a>
                     </div>
                 </form>
                 
@@ -36,10 +36,10 @@
                 @forelse ($posts as $post)
                     <x-card class="bg-slate-50 rounded-sm p-3 min-w-full shadow-sm">
                         <div class="flex flex-col items-end justify-end w-full">
-                            <p class="text-xs text-slate-500"> Created: {{ $post->created_at->format('d M Y') }} </p>
+                            <p class="text-xs text-slate-500"> @lang('messages.blog-created-at') {{ $post->created_at->format('d M Y') }} </p>
                             <p class="text-xs text-slate-500">
                                 @if($post->updated_at > $post->created_at) 
-                                    Last modified: {{$post->updated_at->format('d M Y')}}
+                                    @lang('messages.blog-modify-at') {{$post->updated_at->format('d M Y')}}
                                 @endif
                             </p>
                         </div>
@@ -78,7 +78,7 @@
                             <a href="{{route('posts.show', [
                                 'locale' => app()->getLocale(), 
                                 'post' => $post])}}">
-                                <button class="text-slate-700 text-sm hover:text-blue-400 hover:underline"> Ver post </button>
+                                <button class="text-slate-700 text-sm hover:text-blue-400 hover:underline"> @lang('messages.blog-see') </button>
                             </a>
                         </div>
                     </x-card>
@@ -86,7 +86,7 @@
                 @empty
                     <div class="h-full w-full flex items-center justify-center">
                         <div class="p-10 rounded-2xl border border-slate-600 border-dotted text-slate-500 font-semibold">
-                            No hay Posts para mostrar
+                            @lang('messages.blog-no-post')
                         </div>
                     </div>
                 @endforelse
