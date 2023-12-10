@@ -26,24 +26,24 @@
                     <div class="flex flex-col space-y-2 w-full">
                         <label for="editor" class="text-gray-600 font-semibold">Content</label>
                         <div id="editor" name="editor" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-slate-100">{!! Str::markdown($post->body) !!}</div>
-                        @error('editor')
+                        @error('body')
                         <div class="mt-1 text-xs text-red-500">
                             {{ $message }}
                         </div>
                         @enderror
                     </div>
                     <input type="hidden" name="body" id="body">
-                    <label for="img" class="text-sm self-start text-slate-100 flex flex-col hover:cursor-pointer bg-blue-600 px-3 py-0.5 rounded-sm items-center shadow-sm hover:bg-slate-200 hover:text-slate-600">Load Thumbnail
+                    {{-- <label for="img" class="text-sm self-start text-slate-100 flex flex-col hover:cursor-pointer bg-blue-600 px-3 py-0.5 rounded-sm items-center shadow-sm hover:bg-slate-200 hover:text-slate-600">Load Thumbnail
                         <input class="hidden" type="file" name="img" id="img">
-                        @error('img')
-                        <div class="mt-1 text-xs text-red-400">
-                            {{ $message }}
-                        </div>
-                        @enderror
-                    </label>
+                    </label> --}}
                     <label for="lang" class="self-start">Lang: 
                         <input class="text-xs" type="radio" name="lang" id="es" value="es" class="ml-1" {{($post->lang == 'es') ? 'checked' : ''}}>es
                         <input class="text-xs" type="radio" name="lang" id="en" value="en" {{($post->lang == 'en') ? 'checked' : ''}}>en
+                        @error('lang')
+                        <div class="mt-1 text-xs text-red-500">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </label>
                     <input type="hidden" name="author" value="guest">
                     <button class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Editar</button>

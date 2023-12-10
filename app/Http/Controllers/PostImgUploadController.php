@@ -26,10 +26,21 @@ class PostImgUploadController extends Controller
 
     public function deleteImg(String $id)
     {
-        $delete = Storage::delete($id);
-        
-        // Return the URL as a JSON response
-        return response()->json(['url' => $id]);
+        try {
+            // Attempt to delete the file
+            $delete = Storage::delete($id);
+    
+            if ($delete) {
+                // If deletion was successful, return the URL as a JSON response
+                return response()->json(['url' => $id]);
+            } else {
+                // If deletion failed, return an error response
+                return response()->json(['error' => 'Failed to delete the file.'], 500);
+            }
+        } catch (\Exception $e) {
+            // Catch any exceptions and return an error response
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     }
 
 }

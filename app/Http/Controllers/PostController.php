@@ -39,22 +39,23 @@ class PostController extends Controller
             'subTitle' => 'required|max:255',
             'author' => 'required',
             'body' => 'required',
-            'img' => 'file|mimes:jpg,jpeg,png|max:2048',
+            // 'img' => 'file|mimes:jpg,jpeg,png|max:2048',
             'lang' => 'required'
         ]);
-
+        
+        dd($validated);
         //validacion del error pendiente
 
         //seteo la imagen
-        $img = $request->file('img'); //archivo de la imagen
-        ($img) ? $path = $img->store('img', 'public') : ''; //path de la imagen - si la imagen no viene se devuelve ''
+        // $img = $request->file('img'); //archivo de la imagen
+        // ($img) ? $path = $img->store('img', 'public') : ''; //path de la imagen - si la imagen no viene se devuelve ''
 
         Post::create([
             'title' => $validated['title'],
             'subTitle' => $validated['subTitle'],
             'author' => $validated['author'],
             'body' => $validated['body'],
-            'img' => $path,
+            'img' => '',
             'lang' => $validated['lang']
         ]);
 
@@ -89,7 +90,7 @@ class PostController extends Controller
             'subTitle' => 'required|max:255',
             'author' => 'required',
             'body' => 'required',
-            'img' => 'file|mimes:jpg,jpeg,png|max:2048',
+            // 'img' => 'file|mimes:jpg,jpeg,png|max:2048',
             'lang' => 'required'
         ]);
 

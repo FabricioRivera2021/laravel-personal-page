@@ -14,7 +14,11 @@
                         </p>
                         <div class="flex flex-col items-end justify-end w-full">
                             <p class="text-xs text-slate-500"> Created: {{ $post->created_at->format('d M Y') }} </p>
-                            <p class="text-xs text-slate-500"> Last modified: {{$post->updated_at->format('d M Y')}}</p>
+                            <p class="text-xs text-slate-500">
+                                @if($post->updated_at > $post->created_at) 
+                                    Last modified: {{$post->updated_at->format('d M Y')}}
+                                @endif
+                            </p>
                         </div>
                     </div>
                     <x-card class="w-full">

@@ -37,13 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
       // const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
       // Create a FormData object to send the file
       // Send the Fetch request
-      fetch('/uploadImg', {
+      fetch('/uploadImg', { //esta ruta guarda la imagen y devuelve la ruta donde quedo guardada
         method: 'POST',
         body: formData,
       })
       .then(response => response.json())
       .then(data => {
-          // Display the public URL of the stored file
           // A esta altura la imagen ya esta guardada en el storage
           let imgMarkdown = document.getElementById('imageUrl').textContent = '<img src="' + data.url + '" alt="img" />';
           let imgPrev = document.getElementById('imagePreview').src = data.url;
@@ -55,6 +54,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 return document.getElementById('imagePreview').src = '';
               }
           });
+          document.getElementById('clearImageButton').addEventListener('click', function (e) {   
+              e.preventDefault();
+              if (imgPrev) {
+                const match = imgPrev.match(/\/([^\/]+)\.jpg/);
+                const id = match
+                console.log(id);
+        
+                fetch('/deleteImg', {
+                  method: 'DELETE',
+                  body: id,
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Display the public URL of the stored file
+                    console.log(data.url);
+                })
+                .catch(error => {
+                    // Handle errors if any
+                    console.error('Error:', error);
+                });
+                return document.getElementById('imagePreview').src = '';
+              }
+          });
       })
       .catch(error => {
           // Handle errors if any
@@ -63,31 +85,31 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // cancelar
-  document.getElementById('clearImageButton').addEventListener('click', function (e) {
-    img = document.getElementById('imageUrl')
-    //verificar que tenga algo  
-    if (img.textContent) 
-      { 
-        const file = img.textContent
-        const match = file.match(/\/([^\/]+)\.jpg/);
-        // console.log(match);
-        const id = match
+  // document.getElementById('clearImageButton').addEventListener('click', function (e) {
+  //   img = document.getElementById('imageUrl')
+  //   //verificar que tenga algo  
+  //   if (img.textContent) 
+  //     { 
+  //       const file = img.textContent
+  //       const match = file.match(/\/([^\/]+)\.jpg/);
+  //       // console.log(match);
+  //       const id = match
 
-        fetch('/deleteImg', {
-          method: 'DELETE',
-          body: id,
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Display the public URL of the stored file
-            console.log(data.url);
-            // editor.deleteSelection;
-            img.textContent = ''
-        })
-        .catch(error => {
-            // Handle errors if any
-            console.error('Error:', error);
-        });
-      }
-  });
+  //       fetch('/deleteImg', {
+  //         method: 'DELETE',
+  //         body: id,
+  //       })
+  //       .then(response => response.json())
+  //       .then(data => {
+  //           // Display the public URL of the stored file
+  //           console.log(data.url);
+  //           // editor.deleteSelection;
+  //           img.textContent = ''
+  //       })
+  //       .catch(error => {
+  //           // Handle errors if any
+  //           console.error('Error:', error);
+  //       });
+  //     }
+  // });
 });
