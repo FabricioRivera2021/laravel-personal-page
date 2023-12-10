@@ -56,7 +56,7 @@
         {{-- todo segundo bloque --}}
         <div class="bg-gradient-to-b from-slate-700 to-blue-500 pb-6">
             <div class="text-xl sm:text-3xl md:max-w-6xl 2xl:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 md:gap-3 pt-16">
-                <x-card class="space-y-3 p-3 mt-10 bg-slate-100 rounded-t-md shadow-md col-span-2 row-span-2 place-self-center md:place-self-auto ml-3">
+                <x-card class="space-y-3 p-3 mt-10 bg-slate-100 rounded-t-md shadow-md col-span-2 row-span-2 place-self-center md:place-self-auto ml-0 md:ml-3">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
@@ -74,7 +74,7 @@
                     </div>
                     @lang('messages.aboutMe-edu-text')
                 </x-card>
-                <x-card class="space-y-3 p-3 bg-slate-100 mt-5 md:mt-20 rounded-t-md shadow-md col-span-2 row-span-2 place-self-center md:place-self-auto mr-3">
+                <x-card class="space-y-3 p-3 bg-slate-100 mt-5 md:mt-10 rounded-t-md shadow-md col-span-2 row-span-2 place-self-center md:place-self-auto mr-0 md:mr-3">
                     <div>
                         <div class="flex justify-start items-center space-x-3 text-slate-500">
                             <h3 class="max-w-[60rem] font-bold uppercase">
@@ -122,7 +122,7 @@
                         </li>
                     </ol>
                 </x-card>
-                <x-card class="space-y-10 p-5 bg-slate-100 mt-5 sm:mt-0 rounded-b-md shadow-md col-span-3 place-self-center md:place-self-auto ml-3">
+                <x-card class="space-y-10 p-5 bg-slate-100 mt-5 sm:mt-0 rounded-b-md shadow-md col-span-3 place-self-center md:place-self-auto ml-0 md:ml-3">
                     <div class="flex flex-col md:flex-row justify-evenly w-full h-full items-start sm:items-center">    
                         <div>
                             <div class="flex justify-start items-center space-x-3 text-slate-500">
@@ -168,7 +168,7 @@
                         </div>
                     </div>
                 </x-card>
-                <x-card class="space-y-10 p-5 bg-slate-100 mt-5 sm:mt-0 rounded-b-md shadow-md col-span-1 row-span-1 place-self-center m-3">
+                <x-card class="space-y-10 p-5 bg-slate-100 mt-5 md:mt-0 rounded-b-md shadow-md col-span-1 row-span-1 place-self-center mr-0 md:mr-3">
                     <div class="flex flex-col space-y-2">
                         <div class="w-full bg-orange-300 h-1"></div>
                             <p class="text-gray-700 text-sm">

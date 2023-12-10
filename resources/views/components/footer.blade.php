@@ -33,7 +33,7 @@
                             </a>
                         </div>
                         <div>
-                            <a class="hover:underline hover:text-orange-400" href="https://www.twitter.com" target="_blank">
+                            <a class="hover:underline hover:text-orange-400" href="https://twitter.com/Fabricio0rivera" target="_blank">
                                 <img src="{{ Vite::asset('resources/images/icons/twitter.png') }}" class="w-6" alt="icon">
                             </a>
                         </div>

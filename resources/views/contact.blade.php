@@ -2,9 +2,9 @@
 
     <x-navbar />
 
-    <div class="h-screen bg-slate-100 bg-background bg-cover bg-center">
-        <div class="text-xl w-full mx-auto h-[calc(100vh-40px)] flex justify-evenly items-center opacity-95 z-50">
-            <div class="flex flex-col items-center justify-center py-2 bg-slate-50 min-w-min rounded-sm shadow-md w-1/2 mt-20 sm:mt-0">
+    <div class="min-h-screen bg-slate-100 bg-background bg-cover bg-center">
+        <div class="text-xl w-full mx-auto min-h-[calc(100vh-40px)] flex justify-evenly items-center opacity-95 z-50">
+            <div class="flex flex-col items-center justify-center py-2 bg-slate-50 min-w-min rounded-sm shadow-md w-1/2 mt-20 mb-10 sm:mt-0">
                 <div class="flex w-full">
                     <div class="flex flex-col sm:flex-row items-end justify-evenly w-full mx-10 mb-4">
                         

@@ -62,7 +62,7 @@
                         <img id="imagePreview" class="w-44 mt-2 p-3" alt="" >
                         <div class="flex space-x-2 py-1">
                             <button x-show="clickable" x-on:click="clickable = false" id="uploadImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Añadir</button>
-                            <button x-show="clickable" id="clearImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Limpiar</button>
+                            <button x-show="clickable" x-on:click="clickable = false" id="clearImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Limpiar</button>
                         </div>
                     </div>
                     {{-- x-show="clickable" --}}
