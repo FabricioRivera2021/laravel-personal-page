@@ -48,20 +48,13 @@
                     <input type="hidden" name="author" value="guest">
                     <button class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Editar</button>
                 </form>
-                <div  x-data="{ clickable: false }"
-                    class="flex flex-col">
+                <div class="flex space-x-2">
                     <label for="imgUpload" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600 hover:cursor-pointer">Cargar imagen
-                        <input id="imgUpload" name="imgUpload" type="file" accept="image/*" class="hidden" x-on:change="clickable = true">
+                        <input id="imgUpload" name="imgUpload" type="file" accept="image/*" class="hidden">
                     </label>
-                    <div class="flex flex-col">
-                        <img id="imagePreview" class="w-44 mt-2 p-3" alt="" >
-                        <div class="flex space-x-2 py-1">
-                            <button x-show="clickable" x-on:click="clickable = false" id="uploadImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Añadir</button>
-                            <button x-show="clickable" x-on:click="clickable = false" id="clearImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Limpiar</button>
-                        </div>
-                    </div>
-                    {{-- x-show="clickable" --}}
-                </div>  
+                    <button id="uploadImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Añadir</button>
+                    <button id="clearImageButton" type="submit" class="text-sm bg-blue-600 text-slate-100 px-3 py-1 self-start shadow-sm rounded-sm hover:bg-slate-200 hover:text-slate-600">Limpiar</button>
+                </div>
                 
                 <div>
                     <i id="imageUrl"></i>
