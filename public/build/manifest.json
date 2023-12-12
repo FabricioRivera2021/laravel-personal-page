@@ -1,0 +1,155 @@
+{
+  "img/background.jpg": {
+    "file": "assets/background-6a4e9e0c.jpg",
+    "src": "img/background.jpg"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-b566c448.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/files/en/fabricio_rivera_cv.pdf": {
+    "file": "assets/fabricio_rivera_cv-e9541a7a.pdf",
+    "src": "resources/files/en/fabricio_rivera_cv.pdf"
+  },
+  "resources/files/es/fabricio_rivera_cv.pdf": {
+    "file": "assets/fabricio_rivera_cv-a16034d1.pdf",
+    "src": "resources/files/es/fabricio_rivera_cv.pdf"
+  },
+  "resources/fonts/legacy/Arkhip-Regular.ttf": {
+    "file": "assets/Arkhip-Regular-16316bc5.ttf",
+    "src": "resources/fonts/legacy/Arkhip-Regular.ttf"
+  },
+  "resources/fonts/legacy/Azonix.otf": {
+    "file": "assets/Azonix-51a65e5c.otf",
+    "src": "resources/fonts/legacy/Azonix.otf"
+  },
+  "resources/images/icons/aws.png": {
+    "file": "assets/aws-65e55ced.png",
+    "src": "resources/images/icons/aws.png"
+  },
+  "resources/images/icons/css-3.png": {
+    "file": "assets/css-3-d2e9f9dd.png",
+    "src": "resources/images/icons/css-3.png"
+  },
+  "resources/images/icons/email.png": {
+    "file": "assets/email-687e7e65.png",
+    "src": "resources/images/icons/email.png"
+  },
+  "resources/images/icons/github.png": {
+    "file": "assets/github-4c1cb7af.png",
+    "src": "resources/images/icons/github.png"
+  },
+  "resources/images/icons/github2.png": {
+    "file": "assets/github2-e6b2d03e.png",
+    "src": "resources/images/icons/github2.png"
+  },
+  "resources/images/icons/html-5.png": {
+    "file": "assets/html-5-b7817ea6.png",
+    "src": "resources/images/icons/html-5.png"
+  },
+  "resources/images/icons/instagram.png": {
+    "file": "assets/instagram-c5c7b66c.png",
+    "src": "resources/images/icons/instagram.png"
+  },
+  "resources/images/icons/js.png": {
+    "file": "assets/js-30558d7e.png",
+    "src": "resources/images/icons/js.png"
+  },
+  "resources/images/icons/laravel.png": {
+    "file": "assets/laravel-2d7f2816.png",
+    "src": "resources/images/icons/laravel.png"
+  },
+  "resources/images/icons/linkedin.png": {
+    "file": "assets/linkedin-dcf80414.png",
+    "src": "resources/images/icons/linkedin.png"
+  },
+  "resources/images/icons/linkedin2.png": {
+    "file": "assets/linkedin2-95e32344.png",
+    "src": "resources/images/icons/linkedin2.png"
+  },
+  "resources/images/icons/mySql.png": {
+    "file": "assets/mySql-700490f5.png",
+    "src": "resources/images/icons/mySql.png"
+  },
+  "resources/images/icons/php.png": {
+    "file": "assets/php-80069a19.png",
+    "src": "resources/images/icons/php.png"
+  },
+  "resources/images/icons/react.png": {
+    "file": "assets/react-9c34f4b6.png",
+    "src": "resources/images/icons/react.png"
+  },
+  "resources/images/icons/tailwind.png": {
+    "file": "assets/tailwind-1e38d7ff.png",
+    "src": "resources/images/icons/tailwind.png"
+  },
+  "resources/images/icons/twitter.png": {
+    "file": "assets/twitter-32a7e2de.png",
+    "src": "resources/images/icons/twitter.png"
+  },
+  "resources/images/icons/twitter2.png": {
+    "file": "assets/twitter2-7f15678c.png",
+    "src": "resources/images/icons/twitter2.png"
+  },
+  "resources/images/legacy/DSC_9686.jpg": {
+    "file": "assets/DSC_9686-20d00414.jpg",
+    "src": "resources/images/legacy/DSC_9686.jpg"
+  },
+  "resources/images/legacy/pagina-fotos-img.jpg": {
+    "file": "assets/pagina-fotos-img-ad930179.jpg",
+    "src": "resources/images/legacy/pagina-fotos-img.jpg"
+  },
+  "resources/images/screenshots/old-personal-page/about-me.jpg": {
+    "file": "assets/about-me-bca606a6.jpg",
+    "src": "resources/images/screenshots/old-personal-page/about-me.jpg"
+  },
+  "resources/images/screenshots/old-personal-page/main.jpg": {
+    "file": "assets/main-ff5e171e.jpg",
+    "src": "resources/images/screenshots/old-personal-page/main.jpg"
+  },
+  "resources/images/screenshots/old-personal-page/mobile.jpg": {
+    "file": "assets/mobile-a6cba1e7.jpg",
+    "src": "resources/images/screenshots/old-personal-page/mobile.jpg"
+  },
+  "resources/images/screenshots/old-personal-page/projects.jpg": {
+    "file": "assets/projects-4e0283f4.jpg",
+    "src": "resources/images/screenshots/old-personal-page/projects.jpg"
+  },
+  "resources/images/screenshots/photography/contact.jpg": {
+    "file": "assets/contact-40b1ef39.jpg",
+    "src": "resources/images/screenshots/photography/contact.jpg"
+  },
+  "resources/images/screenshots/photography/main.jpg": {
+    "file": "assets/main-6fc08a32.jpg",
+    "src": "resources/images/screenshots/photography/main.jpg"
+  },
+  "resources/images/screenshots/photography/portfolio.jpg": {
+    "file": "assets/portfolio-b6658551.jpg",
+    "src": "resources/images/screenshots/photography/portfolio.jpg"
+  },
+  "resources/images/screenshots/photography/portfolio1.jpg": {
+    "file": "assets/portfolio1-afac93ef.jpg",
+    "src": "resources/images/screenshots/photography/portfolio1.jpg"
+  },
+  "resources/images/screenshots/photography/portfolio2.jpg": {
+    "file": "assets/portfolio2-ab83217d.jpg",
+    "src": "resources/images/screenshots/photography/portfolio2.jpg"
+  },
+  "resources/images/screenshots/photography/portfolio3.jpg": {
+    "file": "assets/portfolio3-55eaafab.jpg",
+    "src": "resources/images/screenshots/photography/portfolio3.jpg"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-a292666d.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-a292666d.css"
+    ],
+    "file": "assets/app-b0046017.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
