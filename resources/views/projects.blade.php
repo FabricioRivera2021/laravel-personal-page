@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-navbar />
+    <x-nav-bar />
 
     <div class="w-full">
         <div class="flex flex-col bg-slate-100">

@@ -1,5 +1,5 @@
 <x-layout>
-    <x-navbar />
+    <x-nav-bar />
         <x-card class="rounded-md shadow-md flex items-center justify-center mx-auto">
             <div class="mt-[5rem]">
 

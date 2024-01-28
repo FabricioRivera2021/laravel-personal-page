@@ -5,7 +5,7 @@
 {{-- Vite::asset('public/storage/img/lN0pkaItEaZFs1Yc0RVx19WCE9dPzWfNkHj1tIdz.jpg') --}}
 
 <x-layout>
-    <x-navbar />
+    <x-nav-bar />
         <x-card class="flex items-center justify-center mx-auto">
             <div class="mt-[2rem]">
 

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-navbar />
+    <x-nav-bar />
 
     <div class="min-h-screen bg-slate-100 bg-background bg-cover bg-center">
         <div class="text-xl w-full mx-auto min-h-[calc(100vh-40px)] flex justify-evenly items-center opacity-95 z-50">
