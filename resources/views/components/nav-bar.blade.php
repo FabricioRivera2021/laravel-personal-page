@@ -26,7 +26,7 @@ class="antialiased lg:flex bg-slate-700 h-10 w-screen fixed z-50"
             <ul class="flex flex-col sm:flex-row md:space-x-7 space-y-3 sm:space-y-0 font-semibold w-3/4">
                 <x-navbar-link href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</x-navbar-link>
                 <x-navbar-link href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
-                <x-navbar-link href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
+                <x-navbar-link href="{{ route('contact.index', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
                 <x-navbar-link href="{{ route('posts.index', app()->getLocale()) }}">Blog</x-navbar-link>
                 @auth
                 <x-navbar-link href="#" class="text-orange-400">

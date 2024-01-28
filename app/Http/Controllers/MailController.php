@@ -8,10 +8,25 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
-    public function sendMail()
+    public function index()
     {
-        Mail::to('fabricio.rivera2012@gmail.com')->send(new Contact());
+        return view('contact');
+    }
 
-        return view('welcome');
+
+    public function store(Request $request)
+    {
+        //validar la data
+        $validated = $request->validate([
+            'name' => 'required|max:30|min:3',
+            'org' => 'max:30',
+            'email' => 'required|email',
+            'subject' => 'max:30',
+            'msg' => 'required|min:3'
+        ]);
+
+        Mail::to('fabricio.rivera2012@gmail.com')->send(new Contact($validated));
+
+        return redirect()->route('contact.index', app()->getLocale())->with('success', 'Message send');
     }
 }

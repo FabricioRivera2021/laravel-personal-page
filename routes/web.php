@@ -23,7 +23,6 @@ Route::get('/', function () {
     return redirect('/' . app()->getLocale());
 });
 
-Route::get('/', [MailController::class, 'sendmail']);
 
 Route::get('/public/{filename}', [ImageController::class, 'getImage'] )->name('private.image');
 
@@ -48,10 +47,12 @@ Route::group([
         
         Route::get('/', function ($locale) { return view('main', ['locale' => $locale]); })->name('root');
         
-        Route::get('/contact', function ($locale) {
-            app()->setLocale($locale); // Set the current locale
-            return view('contact', ['locale' => $locale]);})->name('contact');
-
+        // Route::get('/contact', function ($locale) {
+        //     app()->setLocale($locale); // Set the current locale
+        //     return view('contact', ['locale' => $locale]);})->name('contact');
+        
+        Route::resource('contact', MailController::class)->only(['index', 'store']);
+            
         Route::get('/projects', function ($locale) {
         app()->setLocale($locale); // Set the current locale
         return view('projects', ['locale' => $locale]);})->name('projects');

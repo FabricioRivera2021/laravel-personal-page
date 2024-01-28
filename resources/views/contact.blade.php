@@ -8,7 +8,7 @@
                 <div class="flex w-full">
                     <div class="flex flex-col sm:flex-row items-end justify-evenly w-full mx-10 mb-4">
                         
-                        <form class="flex flex-col space-y-4 min-w-[237px]" action="">
+                        <form class="flex flex-col space-y-4 min-w-[237px]" method="POST" {{route('contact.store', app()->getLocale())}}>
                             @csrf
                             <div>
                                 <h1 class="text-xl font-semibold text-slate-500">@lang('messages.contact-title')</h1>
@@ -19,8 +19,8 @@
                                     <x-input type="email" placeholder="Email" id="email" name="email"/>
                                 </div>
                                 <div class="w-full space-y-4">
-                                    <x-input :placeholder="trans('messages.contact-organization')" id="name" name="name"/>
-                                    <x-input :placeholder="trans('messages.contact-subject')" name="name"/>
+                                    <x-input :placeholder="trans('messages.contact-organization')" id="name" name="org"/>
+                                    <x-input :placeholder="trans('messages.contact-subject')" name="subject"/>
                                 </div>
                             </div>
                             <textarea 
