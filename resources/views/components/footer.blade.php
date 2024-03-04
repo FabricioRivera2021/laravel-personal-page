@@ -8,7 +8,7 @@
                     <li class="flex flex-col md:flex-row md:space-x-3 justify-center">
                         <div><a class="hover:underline hover:text-orange-400" href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</a></div>
                         <div><a class="hover:underline hover:text-orange-400" href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</a></div>
-                        <div><a class="hover:underline hover:text-orange-400" href="{{ route('contact', app()->getLocale()) }}">@lang('messages.contact')</a></div>
+                        <div><a class="hover:underline hover:text-orange-400" href="{{ route('contact.index', app()->getLocale()) }}">@lang('messages.contact')</a></div>
                         <div><a class="hover:underline hover:text-orange-400" href="{{ route('posts.index', app()->getLocale()) }}">Blog</a></div>
                         <div><a class="hover:underline hover:text-orange-400" href="{{ route('cv', app()->getLocale()) }}" target="_blank">CV</a></div>
                     </li>

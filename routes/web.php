@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostImgUploadController;
 use App\Http\Middleware\Authenticate;
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect('/' . app()->getLocale());
 });
+
 
 Route::get('/public/{filename}', [ImageController::class, 'getImage'] )->name('private.image');
 
@@ -45,10 +47,12 @@ Route::group([
         
         Route::get('/', function ($locale) { return view('main', ['locale' => $locale]); })->name('root');
         
-        Route::get('/contact', function ($locale) {
-            app()->setLocale($locale); // Set the current locale
-            return view('contact', ['locale' => $locale]);})->name('contact');
-
+        // Route::get('/contact', function ($locale) {
+        //     app()->setLocale($locale); // Set the current locale
+        //     return view('contact', ['locale' => $locale]);})->name('contact');
+        
+        Route::resource('contact', MailController::class)->only(['index', 'store']);
+            
         Route::get('/projects', function ($locale) {
         app()->setLocale($locale); // Set the current locale
         return view('projects', ['locale' => $locale]);})->name('projects');

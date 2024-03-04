@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-navbar />
+    <x-nav-bar />
 
     <div class="pt-20 w-full bg-slate-500">
         <h2 class="text-center text-4xl font-semibold">

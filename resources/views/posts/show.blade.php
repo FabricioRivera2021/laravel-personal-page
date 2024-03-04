@@ -1,5 +1,5 @@
 <x-layout>
-    <x-navbar />
+    <x-nav-bar />
         <main>
             <div class="text-lg md:text-4xl max-w-xs md:max-w-6xl 2xl:max-w-7xl mx-auto pt-20 mb-10 flex flex-col justify-evenly items-center space-y-10 min-h-screen">
                 {{-- ! Blog cards --}}
