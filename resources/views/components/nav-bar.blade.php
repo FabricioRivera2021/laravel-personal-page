@@ -24,10 +24,10 @@ class="antialiased lg:flex bg-slate-700 h-10 w-screen fixed z-50"
                     sm:px-20 flex flex-col sm:flex-row p-5 justify-evenly sm:justify-between sm:space-x-24 sm:items-center bg-slate-700 text-slate-100"
                 :class="{'-translate-x-[200px] h-[70vh]':drawerOpen === false, 'translate-x-0 w-fit opacity-100 h-[70vh]': drawerOpen === true}">
             <ul class="flex flex-col sm:flex-row md:space-x-7 space-y-3 sm:space-y-0 font-semibold w-3/4">
-                <x-navbar-link href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</x-navbar-link>
-                <x-navbar-link href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
-                <x-navbar-link href="{{ route('contact.index', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
-                <x-navbar-link href="{{ route('posts.index', app()->getLocale()) }}">Blog</x-navbar-link>
+                <x-navbar-link @class(['bg-orange-500' => preg_match('~^/(en|es)$~', $_SERVER['REQUEST_URI'])]) href="{{ route('root', app()->getLocale()) }}">@lang('messages.home')</x-navbar-link>
+                <x-navbar-link @class(['bg-orange-500' => preg_match('~^/(en|es)/projects$~', $_SERVER['REQUEST_URI'])]) href="{{ route('projects', app()->getLocale()) }}">@lang('messages.proyects')</x-navbar-link>
+                <x-navbar-link @class(['bg-orange-500' => preg_match('~^/(en|es)/contact$~', $_SERVER['REQUEST_URI'])]) href="{{ route('contact.index', app()->getLocale()) }}">@lang('messages.contact')</x-navbar-link>
+                <x-navbar-link @class(['bg-orange-500' => preg_match('~^/(en|es)/posts$~', $_SERVER['REQUEST_URI'])]) href="{{ route('posts.index', app()->getLocale()) }}">Blog</x-navbar-link>
                 @auth
                 <x-navbar-link href="#" class="text-orange-400">
                     <form action="{{ route('auth.destroy') }}" method="POST" class="h-fit">
