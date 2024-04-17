@@ -16,19 +16,35 @@
                             <div class="flex flex-col sm:flex-row justify-between sm:space-x-4 space-y-4 sm:space-y-0">
                                 <div class="w-full space-y-4">
                                     <x-input :placeholder="trans('messages.contact-name')" id="name" name="name"/>
+                                    @error('name')
+                                        <div class="mt-1 text-xs text-red-500">{{ $message }}</div>
+                                    @enderror
                                     <x-input type="email" placeholder="Email" id="email" name="email"/>
+                                    @error('email')
+                                        <div class="mt-1 text-xs text-red-500">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="w-full space-y-4">
-                                    <x-input :placeholder="trans('messages.contact-organization')" id="name" name="org"/>
-                                    <x-input :placeholder="trans('messages.contact-subject')" name="subject"/>
+                                    <x-input :placeholder="trans('messages.contact-organization')" id="org" name="org"/>
+                                    @error('prg')
+                                        <div class="mt-1 text-xs text-red-500">{{ $message }}</div>
+                                    @enderror
+                                    <x-input :placeholder="trans('messages.contact-subject')" id="subject" name="subject"/>
+                                    @error('subject')
+                                        <div class="mt-1 text-xs text-red-500">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
                             <textarea 
                             class="w-full pr-8 rounded-sm border-0 py-1.5 px-2.5 text-sm ring-1 ring-slate-300 text-slate-400 focus:ring-2" 
                             name="msg"
+                            placeholder=@lang('messages.contact-msg')
                             id=""
                             cols="30" 
-                            rows="10">@lang('messages.contact-msg')</textarea>
+                            rows="10"></textarea>
+                            @error('msg')
+                                <div class="mt-1 text-xs text-red-500">{{ $message }}</div>
+                            @enderror
 
                             <x-button class="shadow-md border-slate-200 text-lg rounded-sm">@lang('messages.contact-submit')</x-button>
                         </form>                  
