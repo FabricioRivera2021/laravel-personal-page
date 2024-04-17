@@ -8,6 +8,11 @@
     "isEntry": true,
     "src": "resources/css/app.css"
   },
+  "resources/css/legacy.css": {
+    "file": "assets/legacy-188626d5.css",
+    "isEntry": true,
+    "src": "resources/css/legacy.css"
+  },
   "resources/files/en/fabricio_rivera_cv.pdf": {
     "file": "assets/fabricio_rivera_cv-e9541a7a.pdf",
     "src": "resources/files/en/fabricio_rivera_cv.pdf"
@@ -151,5 +156,10 @@
     "file": "assets/app-b0046017.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/legacy.js": {
+    "file": "assets/legacy-43bfb79c.js",
+    "isEntry": true,
+    "src": "resources/js/legacy.js"
   }
 }

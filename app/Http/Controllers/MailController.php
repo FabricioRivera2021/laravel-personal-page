@@ -25,8 +25,11 @@ class MailController extends Controller
             'msg' => 'required|min:3'
         ]);
 
-        Mail::to('fabricio.rivera2012@gmail.com')->send(new Contact($validated));
-
-        return redirect()->route('contact.index', app()->getLocale())->with('success', 'Message send');
+        if($validated){
+            Mail::to('fabricio.rivera2012@gmail.com')->send(new Contact($validated));
+            return redirect()->route('contact.index', app()->getLocale())->with('success', 'Message send');
+        }else{
+            return redirect()->route('contact.index', app()->getLocale())->with('error', 'Message not send');
+        }
     }
 }
