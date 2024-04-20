@@ -22,7 +22,8 @@ class MailController extends Controller
             'org' => 'max:30',
             'email' => 'required|email',
             'subject' => 'max:30',
-            'msg' => 'required|min:3'
+            'msg' => 'required|min:3',
+            'g-recaptcha-response' => 'recaptcha'
         ]);
 
         if($validated){

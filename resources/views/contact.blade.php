@@ -46,6 +46,14 @@
                                 <div class="mt-1 text-xs text-red-500">{{ $message }}</div>
                             @enderror
 
+                            {{-- Captcha TIME --}}
+                            <div>
+                                {!! htmlFormSnippet() !!}
+                                @if ($errors->has('g-recaptcha-response'))
+                                    <div class="mt-1 text-xs text-red-500">{{ $errors->first('g-recaptcha-response') }}</div>
+                                @endif
+                            </div>
+
                             <x-button class="shadow-md border-slate-200 text-lg rounded-sm">@lang('messages.contact-submit')</x-button>
                         </form>                  
 
