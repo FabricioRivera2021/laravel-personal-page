@@ -40,6 +40,10 @@ Route::get('/legacy', function(){
     return view('legacy');
 });
 
+Route::get('/fotografia/{path?}/{subPath?}', function(){
+    return view('photoPage');
+});
+
 Route::group([
     'prefix' => '/{locale}',
     'middleware' => 'locale'],

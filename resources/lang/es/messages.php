@@ -10,7 +10,7 @@ return [
 
     //main content
     'title' => "<span class='text-orange-400'>DESARROLLO</span> WEB",
-    'madeBy' => 'Echo por Fabricio Rivera',
+    'madeBy' => 'Hecho por Fabricio Rivera',
     'welcome' => 'Bienvenido a mi Página personal',
     'hero-text-first' =>    'Bienvenido a mi rincón personal de desarrollo web, donde emprendo una odisea creativa a través del fascinante mundo de la web. Aquí, 
                             compartiré mi pasión por la creación de soluciones web elegantes y eficientes, desde la magia del front-end hasta las oscuras artes del back-end. Únete a mí mientras 
